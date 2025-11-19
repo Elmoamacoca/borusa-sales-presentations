@@ -1,151 +1,136 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 
 interface Point {
   x: number;
   y: number;
-  time: number;
+  timestamp: number;
 }
 
 export function LaserPointer({ active }: { active: boolean }) {
-  const [points, setPoints] = useState<Point[]>([]);
-  const [isDrawing, setIsDrawing] = useState(false);
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const animationRef = useRef<number | undefined>(undefined);
+  const pointsRef = useRef<Point[]>([]);
+  const isDrawingRef = useRef(false);
+  const animationIdRef = useRef<number | undefined>(undefined);
 
-  // Resize canvas
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-
-    const resize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    };
-
-    resize();
-    window.addEventListener('resize', resize);
-    return () => window.removeEventListener('resize', resize);
-  }, []);
-
-  // Mouse events
-  useEffect(() => {
-    if (!active) {
-      setPoints([]);
-      setIsDrawing(false);
-      return;
-    }
-
-    const handleMouseDown = (e: MouseEvent) => {
-      setIsDrawing(true);
-      setPoints([{ x: e.clientX, y: e.clientY, time: Date.now() }]);
-    };
-
-    const handleMouseMove = (e: MouseEvent) => {
-      if (!isDrawing) return;
-      setPoints(prev => [...prev, { x: e.clientX, y: e.clientY, time: Date.now() }]);
-    };
-
-    const handleMouseUp = () => {
-      setIsDrawing(false);
-    };
-
-    window.addEventListener('mousedown', handleMouseDown);
-    window.addEventListener('mousemove', handleMouseMove);
-    window.addEventListener('mouseup', handleMouseUp);
-
-    return () => {
-      window.removeEventListener('mousedown', handleMouseDown);
-      window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('mouseup', handleMouseUp);
-    };
-  }, [active, isDrawing]);
-
-  // Render loop
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas || !active) return;
 
+    // Setup canvas size
+    const resize = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
+    resize();
+    window.addEventListener('resize', resize);
+
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
+    // Mouse handlers
+    const onMouseDown = (e: MouseEvent) => {
+      console.log('MOUSE DOWN', e.clientX, e.clientY);
+      isDrawingRef.current = true;
+      pointsRef.current = [{ x: e.clientX, y: e.clientY, timestamp: Date.now() }];
+    };
+
+    const onMouseMove = (e: MouseEvent) => {
+      if (!isDrawingRef.current) return;
+      console.log('MOUSE MOVE', e.clientX, e.clientY);
+      pointsRef.current.push({ x: e.clientX, y: e.clientY, timestamp: Date.now() });
+    };
+
+    const onMouseUp = () => {
+      console.log('MOUSE UP');
+      isDrawingRef.current = false;
+    };
+
+    // Add listeners to canvas
+    canvas.addEventListener('mousedown', onMouseDown);
+    canvas.addEventListener('mousemove', onMouseMove);
+    canvas.addEventListener('mouseup', onMouseUp);
+    canvas.addEventListener('mouseleave', onMouseUp);
+
+    // Render loop
     const render = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       const now = Date.now();
-      const validPoints = points.filter(p => now - p.time < 800);
+      // Remove old points (older than 800ms)
+      pointsRef.current = pointsRef.current.filter(p => now - p.timestamp < 800);
 
-      if (validPoints.length !== points.length && validPoints.length > 0) {
-        setPoints(validPoints);
-      } else if (validPoints.length === 0 && points.length > 0) {
-        setPoints([]);
-      }
-
-      if (validPoints.length > 0) {
+      if (pointsRef.current.length > 0) {
         // Draw trail
         ctx.beginPath();
-        validPoints.forEach((p, i) => {
+        pointsRef.current.forEach((p, i) => {
           if (i === 0) ctx.moveTo(p.x, p.y);
           else ctx.lineTo(p.x, p.y);
         });
 
-        const avgAge = validPoints.reduce((sum, p) => sum + (now - p.time), 0) / validPoints.length;
-        const opacity = Math.max(0, 1 - avgAge / 800);
-
-        // Glow
-        ctx.strokeStyle = `rgba(255, 0, 0, ${opacity * 0.3})`;
-        ctx.lineWidth = 10;
+        // Glow effect
+        ctx.strokeStyle = 'rgba(255, 0, 0, 0.3)';
+        ctx.lineWidth = 12;
         ctx.lineCap = 'round';
         ctx.lineJoin = 'round';
         ctx.shadowBlur = 30;
-        ctx.shadowColor = 'rgba(255, 0, 0, 1)';
+        ctx.shadowColor = '#ff0000';
         ctx.stroke();
 
         // Main line
         ctx.beginPath();
-        validPoints.forEach((p, i) => {
+        pointsRef.current.forEach((p, i) => {
           if (i === 0) ctx.moveTo(p.x, p.y);
           else ctx.lineTo(p.x, p.y);
         });
-        ctx.strokeStyle = `rgba(255, 20, 20, ${opacity})`;
+        ctx.strokeStyle = '#ff0000';
         ctx.lineWidth = 3;
-        ctx.shadowBlur = 25;
+        ctx.shadowBlur = 20;
         ctx.stroke();
 
-        // Dot
-        const last = validPoints[validPoints.length - 1];
-        ctx.shadowBlur = 0;
+        // Dot at end
+        const last = pointsRef.current[pointsRef.current.length - 1];
+        ctx.shadowBlur = 15;
         ctx.beginPath();
-        ctx.arc(last.x, last.y, 15, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(255, 0, 0, 0.2)';
-        ctx.fill();
-
-        ctx.beginPath();
-        ctx.arc(last.x, last.y, 6, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(255, 255, 255, 1)';
-        ctx.shadowBlur = 10;
-        ctx.shadowColor = 'rgba(255, 0, 0, 1)';
+        ctx.arc(last.x, last.y, 8, 0, Math.PI * 2);
+        ctx.fillStyle = '#ffffff';
         ctx.fill();
       }
 
-      animationRef.current = requestAnimationFrame(render);
+      animationIdRef.current = requestAnimationFrame(render);
     };
 
     render();
 
     return () => {
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current);
+      window.removeEventListener('resize', resize);
+      canvas.removeEventListener('mousedown', onMouseDown);
+      canvas.removeEventListener('mousemove', onMouseMove);
+      canvas.removeEventListener('mouseup', onMouseUp);
+      canvas.removeEventListener('mouseleave', onMouseUp);
+      if (animationIdRef.current) {
+        cancelAnimationFrame(animationIdRef.current);
       }
+      pointsRef.current = [];
     };
-  }, [active, points]);
+  }, [active]);
 
   if (!active) return null;
 
   return (
-    <canvas
-      ref={canvasRef}
-      className="fixed inset-0 z-[100] pointer-events-none cursor-crosshair"
-      style={{ cursor: 'crosshair' }}
-    />
+    <>
+      <style>{`
+        .laser-cursor {
+          cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" fill="red" opacity="0.8"/><circle cx="12" cy="12" r="2" fill="white"/></svg>') 12 12, pointer;
+        }
+      `}</style>
+      <canvas
+        ref={canvasRef}
+        className="fixed inset-0 z-[100] laser-cursor"
+        style={{
+          pointerEvents: 'auto',
+          touchAction: 'none',
+        }}
+      />
+    </>
   );
 }

@@ -124,3 +124,10 @@
 - [x] Manter downsells: 1, 2, 3
 
 - [ ] Laser não está funcionando após simplificação - debugar
+
+- [x] Laser não captura eventos de mouse - corrigido (pointer-events: auto)
+- [x] Mudar cursor para laser quando modo laser ativo - cursor escondido
+
+- [x] Reescrever LaserPointer do zero com event listeners diretos no canvas
+- [x] Adicionar cursor de ponteiro laser (ponto vermelho)
+- [x] Testar se laser está capturando eventos e desenhando - FUNCIONANDO
