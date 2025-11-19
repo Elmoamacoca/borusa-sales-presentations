@@ -29,7 +29,7 @@ export function FullscreenButton() {
       variant="ghost"
       size="icon"
       onClick={toggleFullscreen}
-      className="fixed top-4 right-4 z-50 bg-background/50 backdrop-blur-sm hover:bg-background/80"
+      className="fixed top-4 left-4 z-50 bg-background/50 backdrop-blur-sm hover:bg-background/80"
       title={isFullscreen ? 'Sair da tela cheia (F)' : 'Tela cheia (F)'}
     >
       {isFullscreen ? (

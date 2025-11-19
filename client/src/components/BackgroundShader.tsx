@@ -12,7 +12,7 @@ export default function BackgroundShader() {
     return () => clearTimeout(timer);
   }, []);
 
-  // Paleta azul da primeira dobra do site BORUSA
+  // Paleta azul da primeira dobra do site Borusa
   const blueColors = [
     "#0a0a0a",
     "#1a2332",
@@ -23,12 +23,12 @@ export default function BackgroundShader() {
 
   // Não renderizar até estar visível
   if (!isVisible) {
-    return <div className="fixed inset-0 -z-10 bg-[#0a0a0a]" />; // Fallback estático
+    return <div className="fixed inset-0 z-0 bg-[#0a0a0a]" />; // Fallback estático
   }
 
   return (
     <div 
-      className="fixed inset-0 -z-10" 
+      className="fixed inset-0 z-0" 
       style={{
         willChange: 'transform',
         contain: 'layout style paint',
@@ -40,8 +40,8 @@ export default function BackgroundShader() {
       <MeshGradient
         className="w-full h-full"
         colors={blueColors}
-        speed={window.innerWidth >= 1920 ? 0.2 : 0.3}
-        minPixelRatio={window.innerWidth >= 1920 ? 0.2 : 0.4}
+        speed={0.15}
+        minPixelRatio={1.0}
       />
     </div>
   );

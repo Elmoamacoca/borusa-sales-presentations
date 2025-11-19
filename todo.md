@@ -54,3 +54,73 @@
 - [ ] Criar checkpoint final
 - [ ] Preparar documentação de entrega
 - [ ] Fornecer instruções de deploy
+
+
+## Fase 6: Dashboard Administrativo para Closers
+- [ ] Criar arquivo de configuração presentations.config.ts
+- [ ] Criar página de login do dashboard (DashboardLogin.tsx)
+- [ ] Criar página do dashboard (Dashboard.tsx)
+- [ ] Implementar listagem de apresentações
+- [ ] Adicionar metadados (para quem, quando usar, produto)
+- [ ] Criar sistema de autenticação do dashboard
+
+## Fase 7: Sistema de rotas dinâmicas
+- [ ] Implementar rota dinâmica /p/:slug
+- [ ] Criar página de login por apresentação (PresentationLogin.tsx)
+- [ ] Integrar proteção por senha individual
+- [ ] Conectar slug com apresentação correta
+
+## Fase 8: Preparar para deploy
+- [ ] Criar .env.example com todas as variáveis
+- [ ] Documentar processo de deploy
+- [ ] Testar fluxo completo (login dashboard → acessar apresentação → login apresentação → navegar)
+- [ ] Criar checkpoint final
+
+## Ajustes Dashboard
+- [x] Trocar fonte do título "Dashboard BORUSA" para sans-serif
+- [x] Trocar "BORUSA" por "Borusa" em todo o projeto
+- [x] Remover campos "Para quem" e "Quando usar" dos cards
+- [x] Manter apenas "Produto", "Senha" e "URL"
+- [x] Trocar slugs para códigos aleatórios (a7k9m2, x3p8w1, q5n2r8)
+- [x] Melhorar responsividade (ultra-wide, desktop, tablet, mobile)
+
+## Ferramentas de Apresentação
+- [x] Ajustar responsividade ultra-wide do dashboard
+- [x] Criar sistema de desenho (caneta/lápis)
+- [x] Adicionar seletor de cores para desenho (6 cores)
+- [x] Criar sistema de laser pointer (rastro temporário com fade)
+- [x] Implementar atalhos de teclado (D, L, C, E)
+- [x] Adicionar toolbar flutuante com ferramentas
+
+
+## Bugs
+- [x] Sistema de laser e desenho não está funcionando - corrigido (conflito de atalhos + z-index)
+
+
+## Ajustes de UX
+- [x] Ajustar laser: rastro mais fino (3px) e duração mais curta (0.8s) com fade suave
+- [x] Mover botão fullscreen para lado esquerdo
+- [x] Remover caixa de atalhos sempre visível
+- [x] Criar painel de atalhos que abre/fecha com tecla P
+- [x] Painel mostra todos os atalhos disponíveis com ícones
+
+## Novos Ajustes
+- [x] Mover painel de atalhos para lado direito (sidebar 320px)
+- [x] Reduzir tamanho do painel para não ocupar apresentação
+- [x] Adicionar Ctrl+Z para desfazer desenhos (undo)
+- [ ] Verificar se desenho e laser estão funcionando após restart
+
+## Bugs Críticos
+- [ ] Painel de atalhos com scroll bugado
+- [ ] Desenho e laser pararam de funcionar (5ª vez) - criar solução definitiva
+
+## Simplificação Total
+- [x] Remover sistema de desenho (caneta)
+- [x] Remover painel de atalhos (tecla P)
+- [x] Remover toolbar de ferramentas
+- [x] Manter apenas laser (tecla R)
+- [x] Mudar navegação: D (avançar), A (voltar)
+- [x] Manter tela cheia: F + botão
+- [x] Manter downsells: 1, 2, 3
+
+- [ ] Laser não está funcionando após simplificação - debugar

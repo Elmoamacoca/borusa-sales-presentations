@@ -17,7 +17,7 @@ export default function WelcomeSlide() {
         <h1 className="text-5xl md:text-7xl font-bold text-foreground">
           Bem-vindo à
           <br />
-          <span className="text-primary">Apresentação BORUSA</span>
+          <span className="text-primary">Apresentação Borusa</span>
         </h1>
 
         <motion.p

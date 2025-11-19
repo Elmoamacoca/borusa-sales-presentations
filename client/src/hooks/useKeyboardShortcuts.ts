@@ -1,15 +1,15 @@
 import { useEffect } from 'react';
 import { usePresentationStore } from '@/store/presentationStore';
+import { useLaser } from '@/hooks/useLaser';
 
 /**
- * Hook para gerenciar atalhos de teclado globais da apresentação
+ * Hook para gerenciar atalhos de teclado da apresentação
  * 
- * Atalhos disponíveis:
- * - ArrowRight / Enter: Próximo slide
- * - ArrowLeft: Slide anterior
- * - 1, 2, 3: Rotas condicionais (quando disponíveis no slide atual)
- * - f / F: Toggle fullscreen
- * - Escape: Sair do fullscreen
+ * Atalhos:
+ * - D: Próximo slide
+ * - A: Slide anterior
+ * - F: Tela cheia
+ * - 1, 2, 3: Downsells condicionais
  */
 export function useKeyboardShortcuts() {
   const {
@@ -20,6 +20,7 @@ export function useKeyboardShortcuts() {
     isFullscreen,
     setFullscreen,
   } = usePresentationStore();
+  const { toggle: toggleLaser } = useLaser();
 
   useEffect(() => {
     const handleKeyPress = async (e: KeyboardEvent) => {
@@ -31,23 +32,33 @@ export function useKeyboardShortcuts() {
         return;
       }
 
+      const key = e.key.toLowerCase();
       const currentSlide = getCurrentSlide();
 
-      // Navegação normal
-      if (e.key === 'ArrowRight' || e.key === 'Enter') {
+      // D - Próximo slide
+      if (key === 'd') {
         e.preventDefault();
         goNext();
         return;
       }
 
-      if (e.key === 'ArrowLeft') {
+      // A - Slide anterior
+      if (key === 'a') {
         e.preventDefault();
         goBack();
         return;
       }
 
-      // Fullscreen
-      if (e.key === 'f' || e.key === 'F') {
+      // R - Laser
+      if (key === 'r') {
+        e.preventDefault();
+        toggleLaser();
+        console.log('Laser toggled');
+        return;
+      }
+
+      // F - Tela cheia
+      if (key === 'f') {
         e.preventDefault();
         try {
           if (!document.fullscreenElement) {
@@ -76,7 +87,7 @@ export function useKeyboardShortcuts() {
         return;
       }
 
-      // Rotas condicionais (teclas 1, 2, 3)
+      // Downsells condicionais (1, 2, 3)
       if (currentSlide?.conditionalRoutes) {
         if (['1', '2', '3'].includes(e.key)) {
           e.preventDefault();
@@ -92,7 +103,7 @@ export function useKeyboardShortcuts() {
     };
   }, [goNext, goBack, handleConditionalRoute, getCurrentSlide, isFullscreen, setFullscreen]);
 
-  // Listener para mudanças de fullscreen (quando usuário usa F11 ou botão do navegador)
+  // Listener para mudanças de fullscreen
   useEffect(() => {
     const handleFullscreenChange = () => {
       setFullscreen(!!document.fullscreenElement);

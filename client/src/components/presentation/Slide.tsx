@@ -23,7 +23,7 @@ export function Slide({ children, className }: SlideProps) {
       exit={{ opacity: 0, y: -50 }}
       transition={{ duration: 0.5, ease: 'easeInOut' }}
       className={cn(
-        'relative z-10 min-h-screen w-full flex flex-col items-center justify-center p-8 md:p-12 lg:p-16',
+        'relative z-20 min-h-screen w-full flex flex-col items-center justify-center p-8 md:p-12 lg:p-16',
         className
       )}
     >
