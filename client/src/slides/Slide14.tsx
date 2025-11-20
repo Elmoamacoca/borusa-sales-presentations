@@ -1,7 +1,7 @@
 import { Slide } from '@/components/presentation/Slide';
 import { motion } from 'framer-motion';
 
-export default function DownsellXSlide() {
+export default function Slide14() {
   return (
     <Slide className="flex items-center justify-center">
       <div className="w-full h-full flex flex-col md:flex-row">
@@ -11,16 +11,18 @@ export default function DownsellXSlide() {
               <div className="w-0.5 h-20 bg-yellow-500 absolute left-8"></div>
               <div className="w-20 h-0.5 bg-yellow-500 absolute top-8"></div>
             </div>
-            <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 0.6 }} className="text-3xl md:text-4xl font-bold text-white leading-tight font-sans">
-              Hoje a minha metodologia está nas <span className="underline decoration-yellow-500 decoration-4 underline-offset-8">Maiores Mentorias e Masterminds do Brasil</span>...
-            </motion.h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-white font-sans">Investimento</h1>
+            <div className="space-y-4 text-white text-lg">
+              <p>imagine que a cada 1L de gasolina, você coloca só 200mL no carro, e os outros 800mL joga no chão.</p>
+              <p className="pt-4">Vai ou não ficar mais caro encher o tanque?</p>
+            </div>
           </div>
         </motion.div>
         <motion.div initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.6, duration: 0.6 }} className="w-full md:w-1/2 flex items-center justify-center px-8 py-12 relative">
-          <div className="w-full max-w-md h-96 bg-gradient-to-br from-blue-900 to-orange-600 rounded-lg shadow-2xl flex items-center justify-center">
-            <div className="text-white text-center"><p className="text-sm">Foto de palestra/evento</p></div>
+          <div className="w-full max-w-md h-96 bg-gradient-to-br from-orange-600 to-yellow-700 rounded-lg shadow-2xl flex items-center justify-center">
+            <div className="text-white text-center"><p className="text-sm">Imagem de gasolina/combustível</p></div>
           </div>
-          <div className="absolute bottom-8 right-8 w-24 h-24"><div className="w-20 h-0.5 bg-yellow-500 absolute bottom-8"></div></div>
+          <div className="absolute bottom-8 right-8 w-32 h-32"><div className="w-24 h-0.5 bg-yellow-500 absolute bottom-8"></div></div>
         </motion.div>
       </div>
     </Slide>
