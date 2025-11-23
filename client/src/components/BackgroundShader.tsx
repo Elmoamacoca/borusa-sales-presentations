@@ -32,8 +32,8 @@ export default function BackgroundShader() {
     "#141414",
   ];
 
-  // Usar cores diferentes para slides HydraNet, AdaptedLogic e Results
-  const isDarkSlide = currentSlideId === 'hydranet' || currentSlideId === 'adapted-logic' || currentSlideId === 'results' || currentSlideId === 'obstacles';
+  // Usar cores diferentes para slides HydraNet, AdaptedLogic, Results, Obstacles e OtimizacaoTempo
+  const isDarkSlide = currentSlideId === 'hydranet' || currentSlideId === 'adapted-logic' || currentSlideId === 'results' || currentSlideId === 'obstacles' || currentSlideId === 'otimizacao-tempo' || currentSlideId === 'otimizacao-tempo-2' || currentSlideId === 'investimento' || currentSlideId === 'investimento-2' || currentSlideId === 'estrutura' || currentSlideId === 'pergunta-ia' || currentSlideId === 'investimento-3' || currentSlideId === 'investimento-4';
   const colors = isDarkSlide ? charcoalColors : blueColors;
   const fallbackColor = isDarkSlide ? '#1a1a1a' : '#0a0a0a';
 

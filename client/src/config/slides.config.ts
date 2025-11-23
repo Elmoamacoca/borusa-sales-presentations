@@ -13,6 +13,14 @@ import AdaptedLogicSlide from '@/slides/AdaptedLogicSlide';
 import JourneySlide from '@/slides/JourneySlide';
 import ResultsSlide from '@/slides/ResultsSlide';
 import ObstaclesSlide from '@/slides/ObstaclesSlide';
+import OtimizacaoTempoSlide from '@/slides/OtimizacaoTempoSlide';
+import InvestimentoSlide from '@/slides/InvestimentoSlide';
+import Investimento2Slide from '@/slides/Investimento2Slide';
+import EstruturaSlide from '@/slides/EstruturaSlide';
+import PerguntaIASlide from '@/slides/PerguntaIASlide';
+import Investimento3Slide from '@/slides/Investimento3Slide';
+import Investimento4Slide from '@/slides/Investimento4Slide';
+import OtimizacaoTempo2Slide from '@/slides/OtimizacaoTempo2Slide';
 
 export interface SlideDefinition extends SlideConfig {
   component: ComponentType;
@@ -31,6 +39,14 @@ export const slidesConfig: SlideDefinition[] = [
   { id: 'journey', order: 9, component: JourneySlide, title: 'Como chegamos até aqui' },
   { id: 'results', order: 10, component: ResultsSlide, title: 'Resultados?' },
   { id: 'obstacles', order: 11, component: ObstaclesSlide, title: 'Obstáculos no Caminho' },
+  { id: 'otimizacao-tempo', order: 12, component: OtimizacaoTempoSlide, title: 'Otimização de Tempo' },
+  { id: 'investimento', order: 13, component: InvestimentoSlide, title: 'Investimento' },
+  { id: 'investimento-2', order: 14, component: Investimento2Slide, title: 'Investimento 2' },
+  { id: 'estrutura', order: 15, component: EstruturaSlide, title: 'Estrutura' },
+  { id: 'pergunta-ia', order: 16, component: PerguntaIASlide, title: 'Pergunta IA' },
+  { id: 'investimento-3', order: 17, component: Investimento3Slide, title: 'Investimento 3' },
+  { id: 'investimento-4', order: 18, component: Investimento4Slide, title: 'Investimento 4' },
+  { id: 'otimizacao-tempo-2', order: 19, component: OtimizacaoTempo2Slide, title: 'Otimização de Tempo 2' },
 ];
 
 export const getSlideById = (id: string): SlideDefinition | undefined => {
