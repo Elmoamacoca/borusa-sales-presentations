@@ -1,7 +1,9 @@
 import { MeshGradient } from "@paper-design/shaders-react";
 import { useEffect, useState } from "react";
+import { usePresentationStore } from '@/store/presentationStore';
 
 export default function BackgroundShader() {
+  const { currentSlideId } = usePresentationStore();
   const [isVisible, setIsVisible] = useState(false);
 
   // Adiar renderização do shader para não competir com primeira dobra
@@ -21,9 +23,23 @@ export default function BackgroundShader() {
     "#1a1a1a",
   ];
 
+  // Paleta de preto carvão para slide HydraNet
+  const charcoalColors = [
+    "#0f0f0f",
+    "#1a1a1a",
+    "#252525",
+    "#1e1e1e",
+    "#141414",
+  ];
+
+  // Usar cores diferentes para slides HydraNet, AdaptedLogic e Results
+  const isDarkSlide = currentSlideId === 'hydranet' || currentSlideId === 'adapted-logic' || currentSlideId === 'results' || currentSlideId === 'obstacles';
+  const colors = isDarkSlide ? charcoalColors : blueColors;
+  const fallbackColor = isDarkSlide ? '#1a1a1a' : '#0a0a0a';
+
   // Não renderizar até estar visível
   if (!isVisible) {
-    return <div className="fixed inset-0 z-0 bg-[#0a0a0a]" />; // Fallback estático
+    return <div className="fixed inset-0 z-0" style={{ backgroundColor: fallbackColor }} />;
   }
 
   return (
@@ -39,7 +55,7 @@ export default function BackgroundShader() {
     >
       <MeshGradient
         className="w-full h-full"
-        colors={blueColors}
+        colors={colors}
         speed={0.15}
         minPixelRatio={1.0}
       />

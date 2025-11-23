@@ -13,16 +13,12 @@ export default function WelcomeSlide() {
           className="space-y-12"
         >
           {/* Título Principal */}
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight font-sans">
-            Você encontrou a peça que faltava: vamos construir uma máquina de{' '}
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-tight font-sans">
+            Você encontrou a peça que faltava. Vamos instalar um sistema de{' '}
             <span className="underline decoration-yellow-500 decoration-4 underline-offset-8">
-              MQL's
+              IA comercial
             </span>{' '}
-            que{' '}
-            <span className="underline decoration-yellow-500 decoration-4 underline-offset-8">
-              pagam bem
-            </span>
-            , pagam rápido e pagam fácil
+            que otimiza seus resultados, multiplica o que já está bom e se alimenta da inteligência da sua operação.
           </h1>
 
           {/* Linha decorativa */}
@@ -44,7 +40,7 @@ export default function WelcomeSlide() {
               </div>
               <div>
                 <p className="text-gray-300 text-sm md:text-base leading-relaxed">
-                  Com foco em aumento da lucratividade com equipe enxuta
+                  Você consegue ver onde está vazando sua receita. Decisões baseadas em dados, não em achismo.
                 </p>
               </div>
             </motion.div>
@@ -63,7 +59,7 @@ export default function WelcomeSlide() {
               </div>
               <div>
                 <p className="text-gray-300 text-sm md:text-base leading-relaxed">
-                  Aliviar a carga e estresse em você, pra ter mais liberdade
+                  Cada lead que você pagou em mídia agora recebe a atenção que merecia. Nenhuma venda perdida.
                 </p>
               </div>
             </motion.div>
@@ -82,7 +78,7 @@ export default function WelcomeSlide() {
               </div>
               <div>
                 <p className="text-gray-300 text-sm md:text-base leading-relaxed">
-                  Através de uma metodologia de Copy que já gerou +8 Dígitos e atraiu até Experts Renomados, mesmo sem aparecer e sem ter um nome famoso
+                  Sua operação não apenas funciona, ela melhora sozinha. Inteligência contínua evoluindo.
                 </p>
               </div>
             </motion.div>

@@ -1,49 +1,64 @@
 import { Slide } from '@/components/presentation/Slide';
 import { motion } from 'framer-motion';
-import { Clock, DollarSign, Building2, AlertCircle, Hourglass } from 'lucide-react';
+import { Clock, DollarSign, Settings, Building2, Hourglass } from 'lucide-react';
 
 export default function ObstaclesSlide() {
+  const obstacles = [
+    { icon: Clock, label: 'Tempo' },
+    { icon: DollarSign, label: 'Investimento' },
+    { icon: Settings, label: 'Execução' },
+    { icon: Building2, label: 'Estrutura' },
+    { icon: Hourglass, label: 'Momento' }
+  ];
+
   return (
-    <Slide className="flex items-center justify-center">
-      <div className="w-full px-8 md:px-16 py-12 relative">
-        <div className="absolute top-8 left-8 w-24 h-24">
-          <div className="w-0.5 h-20 bg-yellow-500 absolute left-8"></div>
-          <div className="w-20 h-0.5 bg-yellow-500 absolute top-8"></div>
-        </div>
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2, duration: 0.6 }} className="text-left mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-white font-sans">Obstáculos no Caminho</h1>
-        </motion.div>
-        <div className="space-y-6 max-w-3xl">
-          <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.4, duration: 0.5 }} className="flex items-center gap-4">
-            <Clock className="w-8 h-8 text-white flex-shrink-0" />
-            <div className="flex-1"><div className="h-px bg-white w-full"></div></div>
-            <p className="text-white text-lg font-medium">Tempo</p>
-          </motion.div>
-          <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.5, duration: 0.5 }} className="flex items-center gap-4">
-            <DollarSign className="w-8 h-8 text-white flex-shrink-0" />
-            <div className="flex-1"><div className="h-px bg-white w-full"></div></div>
-            <p className="text-white text-lg font-medium">Investimento</p>
-          </motion.div>
-          <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.6, duration: 0.5 }} className="flex items-center gap-4">
-            <Building2 className="w-8 h-8 text-white flex-shrink-0" />
-            <div className="flex-1"><div className="h-px bg-white w-full"></div></div>
-            <p className="text-white text-lg font-medium">Estrutura</p>
-          </motion.div>
-          <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.7, duration: 0.5 }} className="flex items-center gap-4">
-            <AlertCircle className="w-8 h-8 text-white flex-shrink-0" />
-            <div className="flex-1"><div className="h-px bg-white w-full"></div></div>
-            <p className="text-white text-lg font-medium">Habilidade</p>
-          </motion.div>
-          <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.8, duration: 0.5 }} className="flex items-center gap-4">
-            <Hourglass className="w-8 h-8 text-white flex-shrink-0" />
-            <div className="flex-1"><div className="h-px bg-white w-full"></div></div>
-            <p className="text-white text-lg font-medium">Momento</p>
-          </motion.div>
-        </div>
-        <div className="absolute bottom-8 right-8 w-32 h-32">
-          <div className="w-24 h-0.5 bg-yellow-500 absolute bottom-8"></div>
-        </div>
+    <Slide className="!items-center !justify-center">
+      {/* Linhas decorativas no canto superior esquerdo */}
+      <div className="absolute top-8 left-8 w-24 h-24">
+        <div className="w-0.5 h-16 bg-yellow-500 absolute left-8"></div>
+        <div className="w-16 h-0.5 bg-yellow-500 absolute top-8"></div>
       </div>
+
+      {/* Linha decorativa no canto inferior direito */}
+      <div className="absolute bottom-8 right-8 w-32 h-32">
+        <div className="w-24 h-0.5 bg-yellow-500 absolute bottom-8"></div>
+      </div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2, duration: 0.6 }}
+        className="w-full max-w-3xl mx-auto px-20"
+      >
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-16 font-sans text-left">
+          Obstáculos no Caminho
+        </h1>
+
+        <div className="space-y-6">
+          {obstacles.map((obstacle, index) => {
+            const Icon = obstacle.icon;
+            return (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -30 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.4 + index * 0.15, duration: 0.5 }}
+              >
+                {/* Ícone e texto na mesma linha */}
+                <div className="flex items-center gap-4 mb-2">
+                  <Icon className="w-8 h-8 text-white flex-shrink-0" strokeWidth={1.5} />
+                  <p className="text-white text-xl font-medium">
+                    {obstacle.label}
+                  </p>
+                </div>
+                
+                {/* Linha horizontal embaixo */}
+                <div className="h-px bg-white w-full" />
+              </motion.div>
+            );
+          })}
+        </div>
+      </motion.div>
     </Slide>
   );
 }

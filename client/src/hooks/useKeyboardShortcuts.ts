@@ -6,8 +6,8 @@ import { useLaser } from '@/hooks/useLaser';
  * Hook para gerenciar atalhos de teclado da apresentação
  * 
  * Atalhos:
- * - D: Próximo slide
- * - A: Slide anterior
+ * - Seta Direita (→): Próximo slide
+ * - Seta Esquerda (←): Slide anterior
  * - F: Tela cheia
  * - 1, 2, 3: Downsells condicionais
  */
@@ -32,25 +32,25 @@ export function useKeyboardShortcuts() {
         return;
       }
 
-      const key = e.key.toLowerCase();
+      const key = e.key;
       const currentSlide = getCurrentSlide();
 
-      // D - Próximo slide
-      if (key === 'd') {
+      // Seta Direita - Próximo slide
+      if (key === 'ArrowRight') {
         e.preventDefault();
         goNext();
         return;
       }
 
-      // A - Slide anterior
-      if (key === 'a') {
+      // Seta Esquerda - Slide anterior
+      if (key === 'ArrowLeft') {
         e.preventDefault();
         goBack();
         return;
       }
 
       // R - Laser
-      if (key === 'r') {
+      if (key.toLowerCase() === 'r') {
         e.preventDefault();
         toggleLaser();
         console.log('Laser toggled');
@@ -58,7 +58,7 @@ export function useKeyboardShortcuts() {
       }
 
       // F - Tela cheia
-      if (key === 'f') {
+      if (key.toLowerCase() === 'f') {
         e.preventDefault();
         try {
           if (!document.fullscreenElement) {
