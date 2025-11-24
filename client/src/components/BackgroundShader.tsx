@@ -5,6 +5,7 @@ import { usePresentationStore } from '@/store/presentationStore';
 export default function BackgroundShader() {
   const { currentSlideId } = usePresentationStore();
   const [isVisible, setIsVisible] = useState(false);
+  const [displayedSlideId, setDisplayedSlideId] = useState(currentSlideId);
 
   // Adiar renderização do shader para não competir com primeira dobra
   useEffect(() => {
@@ -13,6 +14,14 @@ export default function BackgroundShader() {
     }, 500); // Aguarda 500ms após site aparecer
     return () => clearTimeout(timer);
   }, []);
+
+  // Delay na mudança de fundo para sincronizar com animação do conteúdo
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDisplayedSlideId(currentSlideId);
+    }, 400); // Aguarda 400ms para o conteúdo aparecer antes de mudar o fundo
+    return () => clearTimeout(timer);
+  }, [currentSlideId]);
 
   // Paleta azul da primeira dobra do site Borusa
   const blueColors = [
@@ -33,7 +42,7 @@ export default function BackgroundShader() {
   ];
 
   // Usar cores diferentes para slides HydraNet, AdaptedLogic, Results, Obstacles e OtimizacaoTempo
-  const isDarkSlide = currentSlideId === 'hydranet' || currentSlideId === 'adapted-logic' || currentSlideId === 'results' || currentSlideId === 'obstacles' || currentSlideId === 'otimizacao-tempo' || currentSlideId === 'otimizacao-tempo-2' || currentSlideId === 'investimento' || currentSlideId === 'investimento-2' || currentSlideId === 'estrutura' || currentSlideId === 'pergunta-ia' || currentSlideId === 'investimento-3' || currentSlideId === 'investimento-4';
+  const isDarkSlide = displayedSlideId === 'hydranet' || displayedSlideId === 'adapted-logic' || displayedSlideId === 'results' || displayedSlideId === 'obstacles' || displayedSlideId === 'otimizacao-tempo' || displayedSlideId === 'otimizacao-tempo-2' || displayedSlideId === 'investimento' || displayedSlideId === 'investimento-2' || displayedSlideId === 'estrutura' || displayedSlideId === 'pergunta-ia' || displayedSlideId === 'investimento-3' || displayedSlideId === 'investimento-4';
   const colors = isDarkSlide ? charcoalColors : blueColors;
   const fallbackColor = isDarkSlide ? '#1a1a1a' : '#0a0a0a';
 

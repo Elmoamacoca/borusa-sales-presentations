@@ -9,9 +9,9 @@ export default function MethodologySlide() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.2, duration: 0.8 }}
-          className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight text-center font-sans"
+          className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white leading-tight text-center font-sans"
         >
-          Hoje a minha metodologia usa a mesma lógica de IA aplicada em sistemas críticos como o Autopilot da Tesla.
+          Hoje a minha metodologia usa a mesma lógica de <span className="underline decoration-yellow-500 decoration-1 underline-offset-4">IA aplicada</span> em sistemas críticos como o <span className="underline decoration-yellow-500 decoration-1 underline-offset-4">Autopilot da Tesla</span>.
         </motion.h1>
       </div>
     </Slide>

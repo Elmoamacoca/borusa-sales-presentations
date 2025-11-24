@@ -42,7 +42,7 @@ export default function AdaptedLogicSlide() {
         transition={{ delay: 0.2, duration: 0.6 }}
         className="w-full"
       >
-        <h1 className="text-2xl md:text-3xl lg:text-4xl font-light text-white leading-tight font-sans whitespace-nowrap text-center mb-6">
+        <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white leading-tight font-sans whitespace-nowrap text-center mb-6 mt-16">
           E essa lógica foi adaptada para uma operação comercial
         </h1>
 

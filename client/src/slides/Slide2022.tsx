@@ -1,9 +1,9 @@
 import { Slide } from '@/components/presentation/Slide';
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+
 
 export default function Slide2022() {
-  const [isImageZoomed, setIsImageZoomed] = useState(false);
+
 
   return (
     <Slide className="flex items-center justify-center">
@@ -44,11 +44,7 @@ export default function Slide2022() {
             transition={{ delay: 0.4, duration: 0.6 }}
             className="flex justify-center relative"
           >
-            <div 
-              className="relative cursor-zoom-in overflow-visible"
-              onMouseEnter={() => setIsImageZoomed(true)}
-              onMouseLeave={() => setIsImageZoomed(false)}
-            >
+            <div className="relative overflow-visible">
               {/* Efeito de brilho atrás da imagem */}
               <div className="absolute inset-0 bg-yellow-500/20 blur-3xl rounded-lg"></div>
               
@@ -60,19 +56,14 @@ export default function Slide2022() {
                   imageRendering: 'high-quality',
                   WebkitFontSmoothing: 'antialiased',
                 }}
-                className={`w-full rounded-lg shadow-2xl border-2 border-yellow-500/30 transition-all duration-500 ${
-                  isImageZoomed ? 'fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-[1.2] z-50 max-w-4xl' : 'relative scale-100'
-                }`}
+                className="w-full rounded-lg shadow-2xl border-2 border-yellow-500/30 transition-transform duration-500 hover:scale-[1.15] hover:z-50 cursor-pointer"
               />
             </div>
           </motion.div>
         </div>
       </div>
 
-      {/* Overlay escuro quando zoom está ativo */}
-      {isImageZoomed && (
-        <div className="fixed inset-0 bg-black/80 z-40 pointer-events-none" />
-      )}
+
     </Slide>
   );
 }
