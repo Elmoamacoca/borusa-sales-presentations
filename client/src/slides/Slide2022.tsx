@@ -22,29 +22,18 @@ export default function Slide2022() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.3, duration: 0.5 }}
             >
-              <h3 className="text-4xl font-bold text-yellow-500 mb-2 font-sans">2023</h3>
+              <h3 className="text-4xl font-semibold text-yellow-500 mb-2 font-sans">2023</h3>
               <div className="w-16 h-1 bg-yellow-500"></div>
             </motion.div>
 
-            {/* Título */}
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.6 }}
-              className="text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-relaxed font-sans"
-            >
-              Antes da hype de IA, já fazia operação sair do caos para o controle.
-            </motion.h1>
-
-            {/* Subtítulo */}
+            {/* Texto unificado */}
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5, duration: 0.6 }}
-              className="text-lg md:text-xl text-white leading-relaxed"
+              transition={{ delay: 0.4, duration: 0.6 }}
+              className="text-xl md:text-2xl text-white leading-relaxed font-light font-sans"
             >
-              Nos últimos <span className="text-yellow-500 font-bold">4+ anos</span> trabalhou integrando marketing e vendas em mercados diferentes, um dos cases no mercado de{' '}
-              <span className="text-yellow-500 font-bold">iGaming</span>
+              Antes da hype de IA, já fazia operação sair do caos para o controle. Nos últimos 4+ anos trabalhou integrando marketing e vendas em mercados diferentes, um dos cases no mercado de iGaming.
             </motion.p>
           </motion.div>
 
@@ -71,8 +60,8 @@ export default function Slide2022() {
                   imageRendering: 'high-quality',
                   WebkitFontSmoothing: 'antialiased',
                 }}
-                className={`relative w-full rounded-lg shadow-2xl border-2 border-yellow-500/30 transition-all duration-500 ${
-                  isImageZoomed ? 'scale-[2.5] z-50' : 'scale-100'
+                className={`w-full rounded-lg shadow-2xl border-2 border-yellow-500/30 transition-all duration-500 ${
+                  isImageZoomed ? 'fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-[1.2] z-50 max-w-4xl' : 'relative scale-100'
                 }`}
               />
             </div>

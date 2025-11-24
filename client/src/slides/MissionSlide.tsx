@@ -28,7 +28,7 @@ export default function MissionSlide() {
             className="space-y-8"
           >
             {/* Título "Nossa Missão" com tipografia serifada */}
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white font-serif">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white font-sans">
               NOSSA MISSÃO
             </h2>
 
