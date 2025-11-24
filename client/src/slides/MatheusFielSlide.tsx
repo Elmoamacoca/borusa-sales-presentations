@@ -29,8 +29,8 @@ export default function MatheusFielSlide() {
             className="space-y-8"
           >
             {/* Nome */}
-            <h2 className="text-4xl md:text-5xl font-bold text-white font-serif">
-              GABRIEL TORRES:
+            <h2 className="text-4xl md:text-5xl font-semibold text-white font-sans mb-12">
+              GABRIEL TORRES
             </h2>
 
             {/* Lista de informações com ícones */}
@@ -40,14 +40,14 @@ export default function MatheusFielSlide() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.4, duration: 0.5 }}
-                className="flex gap-4 items-start"
+                className="flex gap-4 items-center"
               >
                 <div className="flex-shrink-0">
                   <div className="w-12 h-12 rounded-full border-2 border-white flex items-center justify-center bg-transparent">
                     <Briefcase className="w-6 h-6 text-white" />
                   </div>
                 </div>
-                <p className="text-white text-lg md:text-xl leading-relaxed">
+                <p className="text-white text-base md:text-lg leading-snug font-light">
                   Empresário com mais de 4 anos de experiência em vendas B2B
                 </p>
               </motion.div>
@@ -57,14 +57,14 @@ export default function MatheusFielSlide() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.5, duration: 0.5 }}
-                className="flex gap-4 items-start"
+                className="flex gap-4 items-center"
               >
                 <div className="flex-shrink-0">
                   <div className="w-12 h-12 rounded-full border-2 border-white flex items-center justify-center bg-transparent">
                     <TrendingUp className="w-6 h-6 text-white" />
                   </div>
                 </div>
-                <p className="text-white text-lg md:text-xl leading-relaxed">
+                <p className="text-white text-base md:text-lg leading-snug font-light">
                   +7 Dígitos em vendas B2B
                 </p>
               </motion.div>
@@ -74,14 +74,14 @@ export default function MatheusFielSlide() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.6, duration: 0.5 }}
-                className="flex gap-4 items-start"
+                className="flex gap-4 items-center"
               >
                 <div className="flex-shrink-0">
                   <div className="w-12 h-12 rounded-full border-2 border-white flex items-center justify-center bg-transparent">
                     <Brain className="w-6 h-6 text-white" />
                   </div>
                 </div>
-                <p className="text-white text-lg md:text-xl leading-relaxed">
+                <p className="text-white text-base md:text-lg leading-snug font-light">
                   Desenvolvedor do Cérebro Comercial Autônomo (CCA)
                 </p>
               </motion.div>
@@ -91,14 +91,14 @@ export default function MatheusFielSlide() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.7, duration: 0.5 }}
-                className="flex gap-4 items-start"
+                className="flex gap-4 items-center"
               >
                 <div className="flex-shrink-0">
                   <div className="w-12 h-12 rounded-full border-2 border-white flex items-center justify-center bg-transparent">
                     <Award className="w-6 h-6 text-white" />
                   </div>
                 </div>
-                <p className="text-white text-lg md:text-xl leading-relaxed">
+                <p className="text-white text-base md:text-lg leading-snug font-light">
                   Responsável por modelar a o framework da tesla de aprendizagem de inteligência artificial no Brasil.
                 </p>
               </motion.div>

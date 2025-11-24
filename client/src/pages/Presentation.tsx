@@ -4,7 +4,7 @@ import { usePresentationStore, setSlidesConfig } from '@/store/presentationStore
 import { slidesConfig } from '@/config/slides.config';
 import { useKeyboardShortcuts } from '@/hooks/useKeyboardShortcuts';
 import { useDrawingShortcuts } from '@/hooks/useDrawingShortcuts';
-import { ProgressIndicator } from '@/components/presentation/ProgressIndicator';
+
 import { FullscreenButton } from '@/components/presentation/FullscreenButton';
 import BackgroundShader from '@/components/BackgroundShader';
 import { LaserPointer } from '@/components/presentation/LaserPointer';
@@ -39,8 +39,7 @@ export default function Presentation() {
     <div className="relative min-h-screen bg-background text-foreground overflow-hidden">
       {/* Background animado */}
       <BackgroundShader />
-      {/* Indicador de progresso */}
-      <ProgressIndicator />
+
 
       {/* Botão de tela cheia */}
       <FullscreenButton />

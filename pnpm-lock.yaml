@@ -16,6 +16,9 @@ importers:
 
   .:
     dependencies:
+      '@lordicon/element':
+        specifier: ^2.0.1
+        version: 2.0.1
       '@paper-design/shaders-react':
         specifier: ^0.0.63
         version: 0.0.63(@types/react@19.2.2)(react@18.3.1)
@@ -124,6 +127,9 @@ importers:
       input-otp:
         specifier: ^1.4.2
         version: 1.4.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      lottie-web:
+        specifier: ^5.13.0
+        version: 5.13.0
       lucide-react:
         specifier: ^0.453.0
         version: 0.453.0(react@18.3.1)
@@ -704,6 +710,12 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
+
+  '@lordicon/element@2.0.1':
+    resolution: {integrity: sha512-jPW7NauDi6QoLEMHZRu9Za/08wsQEC5grV7yo7QBzQZCtmTbAf78pIiK/bWtsbkClfyetpeozRK+Fr8DS1UVEA==}
+
+  '@lordicon/web@1.0.0':
+    resolution: {integrity: sha512-ffFZGtMpAJiYjFYiWOoPMCZt5Toacu7cvycC9yk8wDhc5WtXxnzhjaxHlZ3qM5PLYJlAF2dYeIUqcJCkH2f+dw==}
 
   '@medv/finder@4.0.2':
     resolution: {integrity: sha512-RraNY9SCcx4KZV0Dh6BEW6XEW2swkqYca74pkFFRw6hHItSHiy+O/xMnpbofjYbzXj0tSpBGthUF1hHTsr3vIQ==}
@@ -2671,6 +2683,9 @@ packages:
     resolution: {integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==}
     hasBin: true
 
+  lottie-web@5.13.0:
+    resolution: {integrity: sha512-+gfBXl6sxXMPe8tKQm7qzLnUy5DUPJPKIyRHwtpCpyUEYjHYRJC/5gjUvdkuO2c3JllrPtHXH5UJJK8LRYl5yQ==}
+
   loupe@3.2.1:
     resolution: {integrity: sha512-CdzqowRJCeLU72bHvWqwRBBlLcMEtIvGrlvef74kMnV2AolS9Y8xUv1I0U/MNAWMhBlKIoyuEgoJ0t/bbwHbLQ==}
 
@@ -4009,6 +4024,12 @@ snapshots:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
+
+  '@lordicon/element@2.0.1':
+    dependencies:
+      '@lordicon/web': 1.0.0
+
+  '@lordicon/web@1.0.0': {}
 
   '@medv/finder@4.0.2': {}
 
@@ -6150,6 +6171,8 @@ snapshots:
   loose-envify@1.4.0:
     dependencies:
       js-tokens: 4.0.0
+
+  lottie-web@5.13.0: {}
 
   loupe@3.2.1: {}
 
