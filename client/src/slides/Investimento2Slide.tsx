@@ -2,60 +2,45 @@ import { Slide } from '@/components/presentation/Slide';
 import { motion } from 'framer-motion';
 
 export default function Investimento2Slide() {
+  const bulletPoints = [
+    "A cada lead que entra e sai sem ser trabalhado, é mais um mês em que esse \"ponto\" não se paga.",
+    "Seu time gasta energia em conversa solta e deixa de falar com quem tem dinheiro e urgência.",
+    "Você segura custo de ponto caro com movimento de ponto ruim.",
+    "É dinheiro que você está deixando na mesa todo mês."
+  ];
+
   return (
     <Slide className="!p-0 !max-w-none">
       <div className="w-full h-full flex">
         {/* Lado ESQUERDO - Conteúdo de texto */}
-        <div className="w-1/2 h-full flex flex-col justify-start pt-24 px-16 relative z-10">
+        <div className="w-1/2 h-full flex flex-col justify-start pt-24 pl-4 pr-8 relative z-10">
           {/* Título */}
           <motion.h1
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="text-5xl font-light text-white mb-8 font-sans"
+            className="text-5xl font-light text-white mb-12 font-sans"
           >
             Investimento
           </motion.h1>
 
-          {/* Parágrafo 1 */}
-          <motion.p
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.4, duration: 0.6 }}
-            className="text-gray-300 text-xl font-light leading-relaxed mb-6"
-          >
-            A cada lead que entra e sai sem ser trabalhado, é mais um mês em que esse "ponto" não se paga.
-          </motion.p>
-
-          {/* Parágrafo 2 */}
-          <motion.p
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.5, duration: 0.6 }}
-            className="text-gray-300 text-xl font-light leading-relaxed mb-6"
-          >
-            Seu time gasta energia em conversa solta e deixa de falar com quem tem dinheiro e urgência.
-          </motion.p>
-
-          {/* Parágrafo 3 */}
-          <motion.p
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.6, duration: 0.6 }}
-            className="text-gray-300 text-xl font-light leading-relaxed mb-6"
-          >
-            Você segura custo de ponto caro com movimento de ponto ruim.
-          </motion.p>
-
-          {/* Parágrafo 4 */}
-          <motion.p
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.7, duration: 0.6 }}
-            className="text-gray-300 text-xl font-light leading-relaxed"
-          >
-            É dinheiro que você está deixando na mesa todo mês.
-          </motion.p>
+          {/* Lista de bullet points */}
+          <ul className="space-y-4">
+            {bulletPoints.map((text, index) => (
+              <motion.li
+                key={index}
+                initial={{ opacity: 0, x: -30 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.4 + index * 0.1, duration: 0.6 }}
+                className="flex items-start gap-3"
+              >
+                <span className="text-yellow-500 text-lg mt-1 flex-shrink-0">•</span>
+                <p className="text-gray-300 text-base font-light leading-relaxed">
+                  {text}
+                </p>
+              </motion.li>
+            ))}
+          </ul>
         </div>
 
         {/* Lado DIREITO - Imagem */}

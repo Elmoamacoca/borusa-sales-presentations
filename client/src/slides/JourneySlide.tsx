@@ -10,7 +10,7 @@ export default function JourneySlide() {
         transition={{ delay: 0.2, duration: 0.6 }}
         className="w-full h-full flex items-center justify-center"
       >
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center leading-tight font-sans">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white text-center leading-tight font-sans">
           Como chegamos até aqui
         </h1>
       </motion.div>

@@ -19,14 +19,14 @@ export default function ResultsSlide() {
   ];
 
   return (
-    <Slide className="!items-start !justify-start !pt-12">
+    <Slide className="!items-start !justify-start !pt-32">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 0.6 }}
         className="w-full max-w-6xl mx-auto px-20"
       >
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-light text-white mb-56 font-sans text-left">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-light text-white mb-36 font-sans text-left">
           Resultados?
         </h1>
 

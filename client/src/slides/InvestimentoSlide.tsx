@@ -32,12 +32,21 @@ export default function InvestimentoSlide() {
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.6, duration: 0.6 }}
-            className="text-gray-300 text-xl font-light leading-relaxed"
+            className="text-gray-300 text-xl font-light leading-relaxed mb-6"
           >
             Parcela mensal: R$ 20.000.
-Receita média daquele ponto: R$ 12.000.
+            <br />
+            Receita média daquele ponto: R$ 12.000.
+          </motion.p>
 
-Esse ponto está ou não está te trazendo mais prejuízo do que caixa?
+          {/* Parágrafo 3 */}
+          <motion.p
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.8, duration: 0.6 }}
+            className="text-yellow-500 text-xl font-light leading-relaxed"
+          >
+            Esse ponto está ou não está te trazendo mais prejuízo do que caixa?
           </motion.p>
         </div>
 

@@ -13,9 +13,10 @@ export default function OtimizacaoTempo2Slide() {
         style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)' }}
       >
         <img 
-          src="/otimizacao-tempo-new.png" 
-          alt="Otimização de Tempo"
-          className="w-full h-full object-cover object-center"
+          src="/momento-ai-future.png" 
+          alt="Momento"
+          className="w-full h-full object-cover"
+          style={{ objectPosition: 'center 20%' }}
         />
         <div className="absolute inset-0 bg-black/30"></div>
         <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-[#0f0f0f] via-[#0f0f0f]/80 to-transparent"></div>
@@ -31,60 +32,56 @@ export default function OtimizacaoTempo2Slide() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.6 }}
-          className="text-4xl md:text-5xl font-normal text-white mt-0 mb-8 font-sans"
+          className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white mt-0 mb-8 font-sans leading-tight"
         >
-          Otimização de tempo
+          Momento
         </motion.h1>
 
-        {/* Grid de cards 2x2 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Card 1 */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.5, duration: 0.5 }}
-            className="rounded-lg p-6 border border-white/20 bg-transparent"
+        {/* Parágrafos */}
+        <div className="space-y-6">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.6 }}
+            className="text-gray-300 text-sm md:text-base leading-relaxed font-light"
           >
-            <p className="text-white text-lg md:text-xl font-normal">
-              Começamos em 1 processo crítico do funil.
-            </p>
-          </motion.div>
+            A IA está hoje no mesmo ponto em que a internet estava nos anos 2000.
+          </motion.p>
 
-          {/* Card 2 */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.6, duration: 0.5 }}
-            className="rounded-lg p-6 border border-white/20 bg-transparent"
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6, duration: 0.6 }}
+            className="text-gray-300 text-sm md:text-base leading-relaxed font-light"
           >
-            <p className="text-white text-lg md:text-xl font-normal">
-              Você não precisa estudar IA.
-            </p>
-          </motion.div>
+            Adiar não te tira do jogo, só te faz entrar{' '}
+            <span className="underline decoration-yellow-500 decoration-1 underline-offset-4">mais caro</span>{' '}
+            e com{' '}
+            <span className="underline decoration-yellow-500 decoration-1 underline-offset-4">menos vantagem</span>.
+          </motion.p>
 
-          {/* Card 3 */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.7, duration: 0.5 }}
-            className="rounded-lg p-6 border border-white/20 bg-transparent"
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7, duration: 0.6 }}
+            className="text-gray-300 text-sm md:text-base leading-relaxed font-light"
           >
-            <p className="text-white text-lg md:text-xl font-normal">
-              Não exige parar a operação atual.
-            </p>
-          </motion.div>
+            Enquanto você espera, concorrentes{' '}
+            <span className="underline decoration-yellow-500 decoration-1 underline-offset-4">treinam sistema</span>,{' '}
+            <span className="underline decoration-yellow-500 decoration-1 underline-offset-4">afinam processo</span>{' '}
+            e{' '}
+            <span className="underline decoration-yellow-500 decoration-1 underline-offset-4">acostumam o time</span>.
+          </motion.p>
 
-          {/* Card 4 */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.8, duration: 0.5 }}
-            className="rounded-lg p-6 border border-white/20 bg-transparent"
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8, duration: 0.6 }}
+            className="text-gray-300 text-sm md:text-base leading-relaxed font-light"
           >
-            <p className="text-white text-lg md:text-xl font-normal">
-              Implementação calibrada por níveis (aumenta só depois que faz sentido).
-            </p>
-          </motion.div>
+            Quando você entrar, eles já vão estar{' '}
+            <span className="text-yellow-500">alguns anos à frente em dados, aprendizado e eficiência</span>.
+          </motion.p>
         </div>
       </div>
     </Slide>

@@ -75,7 +75,7 @@ export default function EstruturaSlide() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.9, duration: 0.6 }}
-          className="text-sm text-gray-400 italic text-center max-w-3xl font-sans"
+          className="text-lg text-gray-400 italic text-center max-w-3xl font-sans"
         >
           Essa estrutura coloca a repetição na mão da IA e o pensamento na mão do seu time comercial.
         </motion.p>

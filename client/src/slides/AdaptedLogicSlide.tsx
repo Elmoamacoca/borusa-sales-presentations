@@ -99,32 +99,42 @@ export default function AdaptedLogicSlide() {
           <p className="text-white text-sm font-semibold">Operação Comercial</p>
         </div>
 
-        {/* Linha conectora simples */}
-        <div className="w-0.5 h-16 bg-yellow-500" />
+        {/* Container para linha vertical e ícones */}
+        <div className="relative flex flex-col items-center">
+          {/* Linha conectora simples */}
+          <div className="w-0.5 h-16 bg-yellow-500" />
 
-        {/* 3 ícones animados em linha horizontal com linhas conectoras */}
-        <div className="relative flex gap-12 items-center justify-center">
+          {/* 3 ícones animados em linha horizontal com linhas conectoras */}
+          <div className="flex gap-12 items-start justify-center">
           {/* Register */}
           <div className="flex flex-col items-center">
             <div className="relative flex items-center justify-center" style={{ width: 70, height: 70 }}>
               <div className="absolute inset-0 rounded-full border-2 border-yellow-500" />
               <div ref={registerRef} style={{ width: 50, height: 50 }} />
             </div>
+            <div className="text-center mt-2">
+              <h2 className="text-yellow-500 text-xl font-bold mb-1">SQL</h2>
+              <p className="text-yellow-500 text-xs font-semibold">Leads Qualificados</p>
+            </div>
           </div>
 
           {/* Linha horizontal esquerda - da borda direita do Register até borda esquerda do Submitted */}
-          <div className="bg-yellow-500" style={{ width: '48px', height: '2px' }} />
+          <div className="bg-yellow-500 self-start" style={{ width: '48px', height: '2px', marginTop: '34px' }} />
 
           {/* Submitted */}
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center" style={{ marginLeft: '-31px' }}>
             <div className="relative flex items-center justify-center" style={{ width: 70, height: 70 }}>
               <div className="absolute inset-0 rounded-full border-2 border-yellow-500" />
               <div ref={submitedRef} style={{ width: 50, height: 50 }} />
             </div>
+            <div className="text-center mt-2">
+              <h2 className="text-yellow-500 text-xl font-bold mb-1">SIH</h2>
+              <p className="text-yellow-500 text-xs font-semibold">Social Intelligence Hub</p>
+            </div>
           </div>
 
           {/* Linha horizontal direita - da borda direita do Submitted até borda esquerda do Report */}
-          <div className="bg-yellow-500" style={{ width: '48px', height: '2px' }} />
+          <div className="bg-yellow-500 self-start" style={{ width: '48px', height: '2px', marginTop: '34px' }} />
 
           {/* Report */}
           <div className="flex flex-col items-center">
@@ -132,7 +142,12 @@ export default function AdaptedLogicSlide() {
               <div className="absolute inset-0 rounded-full border-2 border-yellow-500" />
               <div ref={reportRef} style={{ width: 50, height: 50 }} />
             </div>
+            <div className="text-center mt-2">
+              <h2 className="text-yellow-500 text-xl font-bold mb-1">RS</h2>
+              <p className="text-yellow-500 text-xs font-semibold">Release Sales</p>
+            </div>
           </div>
+        </div>
         </div>
       </div>
     </Slide>

@@ -33,9 +33,9 @@ export default function Investimento3Slide() {
           }}
         >
           <img
-            src="/investimento3-tech.jpg"
+            src="/investimento3-office2000.png"
             alt="Investimento"
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover object-right"
           />
           {/* Overlay sutil */}
           <div className="absolute inset-0 bg-black/10"></div>
