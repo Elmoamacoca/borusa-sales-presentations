@@ -1,182 +1,326 @@
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Slide } from '@/components/presentation/Slide';
-import { useState, useEffect } from 'react';
-import { Database, Server, Cpu, Zap, Brain, Lock, Shield, Cloud, Workflow, Boxes } from 'lucide-react';
+import ReactFlow, {
+  Node,
+  Edge,
+  useNodesState,
+  useEdgesState,
+  Background,
+  Handle,
+  Position,
+  getStraightPath,
+  EdgeProps,
+} from 'reactflow';
+import 'reactflow/dist/style.css';
+import { Brain, Database, Users, Target, Zap, TrendingUp, BarChart3, Settings, Mail } from 'lucide-react';
 
-export default function AdaptedLogicSlide() {
-  const [stage, setStage] = useState(0);
+// Componente customizado para o cérebro
+const BrainNode = ({ data }: any) => {
+  return (
+    <motion.div
+      className="flex items-center justify-center"
+      initial={{ scale: 0, opacity: 0 }}
+      animate={{ scale: 1, opacity: 1 }}
+      transition={{ 
+        type: "spring",
+        stiffness: 260,
+        damping: 20,
+        delay: 0.5
+      }}
+    >
+      <div className="relative">
+        <motion.div 
+          className="w-10 h-10 rounded-full bg-yellow-500/20 border border-yellow-500 flex items-center justify-center backdrop-blur-sm shadow-lg shadow-yellow-500/50"
+          animate={{
+            scale: [1, 1.1, 1],
+          }}
+          transition={{
+            duration: 2,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        >
+          <Brain className="w-5 h-5 text-yellow-500" />
+        </motion.div>
+      </div>
+      <Handle type="source" position={Position.Top} style={{ opacity: 0 }} />
+      <Handle type="source" position={Position.Bottom} style={{ opacity: 0 }} />
+      <Handle type="source" position={Position.Left} style={{ opacity: 0 }} />
+      <Handle type="source" position={Position.Right} style={{ opacity: 0 }} />
+    </motion.div>
+  );
+};
 
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'ArrowRight' && stage < 4) {
-        e.preventDefault();
-        e.stopPropagation();
-        setStage(prev => prev + 1);
-      }
-    };
+// Componente para ícones conectados
+const IconNode = ({ data }: any) => {
+  const Icon = data.icon;
+  
+  return (
+    <motion.div
+      className="flex items-center justify-center"
+      initial={{ scale: 0, opacity: 0 }}
+      animate={{ scale: 1, opacity: 1 }}
+      transition={{ 
+        type: "spring",
+        stiffness: 260,
+        damping: 20,
+        delay: data.delay || 1.5
+      }}
+    >
+      <div className="relative">
+        <motion.div 
+          className="w-8 h-8 rounded-full bg-gray-800/50 border border-gray-600 flex items-center justify-center backdrop-blur-sm"
+          animate={{
+            rotate: [0, 5, 0, -5, 0],
+          }}
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        >
+          <Icon className="w-4 h-4 text-white" />
+        </motion.div>
+      </div>
+      <Handle type="target" position={Position.Top} style={{ opacity: 0 }} />
+      <Handle type="target" position={Position.Bottom} style={{ opacity: 0 }} />
+      <Handle type="target" position={Position.Left} style={{ opacity: 0 }} />
+      <Handle type="target" position={Position.Right} style={{ opacity: 0 }} />
+    </motion.div>
+  );
+};
 
-    window.addEventListener('keydown', handleKeyDown, { capture: true });
-    return () => window.removeEventListener('keydown', handleKeyDown, { capture: true });
-  }, [stage]);
-
-  const assets = [
-    { icon: Database, label: 'A1' },
-    { icon: Server, label: 'A2' },
-    { icon: Cpu, label: 'A3' },
-    { icon: Zap, label: 'A4' },
-    { icon: Brain, label: 'A5' },
-  ];
-
-  // Gerar 30 módulos
-  const iconList = [Lock, Shield, Cloud, Workflow, Boxes, Database, Server, Cpu, Zap, Brain];
-  const hiddenAssets = Array.from({ length: 30 }, (_, i) => ({
-    icon: iconList[i % iconList.length],
-    label: '...'
-  }));
+// Edge customizado totalmente reto
+const StraightEdge = ({
+  id,
+  sourceX,
+  sourceY,
+  targetX,
+  targetY,
+  style,
+}: EdgeProps) => {
+  // Criar path SVG manualmente para garantir linha 100% reta
+  const edgePath = `M ${sourceX},${sourceY} L ${targetX},${targetY}`;
 
   return (
-    <Slide className="!items-start !justify-start !pt-4">
+    <path
+      id={id}
+      style={style}
+      className="react-flow__edge-path"
+      d={edgePath}
+      fill="none"
+    />
+  );
+};
+
+const nodeTypes = {
+  brain: BrainNode,
+  icon: IconNode,
+};
+
+// Removido edgeTypes customizado - usando padrão do React Flow
+
+export default function AdaptedLogicSlide() {
+  const initialNodes: Node[] = [
+    {
+      id: 'center',
+      type: 'brain',
+      position: { x: 400, y: 230 },
+      data: {},
+    },
+    // 8 ícones em círculo ao redor do cérebro
+    {
+      id: 'icon1',
+      type: 'icon',
+      position: { x: 550, y: 150 }, // 45° (superior direita)
+      data: { icon: Database, delay: 1.5 },
+    },
+    {
+      id: 'icon2',
+      type: 'icon',
+      position: { x: 600, y: 230 }, // 0° (direita)
+      data: { icon: Users, delay: 1.6 },
+    },
+    {
+      id: 'icon3',
+      type: 'icon',
+      position: { x: 550, y: 310 }, // 315° (inferior direita)
+      data: { icon: Target, delay: 1.7 },
+    },
+    {
+      id: 'icon4',
+      type: 'icon',
+      position: { x: 400, y: 360 }, // 270° (embaixo)
+      data: { icon: Zap, delay: 1.8 },
+    },
+    {
+      id: 'icon5',
+      type: 'icon',
+      position: { x: 250, y: 310 }, // 225° (inferior esquerda)
+      data: { icon: TrendingUp, delay: 1.9 },
+    },
+    {
+      id: 'icon6',
+      type: 'icon',
+      position: { x: 200, y: 230 }, // 180° (esquerda)
+      data: { icon: BarChart3, delay: 2.0 },
+    },
+    {
+      id: 'icon7',
+      type: 'icon',
+      position: { x: 250, y: 150 }, // 135° (superior esquerda)
+      data: { icon: Settings, delay: 2.1 },
+    },
+    {
+      id: 'icon8',
+      type: 'icon',
+      position: { x: 400, y: 100 }, // 90° (em cima)
+      data: { icon: Mail, delay: 2.2 },
+    },
+  ];
+
+  const initialEdges: Edge[] = [
+    {
+      id: 'e1',
+      source: 'center',
+      target: 'icon1',
+      type: 'straight',
+      animated: false,
+      style: { 
+        stroke: '#eab308', 
+        strokeWidth: 2.5,
+        strokeOpacity: 0.8
+      },
+    },
+    {
+      id: 'e2',
+      source: 'center',
+      target: 'icon2',
+      type: 'straight',
+      animated: false,
+      style: { 
+        stroke: '#eab308', 
+        strokeWidth: 2.5,
+        strokeOpacity: 0.8
+      },
+    },
+    {
+      id: 'e3',
+      source: 'center',
+      target: 'icon3',
+      type: 'straight',
+      animated: false,
+      style: { 
+        stroke: '#eab308', 
+        strokeWidth: 2.5,
+        strokeOpacity: 0.8
+      },
+    },
+    {
+      id: 'e4',
+      source: 'center',
+      target: 'icon4',
+      type: 'straight',
+      animated: false,
+      style: { 
+        stroke: '#eab308', 
+        strokeWidth: 2.5,
+        strokeOpacity: 0.8
+      },
+    },
+    {
+      id: 'e5',
+      source: 'center',
+      target: 'icon5',
+      type: 'straight',
+      animated: false,
+      style: { 
+        stroke: '#eab308', 
+        strokeWidth: 2.5,
+        strokeOpacity: 0.8
+      },
+    },
+    {
+      id: 'e6',
+      source: 'center',
+      target: 'icon6',
+      type: 'straight',
+      animated: false,
+      style: { 
+        stroke: '#eab308', 
+        strokeWidth: 2.5,
+        strokeOpacity: 0.8
+      },
+    },
+    {
+      id: 'e7',
+      source: 'center',
+      target: 'icon7',
+      type: 'straight',
+      animated: false,
+      style: { 
+        stroke: '#eab308', 
+        strokeWidth: 2.5,
+        strokeOpacity: 0.8
+      },
+    },
+    {
+      id: 'e8',
+      source: 'center',
+      target: 'icon8',
+      type: 'straight',
+      animated: false,
+      style: { 
+        stroke: '#eab308', 
+        strokeWidth: 2.5,
+        strokeOpacity: 0.8
+      },
+    },
+  ];
+
+  const [nodes] = useNodesState(initialNodes);
+  const [edges] = useEdgesState(initialEdges);
+
+  return (
+    <Slide className="overflow-hidden">
       <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2, duration: 0.6 }}
-        className="w-full"
+        className="flex flex-col items-center justify-start h-full"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
       >
-        <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white leading-tight font-sans whitespace-nowrap text-center mb-6 mt-16">
-          E essa lógica foi adaptada para uma operação comercial
-        </h1>
+        <motion.h1 
+          className="text-4xl md:text-5xl font-bold text-center mb-12 mt-24"
+          initial={{ y: -50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.2, duration: 0.8 }}
+        >
+          E essa lógica foi adaptada para uma <span className="underline decoration-yellow-500 decoration-4">Operação Comercial</span>
+        </motion.h1>
 
-        <div className="flex flex-col items-center gap-2">
-          
-          {/* Stage 1: CCA */}
-          <AnimatePresence>
-            {stage >= 1 && (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6 }}
-                className={`px-5 py-2 bg-transparent border-2 border-white/80 rounded-lg ${stage >= 3 ? 'animate-pulse-slow' : ''}`}
-              >
-                <h2 className="text-lg font-bold text-white text-center">CCA</h2>
-                <p className="text-xs text-gray-300 text-center mt-1">Cérebro Central</p>
-              </motion.div>
-            )}
-          </AnimatePresence>
+        <div className="w-full h-[400px] mt-12">
+          <ReactFlow
+            nodes={nodes}
+            edges={edges}
+            nodeTypes={nodeTypes}
 
-          {/* Linha vertical */}
-          <AnimatePresence>
-            {stage >= 2 && (
-              <motion.div
-                initial={{ height: 0 }}
-                animate={{ height: '16px' }}
-                transition={{ duration: 0.4 }}
-                className="w-0.5 bg-white/60"
-              />
-            )}
-          </AnimatePresence>
-
-          {/* Stage 2: Infraestrutura */}
-          <AnimatePresence>
-            {stage >= 2 && (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className={`px-5 py-2 bg-transparent border-2 border-white/80 rounded-lg ${stage >= 3 ? 'animate-pulse-slow' : ''}`}
-              >
-                <h2 className="text-base font-bold text-white text-center">Infraestrutura</h2>
-                <p className="text-xs text-gray-300 text-center mt-1">VPS • Servidores • Cloud</p>
-              </motion.div>
-            )}
-          </AnimatePresence>
-
-          {/* Espaço para conexão visual */}
-          <AnimatePresence>
-            {stage >= 3 && (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                className="w-full max-w-4xl flex flex-col items-center gap-2"
-              >
-                {/* Linha vertical curta */}
-                <div className="w-0.5 h-4 bg-white/60" />
-                
-                {/* Ativos */}
-                <div className="flex items-center justify-center gap-6">
-                  {assets.map((asset, index) => {
-                    const Icon = asset.icon;
-                    return (
-                      <motion.div
-                        key={index}
-                        initial={{ opacity: 0, scale: 0 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ 
-                          duration: 0.5, 
-                          delay: 0.4 + index * 0.1,
-                          ease: 'backOut'
-                        }}
-                        className="flex flex-col items-center"
-                      >
-                        <div className={`w-12 h-12 rounded-full bg-transparent border-2 border-white/80 flex items-center justify-center ${stage >= 3 ? 'animate-pulse-slow' : ''}`}>
-                          <Icon className="w-4 h-4 text-white" />
-                        </div>
-                        <p className="text-xs text-gray-400 mt-1">{asset.label}</p>
-                      </motion.div>
-                    );
-                  })}
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
-
-          {/* Stage 4: Segunda cadeia oculta */}
-          <AnimatePresence>
-            {stage >= 4 && (
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                className="flex flex-col items-center gap-0 mt-0"
-              >
-                <div className="w-0.5 h-4 border-l-2 border-dashed border-white/30" />
-                
-                <div className="flex flex-wrap items-center justify-center gap-1.5 w-full px-8">
-                  {hiddenAssets.map((asset, index) => {
-                    const Icon = asset.icon;
-                    return (
-                      <motion.div
-                        key={index}
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={{ opacity: 0.3, scale: 1 }}
-                        transition={{ duration: 0.4, delay: index * 0.08 }}
-                        className="flex flex-col items-center"
-                      >
-                        <div className="w-10 h-10 rounded-full bg-transparent border-2 border-white/30 border-dashed flex items-center justify-center">
-                          <Icon className="w-5 h-5 text-white/50" />
-                        </div>
-                        <p className="text-[10px] text-gray-500 mt-0.5">...</p>
-                      </motion.div>
-                    );
-                  })}
-                </div>
-
-                <p className="text-xs text-gray-400 text-center mt-1 italic">+ Módulos escaláveis</p>
-              </motion.div>
-            )}
-          </AnimatePresence>
-
+            defaultEdgeOptions={{ type: 'straight', style: { stroke: '#eab308', strokeWidth: 2.5 } }}
+            nodesDraggable={false}
+            nodesConnectable={false}
+            elementsSelectable={false}
+            zoomOnScroll={false}
+            panOnScroll={false}
+            panOnDrag={false}
+            zoomOnPinch={false}
+            zoomOnDoubleClick={false}
+            preventScrolling={true}
+            fitView
+            proOptions={{ hideAttribution: true }}
+          >
+            <Background style={{ opacity: 0 }} />
+          </ReactFlow>
         </div>
       </motion.div>
-
-      <style>{`
-        @keyframes pulse-slow {
-          0%, 100% { opacity: 1; }
-          50% { opacity: 0.7; }
-        }
-        .animate-pulse-slow {
-          animation: pulse-slow 2s ease-in-out infinite;
-        }
-      `}</style>
     </Slide>
   );
 }
