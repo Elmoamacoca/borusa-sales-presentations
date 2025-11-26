@@ -41,10 +41,20 @@ export default function BackgroundShader() {
     "#141414",
   ];
 
+  // Paleta vermelha de perigo para Slide 20
+  const dangerColors = [
+    "#0a0000",
+    "#1a0000",
+    "#2d0000",
+    "#450000",
+    "#5a0000",
+  ];
+
   // Usar cores diferentes para slides HydraNet, AdaptedLogic, Results, Obstacles e OtimizacaoTempo
-  const isDarkSlide = displayedSlideId === 'hydranet' || displayedSlideId === 'adapted-logic' || displayedSlideId === 'results' || displayedSlideId === 'obstacles' || displayedSlideId === 'otimizacao-tempo' || displayedSlideId === 'otimizacao-tempo-2' || displayedSlideId === 'investimento' || displayedSlideId === 'investimento-2' || displayedSlideId === 'estrutura' || displayedSlideId === 'pergunta-ia' || displayedSlideId === 'investimento-3' || displayedSlideId === 'investimento-4';
-  const colors = isDarkSlide ? charcoalColors : blueColors;
-  const fallbackColor = isDarkSlide ? '#1a1a1a' : '#0a0a0a';
+  const isDarkSlide = displayedSlideId === 'hydranet' || displayedSlideId === 'adapted-logic' || displayedSlideId === 'results' || displayedSlideId === 'obstacles' || displayedSlideId === 'otimizacao-tempo' || displayedSlideId === 'otimizacao-tempo-2' || displayedSlideId === 'investimento' || displayedSlideId === 'investimento-2' || displayedSlideId === 'estrutura' || displayedSlideId === 'pergunta-ia' || displayedSlideId === 'investimento-3' || displayedSlideId === 'investimento-4' || displayedSlideId === 'slide-21';
+  const isDangerSlide = displayedSlideId === 'slide-20';
+  const colors = isDangerSlide ? dangerColors : (isDarkSlide ? charcoalColors : blueColors);
+  const fallbackColor = isDangerSlide ? '#1a0a0a' : (isDarkSlide ? '#1a1a1a' : '#0a0a0a');
 
   // Não renderizar até estar visível
   if (!isVisible) {

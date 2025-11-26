@@ -1,4 +1,5 @@
 import { create } from 'zustand';
+import { persist } from 'zustand/middleware';
 
 export interface SlideConfig {
   id: string;
@@ -32,10 +33,12 @@ export const setSlidesConfig = (config: SlideConfig[]) => {
   slidesConfig = config;
 };
 
-export const usePresentationStore = create<PresentationState>((set, get) => ({
-  currentSlideId: 'welcome',
-  history: [],
-  isFullscreen: false,
+export const usePresentationStore = create<PresentationState>()(
+  persist(
+    (set, get) => ({
+      currentSlideId: 'welcome',
+      history: [],
+      isFullscreen: false,
 
   setCurrentSlide: (slideId: string, addToHistory = true) => {
     set((state) => ({
@@ -103,4 +106,13 @@ export const usePresentationStore = create<PresentationState>((set, get) => ({
     
     return sortedSlides[currentIndex - 1];
   },
-}));
+    }),
+    {
+      name: 'presentation-storage',
+      partialPersist: (state) => ({
+        currentSlideId: state.currentSlideId,
+        history: state.history,
+      }),
+    }
+  )
+);

@@ -8,6 +8,7 @@ import { useDrawingShortcuts } from '@/hooks/useDrawingShortcuts';
 import { FullscreenButton } from '@/components/presentation/FullscreenButton';
 import BackgroundShader from '@/components/BackgroundShader';
 import { LaserPointer } from '@/components/presentation/LaserPointer';
+import { SlideCounter } from '@/components/presentation/SlideCounter';
 import { useLaser } from '@/hooks/useLaser';
 
 export default function Presentation() {
@@ -46,6 +47,9 @@ export default function Presentation() {
 
       {/* Laser */}
       <LaserPointer active={laserActive} />
+
+      {/* Contador de slides */}
+      <SlideCounter />
 
       {/* Slide atual com animação */}
       <AnimatePresence mode="wait">
