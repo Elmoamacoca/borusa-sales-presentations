@@ -23,6 +23,7 @@ import Investimento4Slide from '@/slides/Investimento4Slide';
 import OtimizacaoTempo2Slide from '@/slides/OtimizacaoTempo2Slide';
 import Slide20 from '@/slides/Slide20';
 import Slide21 from '@/slides/Slide21';
+import Slide22 from '@/slides/Slide22';
 
 export interface SlideDefinition extends SlideConfig {
   component: ComponentType;
@@ -51,6 +52,7 @@ export const slidesConfig: SlideDefinition[] = [
   { id: 'otimizacao-tempo-2', order: 19, component: OtimizacaoTempo2Slide, title: 'Otimização de Tempo 2' },
   { id: 'slide-20', order: 20, component: Slide20, title: 'Cenário do Mercado Hoje' },
   { id: 'slide-21', order: 21, component: Slide21, title: 'Solução para Escala com Lucro' },
+  { id: 'slide-22', order: 22, component: Slide22, title: 'MQL é o Bitcoin do Digital' },
 ];
 
 export const getSlideById = (id: string): SlideDefinition | undefined => {
