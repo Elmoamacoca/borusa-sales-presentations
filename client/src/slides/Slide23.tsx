@@ -2,32 +2,78 @@ import { Slide } from '@/components/presentation/Slide';
 import { motion } from 'framer-motion';
 
 export default function Slide23() {
+  const items = [
+    'Priorizar quem tem dinheiro, urgência e fit, sem precisar dobrar investimento em mídia.',
+    'Aumentar comparecimento em reuniões sem lotar o time de tarefa manual.',
+    'Subir a conversão por etapa com roteiro, timing e follow-up padronizados.',
+    'Melhorar cash collect: mais caixa nos primeiros 30 dias de venda.',
+    'Escalar mantendo margem, em vez de crescer só aumentando custo de gente e operação.',
+  ];
+
   return (
-    <Slide className="flex items-center justify-center">
-      <div className="w-full h-full flex flex-col md:flex-row">
-        <motion.div initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2, duration: 0.6 }} className="w-full md:w-1/2 flex items-center justify-center px-8 md:px-16 py-12 bg-gradient-to-r from-yellow-700 to-yellow-600">
-          <div className="space-y-8">
-            <p className="text-white text-xl">Os maiores do mercado já entenderam...</p>
-            <h1 className="text-5xl md:text-6xl font-bold text-white font-sans">MQL é o Bitcoin do Digital...</h1>
-            <ul className="space-y-3 text-white text-xl">
-              <li>• Alto Valor</li>
-              <li>• Ganha mais quem tem mais</li>
-              <li>• Alta Valorização</li>
-              <li>• Número limitado</li>
-              <li>• Alta Liquidez</li>
-            </ul>
-          </div>
-        </motion.div>
-        <motion.div initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.6, duration: 0.6 }} className="w-full md:w-1/2 flex flex-col items-center justify-center px-8 py-12 bg-black">
-          <div className="text-center space-y-6">
-            <div className="text-yellow-500 text-7xl">*</div>
-            <p className="text-white text-xl">É o nível de Qualificação quem dita a Velocidade, Longevidade e o Lucro que business terá na Escala.</p>
-            <div className="grid grid-cols-3 gap-4 mt-8">
-              <div className="text-center"><div className="w-24 h-24 bg-gray-700 rounded mx-auto mb-2"></div><p className="text-white text-sm">Frank Kern</p></div>
-              <div className="text-center"><div className="w-24 h-24 bg-gray-700 rounded mx-auto mb-2"></div><p className="text-white text-sm">Dan Kennedy</p></div>
-              <div className="text-center"><div className="w-24 h-24 bg-gray-700 rounded mx-auto mb-2"></div><p className="text-white text-sm">Russell Brunson</p></div>
-            </div>
-          </div>
+    <Slide className="!p-0 !max-w-none">
+      <div className="w-full h-full flex">
+        {/* Lado ESQUERDO - Conteúdo de texto */}
+        <div className="w-[60%] h-full flex flex-col justify-start pt-24 pl-4 pr-8 relative z-10">
+          {/* Título */}
+          <motion.h1
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+            className="text-4xl font-light text-white mb-6 font-sans"
+          >
+            SOLUÇÃO PARA ESCALA COM LUCRO
+          </motion.h1>
+
+          {/* Subtítulo/Parágrafo */}
+          <motion.p
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.3, duration: 0.6 }}
+            className="text-base text-gray-300 leading-relaxed mb-8"
+          >
+            Aproveitar ao máximo o fluxo que você já tem com um sistema de IA que otimiza, multiplica e aprende a cada interação.
+          </motion.p>
+
+          {/* Bullet Points */}
+          <ul className="space-y-4">
+            {items.map((item, index) => (
+              <motion.li
+                key={index}
+                initial={{ opacity: 0, x: -30 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.4 + index * 0.1, duration: 0.6 }}
+                className="flex items-start gap-3"
+              >
+                <span className="text-yellow-500 text-xl mt-1">•</span>
+                <span className="text-base text-gray-300 leading-relaxed">{item}</span>
+              </motion.li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Lado DIREITO - Imagem */}
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.3, duration: 0.8 }}
+          className="w-[40%] h-full relative overflow-hidden"
+          style={{
+            position: 'absolute',
+            right: 0,
+            top: 0,
+            width: '40vw',
+            height: '100%',
+          }}
+        >
+          <img
+            src="/slide21-image.png"
+            alt="Solução para Escala com Lucro"
+            className="w-full h-full object-cover"
+            style={{ objectPosition: 'center 30%' }}
+          />
+          {/* Overlay sutil */}
+          <div className="absolute inset-0 bg-black/10"></div>
         </motion.div>
       </div>
     </Slide>

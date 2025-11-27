@@ -1,42 +1,79 @@
 import { Slide } from '@/components/presentation/Slide';
 import { motion } from 'framer-motion';
-import { Heart, Target, TrendingUp, UserCheck, Clock, Smile } from 'lucide-react';
 
 export default function Slide25() {
+  const items = [
+    'Priorizar quem tem dinheiro, urgência e fit, sem precisar dobrar investimento em mídia.',
+    'Aumentar comparecimento em reuniões sem lotar o time de tarefa manual.',
+    'Subir a conversão por etapa com roteiro, timing e follow-up padronizados.',
+    'Melhorar cash collect: mais caixa nos primeiros 30 dias de venda.',
+    'Escalar mantendo margem, em vez de crescer só aumentando custo de gente e operação.',
+  ];
+
   return (
-    <Slide className="flex items-center justify-center">
-      <div className="w-full px-8 md:px-16 py-12 bg-gradient-to-br from-purple-900 via-blue-900 to-purple-900">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2, duration: 0.6 }} className="space-y-12 max-w-6xl mx-auto">
-          <div className="bg-gradient-to-r from-purple-500 to-blue-500 h-2 rounded-full"></div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-blue-900/50 backdrop-blur rounded-lg p-6 border border-blue-500/30 space-y-4">
-              <Heart className="w-12 h-12 text-red-500" />
-              <p className="text-white text-lg">Clientes que <span className="font-bold">pagam bem, pagam rápido</span> e <span className="font-bold">pagam fácil</span></p>
-            </div>
-            <div className="bg-blue-900/50 backdrop-blur rounded-lg p-6 border border-blue-500/30 space-y-4">
-              <Target className="w-12 h-12 text-red-500" />
-              <p className="text-white text-lg">Um negócio que opera com alta margem de lucro, <span className="font-bold">mesmo na escala</span></p>
-            </div>
-            <div className="bg-blue-900/50 backdrop-blur rounded-lg p-6 border border-blue-500/30 space-y-4">
-              <TrendingUp className="w-12 h-12 text-red-500" />
-              <p className="text-white text-lg">Recorrência no High-Ticket pra <span className="font-bold">aumento do ROI</span> e dar previsibilidade</p>
-            </div>
-            <div className="bg-blue-900/50 backdrop-blur rounded-lg p-6 border border-blue-500/30 space-y-4">
-              <UserCheck className="w-12 h-12 text-red-500" />
-              <p className="text-white text-lg">Um negócio que vende <span className="font-bold">sem a sua presença</span>, mesmo sem colaboradores geniais</p>
-            </div>
-            <div className="bg-blue-900/50 backdrop-blur rounded-lg p-6 border border-blue-500/30 space-y-4">
-              <Clock className="w-12 h-12 text-red-500" />
-              <p className="text-white text-lg">Muito mais <span className="font-bold">previsibilidade</span>, sem o "tô rico, tô pobre"</p>
-            </div>
-            <div className="bg-blue-900/50 backdrop-blur rounded-lg p-6 border border-blue-500/30 space-y-4">
-              <Smile className="w-12 h-12 text-red-500" />
-              <p className="text-white text-lg">Alívio do estresse, mais tempo e <span className="font-bold">mais tranquilidade</span> pra focar em outras áreas da vida</p>
-            </div>
-          </div>
-          <div className="bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full p-6 text-center">
-            <p className="text-white text-2xl font-bold">Quanto que valeria hoje pro seu negócio, tudo isso? →</p>
-          </div>
+    <Slide className="!p-0 !max-w-none">
+      <div className="w-full h-full flex">
+        {/* Lado ESQUERDO - Conteúdo de texto */}
+        <div className="w-[60%] h-full flex flex-col justify-start pt-24 pl-4 pr-8 relative z-10">
+          {/* Título */}
+          <motion.h1
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+            className="text-4xl font-light text-white mb-6 font-sans"
+          >
+            SOLUÇÃO PARA ESCALA COM LUCRO
+          </motion.h1>
+
+          {/* Subtítulo/Parágrafo */}
+          <motion.p
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.3, duration: 0.6 }}
+            className="text-base text-gray-300 leading-relaxed mb-8"
+          >
+            Aproveitar ao máximo o fluxo que você já tem com um sistema de IA que otimiza, multiplica e aprende a cada interação.
+          </motion.p>
+
+          {/* Bullet Points */}
+          <ul className="space-y-4">
+            {items.map((item, index) => (
+              <motion.li
+                key={index}
+                initial={{ opacity: 0, x: -30 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.4 + index * 0.1, duration: 0.6 }}
+                className="flex items-start gap-3"
+              >
+                <span className="text-yellow-500 text-xl mt-1">•</span>
+                <span className="text-base text-gray-300 leading-relaxed">{item}</span>
+              </motion.li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Lado DIREITO - Imagem */}
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.3, duration: 0.8 }}
+          className="w-[40%] h-full relative overflow-hidden"
+          style={{
+            position: 'absolute',
+            right: 0,
+            top: 0,
+            width: '40vw',
+            height: '100%',
+          }}
+        >
+          <img
+            src="/slide21-image.png"
+            alt="Solução para Escala com Lucro"
+            className="w-full h-full object-cover"
+            style={{ objectPosition: 'center 30%' }}
+          />
+          {/* Overlay sutil */}
+          <div className="absolute inset-0 bg-black/10"></div>
         </motion.div>
       </div>
     </Slide>
