@@ -1,4 +1,3 @@
-import { Slide } from '@/components/presentation/Slide';
 import { motion } from 'framer-motion';
 import { MeshGradient } from "@paper-design/shaders-react";
 
@@ -20,7 +19,7 @@ export default function Slide25() {
   ];
 
   return (
-    <Slide className="!p-0 !max-w-none">
+    <div className="fixed inset-0 w-screen h-screen overflow-hidden">
       {/* Fundo animado amarelo */}
       <div className="absolute inset-0 z-0">
         <MeshGradient
@@ -49,7 +48,7 @@ export default function Slide25() {
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            className="text-base text-gray-300 leading-relaxed mb-8"
+            className="text-base text-white leading-relaxed mb-8"
           >
             Aproveitar ao máximo o fluxo que você já tem com um sistema de IA que otimiza, multiplica e aprende a cada interação.
           </motion.p>
@@ -95,6 +94,6 @@ export default function Slide25() {
           <div className="absolute inset-0 bg-black/10"></div>
         </motion.div>
       </div>
-    </Slide>
+    </div>
   );
 }
