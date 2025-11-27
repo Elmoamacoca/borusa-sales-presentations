@@ -1,5 +1,6 @@
 import { Slide } from '@/components/presentation/Slide';
 import { motion } from 'framer-motion';
+import { MeshGradient } from "@paper-design/shaders-react";
 
 export default function Slide25() {
   const items = [
@@ -10,9 +11,27 @@ export default function Slide25() {
     'Escalar mantendo margem, em vez de crescer só aumentando custo de gente e operação.',
   ];
 
+  const yellowColors = [
+    "#d4a017",
+    "#f4c430",
+    "#e6b800",
+    "#c9a000",
+    "#b8860b",
+  ];
+
   return (
     <Slide className="!p-0 !max-w-none">
-      <div className="w-full h-full flex">
+      {/* Fundo animado amarelo */}
+      <div className="absolute inset-0 z-0">
+        <MeshGradient
+          className="w-full h-full"
+          colors={yellowColors}
+          speed={0.15}
+          minPixelRatio={1.0}
+        />
+      </div>
+
+      <div className="w-full h-full flex relative z-10">
         {/* Lado ESQUERDO - Conteúdo de texto */}
         <div className="w-[60%] h-full flex flex-col justify-start pt-24 pl-4 pr-8 relative z-10">
           {/* Título */}
@@ -45,8 +64,8 @@ export default function Slide25() {
                 transition={{ delay: 0.4 + index * 0.1, duration: 0.6 }}
                 className="flex items-start gap-3"
               >
-                <span className="text-yellow-500 text-xl mt-1">•</span>
-                <span className="text-base text-gray-300 leading-relaxed">{item}</span>
+                <span className="text-white text-xl mt-1">•</span>
+                <span className="text-base text-white leading-relaxed">{item}</span>
               </motion.li>
             ))}
           </ul>
