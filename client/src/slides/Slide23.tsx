@@ -11,11 +11,11 @@ export default function Slide23() {
   ];
 
   const yellowColors = [
-    "#d4a017",
-    "#f4c430",
-    "#e6b800",
-    "#c9a000",
     "#b8860b",
+    "#9a7209",
+    "#8b6914",
+    "#7a5c0f",
+    "#6b4f0a",
   ];
 
   return (
@@ -38,7 +38,7 @@ export default function Slide23() {
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="text-4xl font-light text-white mb-6 font-sans"
+            className="text-4xl md:text-5xl font-semibold text-white mb-6 font-sans"
           >
             SOLUÇÃO PARA ESCALA COM LUCRO
           </motion.h1>
@@ -48,7 +48,7 @@ export default function Slide23() {
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            className="text-base text-white leading-relaxed mb-8"
+            className="text-base md:text-lg font-light text-gray-300 leading-relaxed mb-8"
           >
             Aproveitar ao máximo o fluxo que você já tem com um sistema de IA que otimiza, multiplica e aprende a cada interação.
           </motion.p>
