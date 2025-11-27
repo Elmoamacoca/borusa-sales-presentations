@@ -2,20 +2,20 @@ import { motion } from 'framer-motion';
 import { MeshGradient } from "@paper-design/shaders-react";
 
 export default function Slide24() {
-  const items = [
-    'Priorizar quem tem dinheiro, urgência e fit, sem precisar dobrar investimento em mídia.',
-    'Aumentar comparecimento em reuniões sem lotar o time de tarefa manual.',
-    'Subir a conversão por etapa com roteiro, timing e follow-up padronizados.',
-    'Melhorar cash collect: mais caixa nos primeiros 30 dias de venda.',
-    'Escalar mantendo margem, em vez de crescer só aumentando custo de gente e operação.',
-  ];
-
   const yellowColors = [
     "#b8860b",
     "#9a7209",
     "#8b6914",
     "#7a5c0f",
     "#6b4f0a",
+  ];
+
+  const breakdown = [
+    { valor: "R$ 2,01", descricao: "parcela Petrobras (produção + refino)", percentual: "36%" },
+    { valor: "R$ 1,22", descricao: "imposto estadual", percentual: "21,9%" },
+    { valor: "R$ 1,06", descricao: "distribuição e revenda", percentual: "19%" },
+    { valor: "R$ 0,69", descricao: "impostos federais", percentual: "12,4%" },
+    { valor: "R$ 0,56", descricao: "etanol anidro", percentual: "10%" },
   ];
 
   return (
@@ -38,36 +38,62 @@ export default function Slide24() {
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="text-4xl md:text-5xl font-semibold text-white mb-6 font-sans"
+            className="text-4xl md:text-5xl font-semibold text-white mb-8 font-sans"
           >
-            SOLUÇÃO PARA ESCALA COM LUCRO
+            PREÇO EXATO NA BOMBA
           </motion.h1>
 
-          {/* Subtítulo/Parágrafo */}
-          <motion.p
+          {/* Preço médio em destaque */}
+          <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            className="text-base md:text-lg font-light text-gray-300 leading-relaxed mb-8"
+            className="mb-8"
           >
-            Aproveitar ao máximo o fluxo que você já tem com um sistema de IA que otimiza, multiplica e aprende a cada interação.
-          </motion.p>
+            <p className="text-xl md:text-2xl font-light text-white leading-relaxed">
+              Preço médio da gasolina no Brasil (jan/2024): <span className="font-semibold">R$ 5,58</span> por litro.
+            </p>
+          </motion.div>
 
-          {/* Bullet Points */}
-          <ul className="space-y-4">
-            {items.map((item, index) => (
-              <motion.li
-                key={index}
-                initial={{ opacity: 0, x: -30 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.4 + index * 0.1, duration: 0.6 }}
-                className="flex items-start gap-3"
-              >
-                <span className="text-white text-xl mt-1">•</span>
-                <span className="text-base text-white leading-relaxed">{item}</span>
-              </motion.li>
+          {/* Breakdown - Lista numérica */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.4, duration: 0.6 }}
+            className="space-y-3 mb-8"
+          >
+            {breakdown.map((item, index) => (
+              <div key={index} className="flex items-baseline gap-3">
+                <span className="text-lg md:text-xl font-semibold text-white min-w-[80px]">
+                  {item.valor}
+                </span>
+                <span className="text-base md:text-lg font-light text-gray-300">
+                  ≈ {item.descricao}
+                </span>
+                <span className="text-base md:text-lg font-light text-white ml-auto">
+                  {item.percentual}
+                </span>
+              </div>
             ))}
-          </ul>
+          </motion.div>
+
+          {/* Frase de fechamento */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.5, duration: 0.6 }}
+            className="border-l-4 border-white pl-4"
+          >
+            <p className="text-base md:text-lg font-light text-white leading-relaxed">
+              De cada R$ 5,58 que você paga,
+            </p>
+            <p className="text-base md:text-lg font-light text-white leading-relaxed">
+              cerca de <span className="font-semibold">R$ 2,00</span> são "petróleo + refino"
+            </p>
+            <p className="text-base md:text-lg font-light text-white leading-relaxed">
+              e mais de <span className="font-semibold">R$ 3,50</span> são camadas em cima: imposto, logística e margem.
+            </p>
+          </motion.div>
         </div>
 
         {/* Lado DIREITO - Imagem */}
@@ -86,7 +112,7 @@ export default function Slide24() {
         >
           <img
             src="/slide21-image.png"
-            alt="Solução para Escala com Lucro"
+            alt="Preço Exato na Bomba"
             className="w-full h-full object-cover"
             style={{ objectPosition: 'center 30%' }}
           />

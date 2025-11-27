@@ -2,14 +2,6 @@ import { motion } from 'framer-motion';
 import { MeshGradient } from "@paper-design/shaders-react";
 
 export default function Slide23() {
-  const items = [
-    'Priorizar quem tem dinheiro, urgência e fit, sem precisar dobrar investimento em mídia.',
-    'Aumentar comparecimento em reuniões sem lotar o time de tarefa manual.',
-    'Subir a conversão por etapa com roteiro, timing e follow-up padronizados.',
-    'Melhorar cash collect: mais caixa nos primeiros 30 dias de venda.',
-    'Escalar mantendo margem, em vez de crescer só aumentando custo de gente e operação.',
-  ];
-
   const yellowColors = [
     "#b8860b",
     "#9a7209",
@@ -38,36 +30,60 @@ export default function Slide23() {
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="text-4xl md:text-5xl font-semibold text-white mb-6 font-sans"
+            className="text-4xl md:text-5xl font-semibold text-white mb-8 font-sans"
           >
-            SOLUÇÃO PARA ESCALA COM LUCRO
+            O PARADOXO PETROBRAS
           </motion.h1>
 
-          {/* Subtítulo/Parágrafo */}
-          <motion.p
+          {/* Corpo - Texto em blocos */}
+          <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            className="text-base md:text-lg font-light text-gray-300 leading-relaxed mb-8"
+            className="space-y-4 mb-8"
           >
-            Aproveitar ao máximo o fluxo que você já tem com um sistema de IA que otimiza, multiplica e aprende a cada interação.
-          </motion.p>
+            <p className="text-base md:text-lg font-light text-gray-300 leading-relaxed">
+              O Brasil está entre os maiores produtores de petróleo do mundo.
+            </p>
+            <p className="text-base md:text-lg font-light text-gray-300 leading-relaxed">
+              Em 2023, a Petrobras aumentou a produção e reduziu importações,
+            </p>
+            <p className="text-base md:text-lg font-light text-gray-300 leading-relaxed">
+              mas o país ainda depende de combustível importado.
+            </p>
+          </motion.div>
 
-          {/* Bullet Points */}
-          <ul className="space-y-4">
-            {items.map((item, index) => (
-              <motion.li
-                key={index}
-                initial={{ opacity: 0, x: -30 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.4 + index * 0.1, duration: 0.6 }}
-                className="flex items-start gap-3"
-              >
-                <span className="text-white text-xl mt-1">•</span>
-                <span className="text-base text-white leading-relaxed">{item}</span>
-              </motion.li>
-            ))}
-          </ul>
+          {/* Bullets */}
+          <motion.ul
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.4, duration: 0.6 }}
+            className="space-y-3 mb-8"
+          >
+            <li className="flex items-start gap-3">
+              <span className="text-white text-xl mt-1">•</span>
+              <span className="text-base md:text-lg font-light text-white leading-relaxed">
+                Em 2023, o diesel importado ainda representou ≈25,5% do mercado.
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-white text-xl mt-1">•</span>
+              <span className="text-base md:text-lg font-light text-white leading-relaxed">
+                Na gasolina, a dependência externa ficou em ≈12,6%.
+              </span>
+            </li>
+          </motion.ul>
+
+          {/* Frase de fechamento */}
+          <motion.p
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.5, duration: 0.6 }}
+            className="text-base md:text-lg font-light text-white leading-relaxed border-l-4 border-white pl-4"
+          >
+            Mesmo produzindo muito petróleo, a conta final do combustível
+            continua sendo preço de importador + cadeia + imposto.
+          </motion.p>
         </div>
 
         {/* Lado DIREITO - Imagem */}
@@ -86,7 +102,7 @@ export default function Slide23() {
         >
           <img
             src="/slide21-image.png"
-            alt="Solução para Escala com Lucro"
+            alt="O Paradoxo Petrobras"
             className="w-full h-full object-cover"
             style={{ objectPosition: 'center 30%' }}
           />
