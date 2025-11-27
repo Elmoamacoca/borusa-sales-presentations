@@ -32,7 +32,7 @@ export default function Slide24() {
 
       <div className="w-full h-full flex relative z-10">
         {/* Lado ESQUERDO - Conteúdo de texto */}
-        <div className="w-[60%] h-full flex flex-col justify-start pt-24 pl-4 pr-8 relative z-10">
+        <div className="w-[50%] h-full flex flex-col justify-center px-8 md:px-12 lg:px-16 relative z-10">
           {/* Título */}
           <motion.h1
             initial={{ opacity: 0, x: -30 }}
@@ -75,12 +75,12 @@ export default function Slide24() {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.3, duration: 0.8 }}
-          className="w-[40%] h-full relative overflow-hidden"
+          className="w-[50%] h-full relative overflow-hidden"
           style={{
             position: 'absolute',
             right: 0,
             top: 0,
-            width: '40vw',
+            width: '50vw',
             height: '100%',
           }}
         >
