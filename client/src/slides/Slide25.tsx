@@ -1,21 +1,29 @@
 import { motion } from 'framer-motion';
 import { MeshGradient } from "@paper-design/shaders-react";
+import { Briefcase, Network, CheckCircle } from 'lucide-react';
 
 export default function Slide25() {
-  const items = [
-    'Priorizar quem tem dinheiro, urgência e fit, sem precisar dobrar investimento em mídia.',
-    'Aumentar comparecimento em reuniões sem lotar o time de tarefa manual.',
-    'Subir a conversão por etapa com roteiro, timing e follow-up padronizados.',
-    'Melhorar cash collect: mais caixa nos primeiros 30 dias de venda.',
-    'Escalar mantendo margem, em vez de crescer só aumentando custo de gente e operação.',
-  ];
-
   const yellowColors = [
     "#b8860b",
     "#9a7209",
     "#8b6914",
     "#7a5c0f",
     "#6b4f0a",
+  ];
+
+  const columns = [
+    {
+      icon: Briefcase,
+      text: 'Empresário atrás de Empresário querendo parar de depender só de SDR e pedir "um sistema que pense o comercial", não mais uma campanha ou funil solto.'
+    },
+    {
+      icon: Network,
+      text: 'Operações em mercados diferentes (apostas online, educação, jurídico) buscando modelar a mesma lógica de "CCA" para organizar o caos e ter previsibilidade.'
+    },
+    {
+      icon: CheckCircle,
+      text: 'Primeiros projetos fechados de sistema de IA comercial validando funcionalidade do CCA'
+    }
   ];
 
   return (
@@ -30,68 +38,47 @@ export default function Slide25() {
         />
       </div>
 
-      <div className="w-full h-full flex relative z-10">
-        {/* Lado ESQUERDO - Conteúdo de texto */}
-        <div className="w-[50%] h-full flex flex-col justify-center px-8 md:px-12 lg:px-16 relative z-10">
-          {/* Título */}
-          <motion.h1
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            className="text-4xl md:text-5xl font-semibold text-white mb-6 font-sans"
-          >
-            SOLUÇÃO PARA ESCALA COM LUCRO
-          </motion.h1>
-
-          {/* Subtítulo/Parágrafo */}
-          <motion.p
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.3, duration: 0.6 }}
-            className="text-base md:text-lg font-light text-gray-300 leading-relaxed mb-8"
-          >
-            Aproveitar ao máximo o fluxo que você já tem com um sistema de IA que otimiza, multiplica e aprende a cada interação.
-          </motion.p>
-
-          {/* Bullet Points */}
-          <ul className="space-y-4">
-            {items.map((item, index) => (
-              <motion.li
-                key={index}
-                initial={{ opacity: 0, x: -30 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.4 + index * 0.1, duration: 0.6 }}
-                className="flex items-start gap-3"
-              >
-                <span className="text-white text-xl mt-1">•</span>
-                <span className="text-base text-white leading-relaxed">{item}</span>
-              </motion.li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Lado DIREITO - Imagem */}
+      {/* Conteúdo */}
+      <div className="relative z-10 w-full h-full flex items-start justify-start pt-32">
         <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.3, duration: 0.8 }}
-          className="w-[50%] h-full relative overflow-hidden"
-          style={{
-            position: 'absolute',
-            right: 0,
-            top: 0,
-            width: '50vw',
-            height: '100%',
-          }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+          className="w-full max-w-6xl mx-auto px-20"
         >
-          <img
-            src="/slide21-image.png"
-            alt="Solução para Escala com Lucro"
-            className="w-full h-full object-cover"
-            style={{ objectPosition: 'center 30%' }}
-          />
-          {/* Overlay sutil */}
-          <div className="absolute inset-0 bg-black/10"></div>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-light text-white mb-36 font-sans text-left">
+            Resultados?
+          </h1>
+
+          <div className="grid grid-cols-3 gap-0 relative">
+            {columns.map((column, index) => {
+              const Icon = column.icon;
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.4 + index * 0.2, duration: 0.6 }}
+                  className="relative px-8 flex flex-col items-center"
+                >
+                  {/* Divisória amarela à direita (exceto última coluna) */}
+                  {index < columns.length - 1 && (
+                    <div className="absolute right-0 top-0 bottom-0 w-px bg-yellow-500/60" />
+                  )}
+                  
+                  {/* Ícone */}
+                  <div className="mb-6">
+                    <Icon className="w-12 h-12 text-yellow-500/80" strokeWidth={1.5} />
+                  </div>
+                  
+                  {/* Texto */}
+                  <p className="text-white/90 text-sm md:text-base leading-relaxed font-light text-center">
+                    {column.text}
+                  </p>
+                </motion.div>
+              );
+            })}
+          </div>
         </motion.div>
       </div>
     </div>
