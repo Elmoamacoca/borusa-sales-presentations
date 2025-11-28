@@ -11,11 +11,10 @@ export default function Slide24() {
   ];
 
   const breakdown = [
-    { valor: "R$ 2,01", descricao: "parcela Petrobras (produção + refino)", percentual: "36%" },
-    { valor: "R$ 1,22", descricao: "imposto estadual", percentual: "21,9%" },
-    { valor: "R$ 1,06", descricao: "distribuição e revenda", percentual: "19%" },
-    { valor: "R$ 0,69", descricao: "impostos federais", percentual: "12,4%" },
-    { valor: "R$ 0,56", descricao: "etanol anidro", percentual: "10%" },
+    { valor: "R$ 0,90", descricao: "Refino/Produtor (gasolina A)" },
+    { valor: "R$ 1,15", descricao: "Distribuição + margem revenda" },
+    { valor: "R$ 0,90", descricao: "Etanol anidro (mix E30)" },
+    { valor: "R$ 2,10", descricao: "Tributos (ICMS + PIS/COFINS + CIDE)", destaque: true },
   ];
 
   return (
@@ -51,11 +50,11 @@ export default function Slide24() {
             className="mb-8"
           >
             <p className="text-xl md:text-2xl font-light text-white leading-relaxed">
-              Preço médio da gasolina no Brasil (jan/2024): <span className="font-semibold">R$ 5,58</span> por litro.
+              Preço médio real (2025): <span className="font-semibold text-yellow-300">R$ 6,16/litro</span>
             </p>
           </motion.div>
 
-          {/* Breakdown - Lista numérica */}
+          {/* Breakdown - Lista de valores */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -63,35 +62,47 @@ export default function Slide24() {
             className="space-y-3 mb-8"
           >
             {breakdown.map((item, index) => (
-              <div key={index} className="flex items-baseline gap-3">
-                <span className="text-lg md:text-xl font-semibold text-white min-w-[80px]">
+              <div key={index} className={`flex items-baseline gap-3 ${item.destaque ? 'font-semibold' : ''}`}>
+                <span className="text-lg md:text-xl text-white min-w-[90px]">
                   {item.valor}
                 </span>
-                <span className="text-base md:text-lg font-light text-gray-300">
+                <span className="text-base md:text-lg font-light text-white">
                   ≈ {item.descricao}
-                </span>
-                <span className="text-base md:text-lg font-light text-white ml-auto">
-                  {item.percentual}
                 </span>
               </div>
             ))}
           </motion.div>
 
-          {/* Frase de fechamento */}
+          {/* Preço ideal */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.5, duration: 0.6 }}
-            className="border-l-4 border-white pl-4"
+            className="mb-8 p-4 bg-white/10 rounded-lg"
           >
             <p className="text-base md:text-lg font-light text-white leading-relaxed">
-              De cada R$ 5,58 que você paga,
+              Com infraestrutura eficiente + alíquota zero:
+            </p>
+            <p className="text-xl md:text-2xl font-semibold text-yellow-300 mt-2">
+              R$ 1,90 a R$ 2,05/litro
+            </p>
+          </motion.div>
+
+          {/* Conclusão */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.6, duration: 0.6 }}
+            className="border-l-4 border-white pl-6"
+          >
+            <p className="text-base md:text-lg font-light text-white leading-relaxed">
+              Você paga <span className="font-semibold">R$ 6,00</span> na bomba.
             </p>
             <p className="text-base md:text-lg font-light text-white leading-relaxed">
-              cerca de <span className="font-semibold">R$ 2,00</span> são "petróleo + refino"
+              Mais da metade são tributos + cadeia.
             </p>
             <p className="text-base md:text-lg font-light text-white leading-relaxed">
-              e mais de <span className="font-semibold">R$ 3,50</span> são camadas em cima: imposto, logística e margem.
+              O preço puro poderia ser <span className="font-semibold">R$ 2,00</span>.
             </p>
           </motion.div>
         </div>

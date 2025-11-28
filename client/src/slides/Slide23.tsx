@@ -40,50 +40,32 @@ export default function Slide23() {
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            className="space-y-4 mb-8"
+            className="space-y-6 mb-8"
           >
-            <p className="text-base md:text-lg font-light text-gray-300 leading-relaxed">
+            <p className="text-base md:text-lg font-light text-white leading-relaxed">
               O Brasil está entre os maiores produtores de petróleo do mundo.
             </p>
-            <p className="text-base md:text-lg font-light text-gray-300 leading-relaxed">
-              Em 2023, a Petrobras aumentou a produção e reduziu importações,
+            
+            <p className="text-xl md:text-2xl font-semibold text-white leading-relaxed">
+              Preço médio na bomba (semana recente): <span className="text-yellow-300">R$ 6,16</span> por litro.
             </p>
-            <p className="text-base md:text-lg font-light text-gray-300 leading-relaxed">
-              mas o país ainda depende de combustível importado.
+            
+            <p className="text-base md:text-lg font-light text-white leading-relaxed">
+              Importação de gasolina A representa ~14% da oferta, mesmo com produção nacional.
             </p>
           </motion.div>
 
-          {/* Bullets */}
-          <motion.ul
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.4, duration: 0.6 }}
-            className="space-y-3 mb-8"
-          >
-            <li className="flex items-start gap-3">
-              <span className="text-white text-xl mt-1">•</span>
-              <span className="text-base md:text-lg font-light text-white leading-relaxed">
-                Em 2023, o diesel importado ainda representou ≈25,5% do mercado.
-              </span>
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="text-white text-xl mt-1">•</span>
-              <span className="text-base md:text-lg font-light text-white leading-relaxed">
-                Na gasolina, a dependência externa ficou em ≈12,6%.
-              </span>
-            </li>
-          </motion.ul>
-
-          {/* Frase de fechamento */}
-          <motion.p
+          {/* Destaque - Paradoxo */}
+          <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.5, duration: 0.6 }}
-            className="text-base md:text-lg font-light text-white leading-relaxed border-l-4 border-white pl-4"
+            className="border-l-4 border-white pl-6"
           >
-            Mesmo produzindo muito petróleo, a conta final do combustível
-            continua sendo preço de importador + cadeia + imposto.
-          </motion.p>
+            <p className="text-base md:text-lg font-light text-white leading-relaxed">
+              <span className="font-semibold">Paradoxo:</span> Petróleo abundante, mas preço alto por paridade internacional, tributos e gargalos logísticos.
+            </p>
+          </motion.div>
         </div>
 
         {/* Lado DIREITO - Imagem */}
