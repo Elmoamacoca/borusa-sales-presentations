@@ -48,7 +48,7 @@ export default function Slide22() {
             </p>
             
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
-              IA é o novo petróleo do seu comercial.
+              IA é o novo petróleo.
             </h1>
 
             <p className="text-white/90 text-xl md:text-2xl font-light leading-relaxed">
@@ -59,7 +59,7 @@ export default function Slide22() {
               <li>• Acesso à IA bruta hoje é commodity.</li>
               <li>• O valor real está em refinar IA em processo e sistema.</li>
               <li>• Quem constrói a "refinaria" domina o mercado amanhã.</li>
-              <li>• Quem só exporta o bruto compra inteligência refinada bem mais caro depois.</li>
+              <li>• Quem só consome IA empacotada paga o 'preço da bomba': bruto barato + camadas de custo a cada interação.</li>
               <li>• IA refinada na operação vira vantagem injusta: otimiza, multiplica e aprende todo dia.</li>
             </ul>
           </motion.div>
