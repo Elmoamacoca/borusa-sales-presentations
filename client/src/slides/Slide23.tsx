@@ -30,7 +30,7 @@ export default function Slide23() {
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="text-4xl md:text-5xl font-semibold text-white mb-8 font-sans"
+            className="text-3xl md:text-4xl font-semibold text-white mb-8 font-sans"
           >
             O PARADOXO PETROBRAS
           </motion.h1>
@@ -46,8 +46,8 @@ export default function Slide23() {
               O Brasil está entre os maiores produtores de petróleo do mundo.
             </p>
             
-            <p className="text-xl md:text-2xl font-semibold text-white leading-relaxed">
-              Preço médio na bomba (semana recente): <span className="text-yellow-300">R$ 6,16</span> por litro.
+            <p className="text-lg md:text-xl font-semibold text-white leading-relaxed">
+              Preço médio na bomba (semana recente): <span className="text-yellow-300">R$ 6,16/litro</span>
             </p>
             
             <p className="text-base md:text-lg font-light text-white leading-relaxed">

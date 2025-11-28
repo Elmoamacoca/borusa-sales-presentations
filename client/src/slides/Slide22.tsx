@@ -47,7 +47,7 @@ export default function Slide22() {
               Os maiores do mercado já entenderam…
             </p>
             
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
+            <h1 className="text-3xl md:text-4xl font-semibold text-white leading-tight font-sans">
               IA é o novo petróleo.
             </h1>
 
