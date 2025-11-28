@@ -27,6 +27,7 @@ import Slide22 from '@/slides/Slide22';
 import Slide23 from '@/slides/Slide23';
 import Slide24 from '@/slides/Slide24';
 import Slide25 from '@/slides/Slide25';
+import Slide26 from '@/slides/Slide26';
 
 export interface SlideDefinition extends SlideConfig {
   component: ComponentType;
@@ -59,6 +60,7 @@ export const slidesConfig: SlideDefinition[] = [
   { id: 'slide-23', order: 23, component: Slide23, title: 'Solução para Escala com Lucro' },
   { id: 'slide-24', order: 24, component: Slide24, title: 'Solução para Escala com Lucro' },
   { id: 'slide-25', order: 25, component: Slide25, title: 'Solução para Escala com Lucro' },
+  { id: 'slide-26', order: 26, component: Slide26, title: 'Riscos Fazer Sozinho Sem o Conhecimento' },
 ];
 
 export const getSlideById = (id: string): SlideDefinition | undefined => {
