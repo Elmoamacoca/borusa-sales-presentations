@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { MeshGradient } from "@paper-design/shaders-react";
-import { Users, Clock, TrendingDown, AlertTriangle, Hand, Target } from 'lucide-react';
+import { DollarSign, Users, Lock, AlertTriangle, TrendingDown, Clock } from 'lucide-react';
 
 export default function Slide26() {
   const darkColors = [
@@ -9,6 +9,15 @@ export default function Slide26() {
     "#262626",
     "#1f1f1f",
     "#141414",
+  ];
+
+  const risks = [
+    { icon: DollarSign, text: "Queimar caixa em teste eterno", delay: 0.4 },
+    { icon: Users, text: "Treinar a IA do fornecedor, não a sua", delay: 0.5 },
+    { icon: Lock, text: "Virar refém de ferramenta e dev", delay: 0.6 },
+    { icon: AlertTriangle, text: "Intoxicar base e funil de vendas", delay: 0.7 },
+    { icon: TrendingDown, text: "Desmotivar o time comercial", delay: 0.8 },
+    { icon: Clock, text: "Chegar atrasado na curva da IA", delay: 0.9 },
   ];
 
   return (
@@ -24,148 +33,71 @@ export default function Slide26() {
       </div>
 
       {/* Conteúdo */}
-      <div className="relative z-10 w-full h-full flex flex-col items-center justify-start pt-12 px-8">
+      <div className="relative z-10 w-full h-full flex flex-col items-center justify-center px-8 py-12">
         {/* Título */}
         <motion.h1
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.6 }}
-          className="text-3xl md:text-4xl font-semibold text-white mb-16 font-sans text-center"
+          className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white mb-4 font-sans text-center max-w-5xl"
         >
-          RISCOS FAZER SOZINHO SEM O CONHECIMENTO
+          RISCOS DE TENTAR IA COMERCIAL SOZINHO
         </motion.h1>
 
-        {/* Container de hexágonos */}
-        <div className="relative w-full max-w-5xl h-[400px] mb-12">
-          {/* Hexágono central com alerta */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.4, duration: 0.6 }}
-            className="absolute top-0 left-1/2 transform -translate-x-1/2"
-          >
-            <div className="relative">
-              <div className="w-32 h-32 bg-gradient-to-br from-yellow-600 to-yellow-700 clip-hexagon flex items-center justify-center">
-                <Users className="w-12 h-12 text-white" strokeWidth={1.5} />
-              </div>
-              <p className="text-sm text-white text-center mt-3 font-light">Sujar sua base</p>
-            </div>
-          </motion.div>
+        <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.25, duration: 0.6 }}
+          className="text-xl md:text-2xl font-semibold text-white mb-2 font-sans text-center"
+        >
+          (OU COM O PARCEIRO ERRADO)
+        </motion.h2>
 
-          {/* Ícone de alerta central */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.6, duration: 0.4 }}
-            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-          >
-            <div className="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center">
-              <AlertTriangle className="w-10 h-10 text-black" strokeWidth={2} />
-            </div>
-          </motion.div>
+        {/* Subtítulo */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3, duration: 0.6 }}
+          className="text-base md:text-lg font-light text-yellow-400 mb-12 text-center italic"
+        >
+          Quando você tem o petróleo, mas não tem a refinaria certa.
+        </motion.p>
 
-          {/* Hexágono: Frustrar a equipe (esquerda superior) */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.5, duration: 0.6 }}
-            className="absolute top-20 left-8"
-          >
-            <div className="relative">
-              <div className="w-28 h-28 bg-gradient-to-br from-yellow-600 to-yellow-700 clip-hexagon flex items-center justify-center">
-                <Users className="w-10 h-10 text-white" strokeWidth={1.5} />
+        {/* Grid de riscos */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl w-full mb-12">
+          {risks.map((risk, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: risk.delay, duration: 0.5 }}
+              className="flex flex-col items-center text-center p-6 bg-white/5 backdrop-blur-sm rounded-lg border border-yellow-500/20 hover:border-yellow-500/40 transition-all"
+            >
+              <div className="w-16 h-16 mb-4 flex items-center justify-center bg-gradient-to-br from-yellow-600 to-yellow-700 rounded-full">
+                <risk.icon className="w-8 h-8 text-white" strokeWidth={1.5} />
               </div>
-              <p className="text-sm text-white mt-3 font-light max-w-[120px]">Frustrar a equipe</p>
-            </div>
-          </motion.div>
-
-          {/* Hexágono: Perder tempo (direita superior) */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.5, duration: 0.6 }}
-            className="absolute top-20 right-8"
-          >
-            <div className="relative">
-              <div className="w-28 h-28 bg-gradient-to-br from-yellow-600 to-yellow-700 clip-hexagon flex items-center justify-center">
-                <Clock className="w-10 h-10 text-white" strokeWidth={1.5} />
-              </div>
-              <p className="text-sm text-white text-right mt-3 font-light max-w-[120px] ml-auto">Perder tempo</p>
-            </div>
-          </motion.div>
-
-          {/* Hexágono: Perder caixa (esquerda inferior) */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.7, duration: 0.6 }}
-            className="absolute bottom-0 left-8"
-          >
-            <div className="relative">
-              <div className="w-28 h-28 bg-gradient-to-br from-yellow-600 to-yellow-700 clip-hexagon flex items-center justify-center">
-                <TrendingDown className="w-10 h-10 text-white" strokeWidth={1.5} />
-              </div>
-              <p className="text-sm text-white mt-3 font-light max-w-[140px]">
-                Perder caixa
-                <span className="text-xs block text-gray-400">(Deixar dinheiro na mesa & fuga de clientes)</span>
+              <p className="text-sm md:text-base font-light text-white leading-relaxed">
+                {risk.text}
               </p>
-            </div>
-          </motion.div>
-
-          {/* Hexágono: Perder moral (centro inferior) */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7, duration: 0.6 }}
-            className="absolute bottom-0 left-1/2 transform -translate-x-1/2"
-          >
-            <div className="relative">
-              <div className="w-28 h-28 bg-gradient-to-br from-yellow-600 to-yellow-700 clip-hexagon flex items-center justify-center">
-                <Hand className="w-10 h-10 text-white" strokeWidth={1.5} />
-              </div>
-              <p className="text-sm text-white text-center mt-3 font-light">Perder moral</p>
-            </div>
-          </motion.div>
-
-          {/* Hexágono: Perder espaço (direita inferior) */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.7, duration: 0.6 }}
-            className="absolute bottom-0 right-8"
-          >
-            <div className="relative">
-              <div className="w-28 h-28 bg-gradient-to-br from-yellow-600 to-yellow-700 clip-hexagon flex items-center justify-center">
-                <Target className="w-10 h-10 text-white" strokeWidth={1.5} />
-              </div>
-              <p className="text-sm text-white text-right mt-3 font-light max-w-[160px] ml-auto">
-                Perder espaço
-                <span className="text-xs block text-gray-400">para a concorrência, por ficar atrasado no timing do mercado</span>
-              </p>
-            </div>
-          </motion.div>
+            </motion.div>
+          ))}
         </div>
 
         {/* Frase de fechamento */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.0, duration: 0.6 }}
-          className="text-center max-w-4xl mt-8"
+          transition={{ delay: 1.1, duration: 0.6 }}
+          className="text-center max-w-4xl border-l-4 border-yellow-500 pl-6 py-2"
         >
-          <p className="text-lg md:text-xl font-light text-white leading-relaxed">
-            Nada gera tanta fuga de talentos quanto a{' '}
-            <span className="font-semibold text-yellow-400">intoxicação por leads desqualificados.</span>
+          <p className="text-base md:text-lg lg:text-xl font-light text-white leading-relaxed">
+            O pior cenário não é <span className="italic text-gray-400">"IA que não funciona"</span>.
+          </p>
+          <p className="text-base md:text-lg lg:text-xl font-semibold text-yellow-400 leading-relaxed mt-2">
+            É gastar muito, travar o comercial e matar a moral do time com IA.
           </p>
         </motion.div>
       </div>
-
-      {/* CSS para hexágonos */}
-      <style jsx>{`
-        .clip-hexagon {
-          clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-        }
-      `}</style>
     </div>
   );
 }
