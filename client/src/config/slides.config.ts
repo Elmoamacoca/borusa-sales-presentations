@@ -33,6 +33,17 @@ import Slide28 from '@/slides/Slide28';
 import Slide29 from '@/slides/Slide29';
 import Slide30 from '@/slides/Slide30';
 import Slide31 from '@/slides/Slide31';
+import Slide32 from '@/slides/Slide32';
+import Slide33 from '@/slides/Slide33';
+import Slide34 from '@/slides/Slide34';
+import Slide35 from '@/slides/Slide35';
+import Slide36 from '@/slides/Slide36';
+import Slide37 from '@/slides/Slide37';
+import Slide38 from '@/slides/Slide38';
+import Slide39 from '@/slides/Slide39';
+import Slide40 from '@/slides/Slide40';
+import Slide41 from '@/slides/Slide41';
+
 
 export interface SlideDefinition extends SlideConfig {
   component: ComponentType;
@@ -71,6 +82,17 @@ export const slidesConfig: SlideDefinition[] = [
   { id: 'slide-29', order: 29, component: Slide29, title: 'Sua Nova Estrutura' },
   { id: 'slide-30', order: 30, component: Slide30, title: 'Arquitetura do Sistema IA' },
   { id: 'slide-31', order: 31, component: Slide31, title: 'Sistema de Retroalimentação' },
+  { id: 'slide-32', order: 32, component: Slide32, title: 'Slide 32' },
+  { id: 'slide-33', order: 33, component: Slide33, title: 'Slide 33' },
+  { id: 'slide-34', order: 34, component: Slide34, title: 'Slide 34' },
+  { id: 'slide-35', order: 35, component: Slide35, title: 'Slide 35' },
+  { id: 'slide-36', order: 36, component: Slide36, title: 'Slide 36' },
+  { id: 'slide-37', order: 37, component: Slide37, title: 'Slide 37' },
+  { id: 'slide-38', order: 38, component: Slide38, title: 'Slide 38' },
+  { id: 'slide-39', order: 39, component: Slide39, title: 'A IA É O NOVO PETRÓLEO' },
+  { id: 'slide-40', order: 40, component: Slide40, title: 'Escalar Inside Sales B2B' },
+  { id: 'slide-41', order: 41, component: Slide41, title: 'Dúvidas?' },
+
 ];
 
 export const getSlideById = (id: string): SlideDefinition | undefined => {
