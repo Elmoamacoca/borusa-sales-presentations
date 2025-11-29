@@ -30,6 +30,9 @@ import Slide25 from '@/slides/Slide25';
 import Slide26 from '@/slides/Slide26';
 import Slide27 from '@/slides/Slide27';
 import Slide28 from '@/slides/Slide28';
+import Slide29 from '@/slides/Slide29';
+import Slide30 from '@/slides/Slide30';
+import Slide31 from '@/slides/Slide31';
 
 export interface SlideDefinition extends SlideConfig {
   component: ComponentType;
@@ -65,6 +68,9 @@ export const slidesConfig: SlideDefinition[] = [
   { id: 'slide-26', order: 26, component: Slide26, title: 'Riscos Fazer Sozinho Sem o Conhecimento' },
   { id: 'slide-27', order: 27, component: Slide27, title: 'Benefícios da Solução IA' },
   { id: 'slide-28', order: 28, component: Slide28, title: 'Funil Comercial Atual da Maioria' },
+  { id: 'slide-29', order: 29, component: Slide29, title: 'Sua Nova Estrutura' },
+  { id: 'slide-30', order: 30, component: Slide30, title: 'Arquitetura do Sistema IA' },
+  { id: 'slide-31', order: 31, component: Slide31, title: 'Sistema de Retroalimentação' },
 ];
 
 export const getSlideById = (id: string): SlideDefinition | undefined => {
