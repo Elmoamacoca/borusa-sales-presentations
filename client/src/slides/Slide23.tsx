@@ -83,7 +83,7 @@ export default function Slide23() {
           }}
         >
           <img
-            src="/slide21-image.png"
+            src="/slide23-image.png"
             alt="O Paradoxo Petrobras"
             className="w-full h-full object-cover"
             style={{ objectPosition: 'center top' }}
