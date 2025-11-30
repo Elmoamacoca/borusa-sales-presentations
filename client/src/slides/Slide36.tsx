@@ -61,7 +61,7 @@ export default function Slide36() {
             src="/slide36-image.jpg"
             alt="Radar de Gargalos"
             className="w-full h-full object-cover"
-            style={{ objectPosition: 'center center' }}
+            style={{ objectPosition: 'left center' }}
           />
           <div className="absolute inset-0 bg-black/10"></div>
         </motion.div>
