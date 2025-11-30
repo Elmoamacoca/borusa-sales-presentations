@@ -1,0 +1,302 @@
+import { motion } from 'framer-motion';
+import { MeshGradient } from "@paper-design/shaders-react";
+import { useState, useEffect } from 'react';
+
+export default function Slide58() {
+  const [showAll, setShowAll] = useState(false);
+
+  // Tom de azul correto (mesmo do slide 1 e BackgroundShader)
+  const blueColors = [
+    "#0a0a0a",
+    "#1a2332",
+    "#2d3e50",
+    "#3d5a80",
+    "#1a1a1a",
+  ];
+
+  const etapas = [
+    {
+      numero: "01",
+      titulo: "Kickoff & Plano de Ação",
+      periodo: "Semana 1",
+      descricao: "Call de Alinhamento + Briefing. Definição do Plano de Ação de 90 dias (metas, funis, responsabilidades)."
+    },
+    {
+      numero: "02",
+      titulo: "Infraestrutura & Integrações",
+      periodo: "Semanas 1–2",
+      descricao: "Configuração da VPS dedicada e do Portal do Cliente. Conexão de WhatsApp, CRM, e-mail, agenda e formulários."
+    },
+    {
+      numero: "03",
+      titulo: "Implantação das 4 IAs Operacionais",
+      periodo: "Semanas 2–4",
+      descricao: "IASDR ligada na entrada dos leads. IA de Compromisso cuidando de agenda e no-show. IA de Follow-up configurada nas oportunidades. IA Estrategista começando a ler o funil."
+    },
+    {
+      numero: "04",
+      titulo: "Operação Assistida & Ajustes Finos",
+      periodo: "Semanas 5–8",
+      descricao: "Sistema rodando em produção com leads reais. Ajustes semanais de mensagens, cadências e regras de qualificação."
+    },
+    {
+      numero: "05",
+      titulo: "Inteligência Coletiva & Otimização",
+      periodo: "Semanas 7–10",
+      descricao: "BCF v2 começando a entregar releases e insights de mercado. IA Estrategista apontando gargalos e testes prioritários."
+    },
+    {
+      numero: "06",
+      titulo: "Debriefing & Plano de Expansão",
+      periodo: "Até o dia 90",
+      descricao: "Call de Debriefing com análise de resultados e gargalos. Desenho do próximo passo: manutenção, upgrade de nível ou novos módulos."
+    }
+  ];
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowRight' && !showAll) {
+        e.preventDefault();
+        e.stopPropagation();
+        setShowAll(true);
+      } else if (e.key === 'ArrowLeft' && showAll) {
+        e.preventDefault();
+        e.stopPropagation();
+        setShowAll(false);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown, true);
+    return () => window.removeEventListener('keydown', handleKeyDown, true);
+  }, [showAll]);
+
+  return (
+    <div className="fixed inset-0 w-screen h-screen overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <MeshGradient
+          className="w-full h-full"
+          colors={blueColors}
+          speed={0.15}
+          minPixelRatio={1.0}
+        />
+      </div>
+
+      <div className="w-full h-full flex flex-col relative z-10 px-8 md:px-16 lg:px-20 py-6">
+        {/* Título Principal */}
+        <motion.div
+          initial={{ opacity: 0, y: -40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 0.9, ease: "easeOut" }}
+          className="text-center mb-6"
+        >
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white font-sans mb-3">
+            JORNADA DE <span className="text-yellow-400">90 DIAS</span>
+          </h1>
+          <motion.div
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ delay: 0.8, duration: 0.8, ease: "easeInOut" }}
+            className="w-24 h-0.5 bg-yellow-400 mx-auto"
+          />
+        </motion.div>
+
+        {/* Timeline Vertical */}
+        <div className="flex-1 flex items-center justify-center overflow-hidden">
+          <div className="relative max-w-5xl w-full h-full flex items-center">
+            {/* Linha vertical central */}
+            <motion.div
+              initial={{ scaleY: 0 }}
+              animate={{ scaleY: 1 }}
+              transition={{ delay: 1.2, duration: 1.5, ease: "easeInOut" }}
+              className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-yellow-400/20 via-yellow-400/60 to-yellow-400/20 transform -translate-x-1/2"
+              style={{ originTop: true }}
+            />
+
+            {/* Etapas */}
+            <div className="space-y-4 w-full">
+              {etapas.map((etapa, index) => {
+                const isEven = index % 2 === 0;
+                const baseDelay = showAll ? index * 0.15 : 0;
+
+                return (
+                  <div
+                    key={index}
+                    className="relative flex items-center"
+                  >
+                    {/* Conteúdo Esquerda */}
+                    <motion.div
+                      initial={{ opacity: 0, x: -60 }}
+                      animate={{ 
+                        opacity: showAll ? 1 : 0, 
+                        x: showAll ? 0 : -60 
+                      }}
+                      transition={{ delay: baseDelay, duration: 0.5, ease: "easeOut" }}
+                      className="w-1/2 pr-10 text-right"
+                    >
+                      {isEven && showAll && (
+                        <div className="inline-block">
+                          {/* Badge de período */}
+                          <motion.div
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ delay: baseDelay + 0.1, duration: 0.3 }}
+                            className="inline-block bg-yellow-400/20 border border-yellow-400/40 rounded-full px-3 py-0.5 mb-1.5 float-right"
+                          >
+                            <span className="text-xs text-yellow-400 font-semibold font-sans">
+                              {etapa.periodo}
+                            </span>
+                          </motion.div>
+                          
+                          <div className="clear-both"></div>
+
+                          {/* Título */}
+                          <motion.h3
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ delay: baseDelay + 0.15, duration: 0.4 }}
+                            className="text-base md:text-lg font-bold text-white mb-1 font-sans"
+                          >
+                            {etapa.titulo}
+                          </motion.h3>
+
+                          {/* Descrição */}
+                          <motion.p
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ delay: baseDelay + 0.2, duration: 0.4 }}
+                            className="text-xs md:text-sm text-gray-300 font-light font-sans leading-relaxed"
+                          >
+                            {etapa.descricao}
+                          </motion.p>
+                        </div>
+                      )}
+                    </motion.div>
+
+                    {/* Círculo central com número - SEMPRE NO CENTRO */}
+                    <motion.div
+                      initial={{ scale: 0, rotate: -180 }}
+                      animate={{ 
+                        scale: showAll ? 1 : 0, 
+                        rotate: showAll ? 0 : -180 
+                      }}
+                      transition={{ 
+                        delay: baseDelay + 0.05, 
+                        duration: 0.5, 
+                        type: "spring",
+                        stiffness: 200,
+                        damping: 15
+                      }}
+                      className="absolute left-1/2 transform -translate-x-1/2 z-10"
+                    >
+                      {/* Círculo externo com glow */}
+                      <div className="relative">
+                        <motion.div
+                          animate={showAll ? { 
+                            boxShadow: [
+                              '0 0 20px rgba(212, 160, 23, 0.3)',
+                              '0 0 40px rgba(212, 160, 23, 0.6)',
+                              '0 0 20px rgba(212, 160, 23, 0.3)'
+                            ]
+                          } : {}}
+                          transition={{
+                            duration: 2,
+                            repeat: Infinity,
+                            ease: "easeInOut"
+                          }}
+                          className="w-14 h-14 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center border-4 border-gray-900"
+                        >
+                          <span className="text-lg font-bold text-gray-900 font-sans">
+                            {etapa.numero}
+                          </span>
+                        </motion.div>
+
+                        {/* Pulso decorativo */}
+                        {showAll && (
+                          <motion.div
+                            initial={{ scale: 1, opacity: 0.6 }}
+                            animate={{ scale: 1.8, opacity: 0 }}
+                            transition={{
+                              delay: baseDelay + 0.3,
+                              duration: 1.5,
+                              repeat: Infinity,
+                              repeatDelay: 2
+                            }}
+                            className="absolute inset-0 rounded-full bg-yellow-400/30 border-2 border-yellow-400/50"
+                          />
+                        )}
+                      </div>
+                    </motion.div>
+
+                    {/* Conteúdo Direita */}
+                    <motion.div
+                      initial={{ opacity: 0, x: 60 }}
+                      animate={{ 
+                        opacity: showAll ? 1 : 0, 
+                        x: showAll ? 0 : 60 
+                      }}
+                      transition={{ delay: baseDelay, duration: 0.5, ease: "easeOut" }}
+                      className="w-1/2 pl-10 text-left"
+                    >
+                      {!isEven && showAll && (
+                        <div className="inline-block">
+                          {/* Badge de período */}
+                          <motion.div
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ delay: baseDelay + 0.1, duration: 0.3 }}
+                            className="inline-block bg-yellow-400/20 border border-yellow-400/40 rounded-full px-3 py-0.5 mb-1.5 float-left"
+                          >
+                            <span className="text-xs text-yellow-400 font-semibold font-sans">
+                              {etapa.periodo}
+                            </span>
+                          </motion.div>
+                          
+                          <div className="clear-both"></div>
+
+                          {/* Título */}
+                          <motion.h3
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ delay: baseDelay + 0.15, duration: 0.4 }}
+                            className="text-base md:text-lg font-bold text-white mb-1 font-sans"
+                          >
+                            {etapa.titulo}
+                          </motion.h3>
+
+                          {/* Descrição */}
+                          <motion.p
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ delay: baseDelay + 0.2, duration: 0.4 }}
+                            className="text-xs md:text-sm text-gray-300 font-light font-sans leading-relaxed"
+                          >
+                            {etapa.descricao}
+                          </motion.p>
+                        </div>
+                      )}
+                    </motion.div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+
+        {/* Footer */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.5, duration: 0.8 }}
+          className="text-center mt-4"
+        >
+          <p className="text-xs text-gray-400 font-sans">
+            <span className="text-yellow-400 font-semibold">Acompanhamento semanal</span> durante toda a jornada
+            {!showAll && (
+              <span className="ml-4 text-yellow-400/60">→ Pressione a seta direita para revelar todas as etapas</span>
+            )}
+          </p>
+        </motion.div>
+      </div>
+    </div>
+  );
+}

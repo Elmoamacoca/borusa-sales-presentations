@@ -59,6 +59,18 @@ import Slide54 from '@/slides/Slide54';
 import Slide55 from '@/slides/Slide55';
 import Slide56 from '@/slides/Slide56';
 import Slide57 from '@/slides/Slide57';
+import Slide58 from '@/slides/Slide58';
+import Slide59 from '@/slides/Slide59';
+import Slide60 from '@/slides/Slide60';
+import Slide61 from '@/slides/Slide61';
+import Slide62 from '@/slides/Slide62';
+import Slide63 from '@/slides/Slide63';
+import Slide64 from '@/slides/Slide64';
+import Slide65 from '@/slides/Slide65';
+import Slide66 from '@/slides/Slide66';
+import Slide67 from '@/slides/Slide67';
+import Slide68 from '@/slides/Slide68';
+import Slide69 from '@/slides/Slide69';
 
 
 export interface SlideDefinition extends SlideConfig {
@@ -124,6 +136,27 @@ export const slidesConfig: SlideDefinition[] = [
   { id: 'slide-55', order: 55, component: Slide55, title: 'Inteligência Coletiva Borusa (BCF v2)' },
   { id: 'slide-56', order: 56, component: Slide56, title: 'Bônus: Arsenal Open Source' },
   { id: 'slide-57', order: 57, component: Slide57, title: 'Em Resumo Como Será a Nossa Jornada Juntos?' },
+  { id: 'slide-58', order: 58, component: Slide58, title: 'Jornada de 90 Dias' },
+  { id: 'slide-59', order: 59, component: Slide59, title: 'Garantia de R$20.000,00' },
+  { id: 'slide-60', order: 60, component: Slide60, title: 'Dúvidas?' },
+  { id: 'slide-61', order: 61, component: Slide61, title: 'Quanto Vale?' },
+  { id: 'slide-62', order: 62, component: Slide62, title: 'Valor × Preço' },
+  { id: 'slide-63', order: 63, component: Slide63, title: 'Custo do Time 1:1' },
+  { id: 'slide-64', order: 64, component: Slide64, title: 'Valor × Preço × ROI' },
+  { id: 'slide-65', order: 65, component: Slide65, title: 'Valor da Implementação Célula Términus - NEST' },
+  { id: 'slide-66', order: 66, component: Slide66, title: 'Programa de Implementação Célula Términus - NEST' },
+  { 
+    id: 'slide-67', 
+    order: 67, 
+    component: Slide67, 
+    title: 'Preço do Programa vs Valor Sangue no Olho',
+    conditionalRoutes: {
+      '1': 'slide-68',
+      '2': 'slide-69'
+    }
+  },
+  { id: 'slide-68', order: 68, component: Slide68, title: 'Célula Términus NEST - Opção 1' },
+  { id: 'slide-69', order: 69, component: Slide69, title: 'Célula Términus NEST - Opção 2' },
 
 ];
 
