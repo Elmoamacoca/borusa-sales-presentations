@@ -29,12 +29,12 @@ export default function Slide59() {
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.3, duration: 0.8 }}
-          className="w-[50%] h-full relative overflow-hidden flex items-center justify-center"
+          className="w-[40%] h-full relative overflow-hidden flex items-center justify-center"
           style={{
             position: 'absolute',
             left: 0,
             top: 0,
-            width: '50vw',
+            width: '40vw',
             height: '100%',
           }}
         >
@@ -53,8 +53,8 @@ export default function Slide59() {
           <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/80 to-transparent pointer-events-none" />
         </motion.div>
 
-        {/* Conteúdo à Direita - 50% */}
-        <div className="w-[50%] h-full flex flex-col justify-center px-12 md:px-16 lg:px-20 relative z-10 ml-[50%]">
+        {/* Conteúdo à Direita - 60% */}
+        <div className="w-[60%] h-full flex flex-col justify-center px-12 md:px-16 lg:px-20 relative z-10 ml-[40%]">
           {/* Título */}
           <motion.div
             initial={{ opacity: 0, y: -20 }}

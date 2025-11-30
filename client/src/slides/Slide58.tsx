@@ -1,18 +1,8 @@
 import { motion } from 'framer-motion';
 import { MeshGradient } from "@paper-design/shaders-react";
-import { useState, useEffect } from 'react';
 
 export default function Slide58() {
-  const [showAll, setShowAll] = useState(false);
-
-  // Tom de azul correto (mesmo do slide 1 e BackgroundShader)
-  const blueColors = [
-    "#0a0a0a",
-    "#1a2332",
-    "#2d3e50",
-    "#3d5a80",
-    "#1a1a1a",
-  ];
+  const blueColors = ["#0a0a0a", "#1a2332", "#2d3e50", "#3d5a80", "#1a1a1a"];
 
   const etapas = [
     {
@@ -29,275 +19,101 @@ export default function Slide58() {
     },
     {
       numero: "03",
-      titulo: "Implantação das 4 IAs Operacionais",
-      periodo: "Semanas 2–4",
-      descricao: "IASDR ligada na entrada dos leads. IA de Compromisso cuidando de agenda e no-show. IA de Follow-up configurada nas oportunidades. IA Estrategista começando a ler o funil."
+      titulo: "Treinamento da IA",
+      periodo: "Semanas 2–3",
+      descricao: "Criação do Knowledge Base e treinamento inicial. Testes de precisão e ajuste de tom de voz."
     },
     {
       numero: "04",
-      titulo: "Operação Assistida & Ajustes Finos",
-      periodo: "Semanas 5–8",
-      descricao: "Sistema rodando em produção com leads reais. Ajustes semanais de mensagens, cadências e regras de qualificação."
+      titulo: "Automações & Fluxos",
+      periodo: "Semanas 3–4",
+      descricao: "Construção dos funis de vendas e automações. Integração com pipeline e configuração de gatilhos."
     },
     {
       numero: "05",
-      titulo: "Inteligência Coletiva & Otimização",
-      periodo: "Semanas 7–10",
-      descricao: "BCF v2 começando a entregar releases e insights de mercado. IA Estrategista apontando gargalos e testes prioritários."
+      titulo: "Go-Live & Monitoramento",
+      periodo: "Semana 5",
+      descricao: "Lançamento oficial do sistema. Monitoramento em tempo real e ajustes finos."
     },
     {
       numero: "06",
-      titulo: "Debriefing & Plano de Expansão",
-      periodo: "Até o dia 90",
-      descricao: "Call de Debriefing com análise de resultados e gargalos. Desenho do próximo passo: manutenção, upgrade de nível ou novos módulos."
+      titulo: "Otimização Contínua",
+      periodo: "Semanas 6–12",
+      descricao: "Análise de métricas e otimização de conversão. Expansão de funcionalidades conforme demanda."
     }
   ];
 
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'ArrowRight' && !showAll) {
-        e.preventDefault();
-        e.stopPropagation();
-        setShowAll(true);
-      } else if (e.key === 'ArrowLeft' && showAll) {
-        e.preventDefault();
-        e.stopPropagation();
-        setShowAll(false);
-      }
-    };
-
-    window.addEventListener('keydown', handleKeyDown, true);
-    return () => window.removeEventListener('keydown', handleKeyDown, true);
-  }, [showAll]);
-
   return (
     <div className="fixed inset-0 w-screen h-screen overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        <MeshGradient
-          className="w-full h-full"
-          colors={blueColors}
-          speed={0.15}
-          minPixelRatio={1.0}
-        />
+      <div className="absolute inset-0">
+        <MeshGradient className="w-full h-full" colors={blueColors} speed={0.15} minPixelRatio={1.0} />
       </div>
 
-      <div className="w-full h-full flex flex-col relative z-10 px-8 md:px-16 lg:px-20 py-6">
-        {/* Título Principal */}
+      <div className="relative z-10 w-full h-full flex flex-col items-center justify-center px-6 md:px-12 lg:px-16 py-4">
+        {/* Título */}
         <motion.div
-          initial={{ opacity: 0, y: -40 }}
+          initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.9, ease: "easeOut" }}
-          className="text-center mb-6"
+          transition={{ duration: 0.8 }}
+          className="text-center mb-4 mt-6"
         >
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white font-sans mb-3">
-            JORNADA DE <span className="text-yellow-400">90 DIAS</span>
+          <h1 className="text-4xl md:text-5xl font-light text-white font-sans">
+            JORNADA DE 90 DIAS
           </h1>
-          <motion.div
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ delay: 0.8, duration: 0.8, ease: "easeInOut" }}
-            className="w-24 h-0.5 bg-yellow-400 mx-auto"
-          />
         </motion.div>
 
-        {/* Timeline Vertical */}
-        <div className="flex-1 flex items-center justify-center overflow-hidden">
-          <div className="relative max-w-5xl w-full h-full flex items-center">
-            {/* Linha vertical central */}
-            <motion.div
-              initial={{ scaleY: 0 }}
-              animate={{ scaleY: 1 }}
-              transition={{ delay: 1.2, duration: 1.5, ease: "easeInOut" }}
-              className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-yellow-400/20 via-yellow-400/60 to-yellow-400/20 transform -translate-x-1/2"
-              style={{ originTop: true }}
-            />
+        {/* Grid de etapas */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3, duration: 0.8 }}
+          className="w-full max-w-6xl"
+        >
+          <div className="grid grid-cols-2 gap-x-12 gap-y-5">
+            {etapas.map((etapa, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.5 + index * 0.1, duration: 0.6 }}
+                className="flex items-start gap-5 min-h-[60px]"
+              >
+                {/* Círculo com número */}
+                <div className="flex-shrink-0 w-14 h-14 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center border-3 border-white/20">
+                  <span className="text-lg font-bold text-white">{etapa.numero}</span>
+                </div>
 
-            {/* Etapas */}
-            <div className="space-y-4 w-full">
-              {etapas.map((etapa, index) => {
-                const isEven = index % 2 === 0;
-                const baseDelay = showAll ? index * 0.15 : 0;
-
-                return (
-                  <div
-                    key={index}
-                    className="relative flex items-center"
-                  >
-                    {/* Conteúdo Esquerda */}
-                    <motion.div
-                      initial={{ opacity: 0, x: -60 }}
-                      animate={{ 
-                        opacity: showAll ? 1 : 0, 
-                        x: showAll ? 0 : -60 
-                      }}
-                      transition={{ delay: baseDelay, duration: 0.5, ease: "easeOut" }}
-                      className="w-1/2 pr-10 text-right"
-                    >
-                      {isEven && showAll && (
-                        <div className="inline-block">
-                          {/* Badge de período */}
-                          <motion.div
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ delay: baseDelay + 0.1, duration: 0.3 }}
-                            className="inline-block bg-yellow-400/20 border border-yellow-400/40 rounded-full px-3 py-0.5 mb-1.5 float-right"
-                          >
-                            <span className="text-xs text-yellow-400 font-semibold font-sans">
-                              {etapa.periodo}
-                            </span>
-                          </motion.div>
-                          
-                          <div className="clear-both"></div>
-
-                          {/* Título */}
-                          <motion.h3
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ delay: baseDelay + 0.15, duration: 0.4 }}
-                            className="text-base md:text-lg font-bold text-white mb-1 font-sans"
-                          >
-                            {etapa.titulo}
-                          </motion.h3>
-
-                          {/* Descrição */}
-                          <motion.p
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ delay: baseDelay + 0.2, duration: 0.4 }}
-                            className="text-xs md:text-sm text-gray-300 font-light font-sans leading-relaxed"
-                          >
-                            {etapa.descricao}
-                          </motion.p>
-                        </div>
-                      )}
-                    </motion.div>
-
-                    {/* Círculo central com número - SEMPRE NO CENTRO */}
-                    <motion.div
-                      initial={{ scale: 0, rotate: -180 }}
-                      animate={{ 
-                        scale: showAll ? 1 : 0, 
-                        rotate: showAll ? 0 : -180 
-                      }}
-                      transition={{ 
-                        delay: baseDelay + 0.05, 
-                        duration: 0.5, 
-                        type: "spring",
-                        stiffness: 200,
-                        damping: 15
-                      }}
-                      className="absolute left-1/2 transform -translate-x-1/2 z-10"
-                    >
-                      {/* Círculo externo com glow */}
-                      <div className="relative">
-                        <motion.div
-                          animate={showAll ? { 
-                            boxShadow: [
-                              '0 0 20px rgba(212, 160, 23, 0.3)',
-                              '0 0 40px rgba(212, 160, 23, 0.6)',
-                              '0 0 20px rgba(212, 160, 23, 0.3)'
-                            ]
-                          } : {}}
-                          transition={{
-                            duration: 2,
-                            repeat: Infinity,
-                            ease: "easeInOut"
-                          }}
-                          className="w-14 h-14 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center border-4 border-gray-900"
-                        >
-                          <span className="text-lg font-bold text-gray-900 font-sans">
-                            {etapa.numero}
-                          </span>
-                        </motion.div>
-
-                        {/* Pulso decorativo */}
-                        {showAll && (
-                          <motion.div
-                            initial={{ scale: 1, opacity: 0.6 }}
-                            animate={{ scale: 1.8, opacity: 0 }}
-                            transition={{
-                              delay: baseDelay + 0.3,
-                              duration: 1.5,
-                              repeat: Infinity,
-                              repeatDelay: 2
-                            }}
-                            className="absolute inset-0 rounded-full bg-yellow-400/30 border-2 border-yellow-400/50"
-                          />
-                        )}
-                      </div>
-                    </motion.div>
-
-                    {/* Conteúdo Direita */}
-                    <motion.div
-                      initial={{ opacity: 0, x: 60 }}
-                      animate={{ 
-                        opacity: showAll ? 1 : 0, 
-                        x: showAll ? 0 : 60 
-                      }}
-                      transition={{ delay: baseDelay, duration: 0.5, ease: "easeOut" }}
-                      className="w-1/2 pl-10 text-left"
-                    >
-                      {!isEven && showAll && (
-                        <div className="inline-block">
-                          {/* Badge de período */}
-                          <motion.div
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ delay: baseDelay + 0.1, duration: 0.3 }}
-                            className="inline-block bg-yellow-400/20 border border-yellow-400/40 rounded-full px-3 py-0.5 mb-1.5 float-left"
-                          >
-                            <span className="text-xs text-yellow-400 font-semibold font-sans">
-                              {etapa.periodo}
-                            </span>
-                          </motion.div>
-                          
-                          <div className="clear-both"></div>
-
-                          {/* Título */}
-                          <motion.h3
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ delay: baseDelay + 0.15, duration: 0.4 }}
-                            className="text-base md:text-lg font-bold text-white mb-1 font-sans"
-                          >
-                            {etapa.titulo}
-                          </motion.h3>
-
-                          {/* Descrição */}
-                          <motion.p
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ delay: baseDelay + 0.2, duration: 0.4 }}
-                            className="text-xs md:text-sm text-gray-300 font-light font-sans leading-relaxed"
-                          >
-                            {etapa.descricao}
-                          </motion.p>
-                        </div>
-                      )}
-                    </motion.div>
+                {/* Conteúdo */}
+                <div className="flex-1 max-w-[280px]">
+                  <div className="inline-block bg-cyan-400/20 px-3 py-1 rounded-full mb-1.5">
+                    <span className="text-[10px] font-semibold text-cyan-300 uppercase tracking-wide">
+                      {etapa.periodo}
+                    </span>
                   </div>
-                );
-              })}
-            </div>
+                  <h3 className="text-base font-semibold text-white mb-1.5 leading-tight">
+                    {etapa.titulo}
+                  </h3>
+                  <p className="text-xs text-gray-300 leading-relaxed">
+                    {etapa.descricao}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* Footer */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.5, duration: 0.8 }}
-          className="text-center mt-4"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.2, duration: 0.8 }}
+          className="mt-6 text-center"
         >
-          <p className="text-xs text-gray-400 font-sans">
-            <span className="text-yellow-400 font-semibold">Acompanhamento semanal</span> durante toda a jornada
-            {!showAll && (
-              <span className="ml-4 text-yellow-400/60">→ Pressione a seta direita para revelar todas as etapas</span>
-            )}
+          <p className="text-sm text-cyan-300 font-light">
+            ✦ Acompanhamento semanal e suporte dedicado durante toda a jornada
           </p>
         </motion.div>
       </div>
     </div>
   );
 }
-// Updated Sun Nov 30 14:48:38 EST 2025
