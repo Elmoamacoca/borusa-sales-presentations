@@ -43,6 +43,22 @@ import Slide38 from '@/slides/Slide38';
 import Slide39 from '@/slides/Slide39';
 import Slide40 from '@/slides/Slide40';
 import Slide41 from '@/slides/Slide41';
+import Slide42 from '@/slides/Slide42';
+import Slide43 from '@/slides/Slide43';
+import Slide44 from '@/slides/Slide44';
+import Slide45 from '@/slides/Slide45';
+import Slide46 from '@/slides/Slide46';
+import Slide47 from '@/slides/Slide47';
+import Slide48 from '@/slides/Slide48';
+import Slide49 from '@/slides/Slide49';
+import Slide50 from '@/slides/Slide50';
+import Slide51 from '@/slides/Slide51';
+import Slide52 from '@/slides/Slide52';
+import Slide53 from '@/slides/Slide53';
+import Slide54 from '@/slides/Slide54';
+import Slide55 from '@/slides/Slide55';
+import Slide56 from '@/slides/Slide56';
+import Slide57 from '@/slides/Slide57';
 
 
 export interface SlideDefinition extends SlideConfig {
@@ -92,6 +108,22 @@ export const slidesConfig: SlideDefinition[] = [
   { id: 'slide-39', order: 39, component: Slide39, title: 'A IA É O NOVO PETRÓLEO' },
   { id: 'slide-40', order: 40, component: Slide40, title: 'Escalar Inside Sales B2B' },
   { id: 'slide-41', order: 41, component: Slide41, title: 'Dúvidas?' },
+  { id: 'slide-42', order: 42, component: Slide42, title: 'Célula Términus - NEST' },
+  { id: 'slide-43', order: 43, component: Slide43, title: 'Implementação Híbrida MQL Machine' },
+  { id: 'slide-44', order: 44, component: Slide44, title: 'Plano de Ação Personalizado' },
+  { id: 'slide-45', order: 45, component: Slide45, title: 'Grupo do WhatsApp do Projeto' },
+  { id: 'slide-46', order: 46, component: Slide46, title: 'Visão Geral das IAs' },
+  { id: 'slide-47', order: 47, component: Slide47, title: 'IASDR - Porta de Entrada Inteligente' },
+  { id: 'slide-48', order: 48, component: Slide48, title: 'IA de Compromisso - Agenda Cheia' },
+  { id: 'slide-49', order: 49, component: Slide49, title: 'IA de Follow-up - Persistência Inteligente' },
+  { id: 'slide-50', order: 50, component: Slide50, title: 'IA Estrategista - Cérebro Tático' },
+  { id: 'slide-51', order: 51, component: Slide51, title: '6 Tutorias 1:1' },
+  { id: 'slide-52', order: 52, component: Slide52, title: 'Playbook Operacional' },
+  { id: 'slide-53', order: 53, component: Slide53, title: 'Trilha de Vídeos: Portal e Painéis' },
+  { id: 'slide-54', order: 54, component: Slide54, title: 'Trilha de Vídeos: Automações e IAs' },
+  { id: 'slide-55', order: 55, component: Slide55, title: 'Inteligência Coletiva Borusa (BCF v2)' },
+  { id: 'slide-56', order: 56, component: Slide56, title: 'Bônus: Arsenal Open Source' },
+  { id: 'slide-57', order: 57, component: Slide57, title: 'Em Resumo Como Será a Nossa Jornada Juntos?' },
 
 ];
 
