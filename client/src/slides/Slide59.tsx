@@ -62,7 +62,7 @@ export default function Slide59() {
             transition={{ delay: 0.4, duration: 0.7 }}
             className="mb-8"
           >
-            <h1 className="text-3xl md:text-4xl font-bold text-white font-sans leading-tight">
+            <h1 className="text-5xl md:text-6xl font-light text-white font-sans leading-tight">
               GARANTIA DE <span className="text-yellow-400">R$20.000,00</span>
             </h1>
           </motion.div>
@@ -78,7 +78,7 @@ export default function Slide59() {
           </motion.p>
 
           {/* Opções em Verde */}
-          <div className="grid grid-cols-2 gap-5 mb-8">
+          <div className="flex flex-col gap-5 mb-8">
             {/* Opção 1 */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
@@ -131,7 +131,7 @@ export default function Slide59() {
             transition={{ delay: 1.2, duration: 0.7 }}
             className="border-t border-gray-500/30 pt-5"
           >
-            <p className="text-sm md:text-base text-gray-400 font-light font-sans italic leading-relaxed">
+            <p className="text-base md:text-lg text-gray-400 font-light font-sans italic leading-relaxed">
               Condicionado a você seguir o plano de ação combinado e nos dar a chance de ajustar o sistema ao longo do projeto.
             </p>
           </motion.div>
