@@ -33,57 +33,51 @@ export default function Slide67() {
           <MeshGradient className="w-full h-full" colors={blueColors} speed={0.15} minPixelRatio={1.0} />
         </div>
 
-        <div className="relative z-10 w-full h-full">
-          {/* Texto pequeno */}
-          <div style={{ position: 'absolute', top: '180px', left: '64px', right: '64px' }}>
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-              className="text-sm text-gray-300 font-light font-sans uppercase tracking-wide"
-            >
-              OPÇÃO DE FAZER PARTE DA IMPLEMENTAÇÃO<br />DA CÉLULA TÉRMINUS – NEST
-            </motion.p>
-          </div>
+        <div className="relative z-10 w-full h-full flex flex-col justify-center px-16">
+          {/* Texto pequeno superior */}
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+            className="text-sm text-gray-300 font-light font-sans uppercase tracking-wide mb-12"
+          >
+            OPÇÃO DE FAZER PARTE DA IMPLEMENTAÇÃO<br />DA CÉLULA TÉRMINUS – NEST
+          </motion.p>
 
           {/* Título PREÇO DO PROGRAMA */}
-          <div style={{ position: 'absolute', top: '280px', left: '64px', right: '64px' }}>
-            <motion.h1
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.4, duration: 0.7 }}
-              className="text-5xl font-light text-white font-sans leading-tight"
-            >
-              PREÇO DO<br />PROGRAMA
-            </motion.h1>
-          </div>
+          <motion.h1
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.4, duration: 0.7 }}
+            className="text-5xl font-light text-white font-sans leading-tight mb-16"
+          >
+            PREÇO DO<br />PROGRAMA
+          </motion.h1>
 
           {/* PREÇO REGULAR */}
-          <div style={{ position: 'absolute', top: '540px', left: '88px', right: '64px' }}>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.7 }}
-              className="relative space-y-4"
-            >
-              <div className="absolute left-[-24px] top-0 bottom-0 w-1 bg-gradient-to-b from-cyan-400 to-blue-500" />
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6, duration: 0.7 }}
+            className="relative space-y-4 pl-6"
+          >
+            <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-cyan-400 to-blue-500" />
 
-              <h2 className="text-3xl font-light text-cyan-400 font-sans mb-4">
-                PREÇO REGULAR
-              </h2>
+            <h2 className="text-2xl font-light text-cyan-400 font-sans mb-4">
+              PREÇO REGULAR
+            </h2>
 
-              <p className="text-4xl font-bold text-white font-sans">
-                6x de R$ 4.000,00
+            <p className="text-4xl font-bold text-white font-sans mb-3">
+              6x de R$ 4.000,00
+            </p>
+
+            <div className="flex items-center gap-3 text-white">
+              <span className="text-xl">♦</span>
+              <p className="text-xl font-light font-sans">
+                À vista: R$ 20.000,00
               </p>
-
-              <div className="flex items-center gap-3 text-white">
-                <span className="text-2xl">♦</span>
-                <p className="text-2xl font-light font-sans">
-                  À vista: R$ 20.000,00
-                </p>
-              </div>
-            </motion.div>
-          </div>
+            </div>
+          </motion.div>
         </div>
       </div>
 
@@ -93,54 +87,46 @@ export default function Slide67() {
           <MeshGradient className="w-full h-full" colors={goldColors} speed={0.15} minPixelRatio={1.0} />
         </div>
 
-        <div className="relative z-10 w-full h-full">
+        <div className="relative z-10 w-full h-full flex flex-col justify-center px-16">
           {/* Asterisco */}
-          <div style={{ position: 'absolute', top: '140px', left: '40%', transform: 'translateX(-50%)' }}>
-            <motion.div
-              initial={{ opacity: 0, scale: 0, rotate: -180 }}
-              animate={{ opacity: 0.5, scale: 1, rotate: 0 }}
-              transition={{ delay: 0.3, duration: 1 }}
-              className="text-white font-bold"
-              style={{ fontSize: '150px' }}
-            >
-              *
-            </motion.div>
-          </div>
-
-          {/* Texto invisível para manter estrutura */}
-          <div style={{ position: 'absolute', top: '180px', left: '64px', right: '64px', opacity: 0 }}>
-            <p className="text-sm">PLACEHOLDER</p>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0, rotate: -180 }}
+            animate={{ opacity: 0.3, scale: 1, rotate: 0 }}
+            transition={{ delay: 0.3, duration: 1 }}
+            className="text-white font-bold text-9xl mb-12 self-center"
+          >
+            *
+          </motion.div>
 
           {/* Título VALOR SANGUE NO OLHO */}
-          <div style={{ position: 'absolute', top: '280px', left: '64px', right: '64px' }}>
-            <motion.h1
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.4, duration: 0.7 }}
-              className="text-5xl font-light text-white font-sans leading-tight"
-            >
-              VALOR SANGUE<br />NO OLHO
-            </motion.h1>
-          </div>
+          <motion.h1
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.4, duration: 0.7 }}
+            className="text-5xl font-light text-white font-sans leading-tight mb-16"
+          >
+            VALOR SANGUE<br />NO OLHO
+          </motion.h1>
 
-          {/* Valores */}
-          <div style={{ position: 'absolute', top: '540px', left: '64px', right: '64px' }}>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: showValor ? 1 : 0 }}
-              transition={{ duration: 0.5 }}
-              className="space-y-3"
-            >
-              <p className="text-5xl font-bold text-white font-sans">
-                R$ 9.000,00 à vista
-              </p>
+          {/* Valores - Posição fixa, apenas opacity muda */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: showValor ? 1 : 0 }}
+            transition={{ duration: 0.5 }}
+            className="space-y-3"
+          >
+            <h2 className="text-2xl font-light text-yellow-400 font-sans mb-4">
+              VALOR ESPECIAL
+            </h2>
 
-              <p className="text-lg text-white/90 font-light font-sans">
-                (Pix ou até 12x no cartão)
-              </p>
-            </motion.div>
-          </div>
+            <p className="text-4xl font-bold text-white font-sans mb-3">
+              R$ 9.000,00 à vista
+            </p>
+
+            <p className="text-xl font-light font-sans text-white/90">
+              (Pix ou até 12x no cartão)
+            </p>
+          </motion.div>
         </div>
       </div>
     </div>
