@@ -79,14 +79,14 @@ export default function Slide58() {
                 className="flex items-start gap-5 min-h-[60px]"
               >
                 {/* Círculo com número */}
-                <div className="flex-shrink-0 w-14 h-14 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center border-3 border-white/20">
+                <div className="flex-shrink-0 w-14 h-14 rounded-full bg-gradient-to-br from-yellow-400 to-amber-500 flex items-center justify-center border-3 border-white/20">
                   <span className="text-lg font-bold text-white">{etapa.numero}</span>
                 </div>
 
                 {/* Conteúdo */}
                 <div className="flex-1 max-w-[280px]">
-                  <div className="inline-block bg-cyan-400/20 px-3 py-1 rounded-full mb-1.5">
-                    <span className="text-xs font-semibold text-cyan-300 uppercase tracking-wide">
+                  <div className="inline-block bg-yellow-400/20 px-3 py-1 rounded-full mb-1.5">
+                    <span className="text-xs font-semibold text-yellow-300 uppercase tracking-wide">
                       {etapa.periodo}
                     </span>
                   </div>
@@ -109,7 +109,7 @@ export default function Slide58() {
           transition={{ delay: 1.2, duration: 0.8 }}
           className="mt-6 text-center"
         >
-          <p className="text-sm text-cyan-300 font-light">
+          <p className="text-sm text-yellow-300 font-light">
             ✦ Acompanhamento semanal e suporte dedicado durante toda a jornada
           </p>
         </motion.div>
