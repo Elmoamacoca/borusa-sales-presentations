@@ -1,12 +1,16 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { MeshGradient } from "@paper-design/shaders-react";
+import { usePresentationStore } from '../store/presentationStore';
 
 export default function Slide67() {
   const [step, setStep] = useState(0); // 0 = inicial, 1 = mostra lado direito, 2 = mostra valor
 
+  const { setCurrentSlide } = usePresentationStore();
+
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
+      // Navegação interna do slide (steps 0 e 1)
       if (e.key === 'ArrowRight' && step < 2) {
         e.preventDefault();
         e.stopPropagation();
@@ -16,11 +20,29 @@ export default function Slide67() {
         e.stopPropagation();
         setStep(step - 1);
       }
+      // Bloquear seta direita no step 2
+      else if (e.key === 'ArrowRight' && step === 2) {
+        e.preventDefault();
+        e.stopPropagation();
+        // Não faz nada - bloqueia a navegação
+      }
+      // Navegação condicional com teclas 1 e 2 (apenas no step 2)
+      else if (step === 2) {
+        if (e.key === '1') {
+          e.preventDefault();
+          e.stopPropagation();
+          setCurrentSlide('slide-68');
+        } else if (e.key === '2') {
+          e.preventDefault();
+          e.stopPropagation();
+          setCurrentSlide('slide-69');
+        }
+      }
     };
 
     window.addEventListener('keydown', handleKeyDown, true);
     return () => window.removeEventListener('keydown', handleKeyDown, true);
-  }, [step]);
+  }, [step, setCurrentSlide]);
 
   const blueColors = ["#0a0a0a", "#1a2332", "#2d3e50", "#3d5a80", "#1a1a1a"];
   const goldColors = ["#b8860b", "#d4a017", "#daa520", "#b8860b", "#8b6914"];
