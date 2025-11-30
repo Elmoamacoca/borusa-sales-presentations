@@ -55,7 +55,7 @@ export default function Slide58() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-8"
+          className="text-center mb-12"
         >
           <h1 className="text-4xl md:text-5xl font-light text-white font-sans">
             JORNADA DE 90 DIAS
@@ -67,9 +67,9 @@ export default function Slide58() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
-          className="w-full max-w-6xl flex justify-center"
+          className="w-full max-w-6xl flex justify-center mt-20"
         >
-          <div className="grid grid-cols-2 gap-x-12 gap-y-5 mx-auto">
+          <div className="grid grid-cols-2 gap-x-32 gap-y-5 mx-auto">
             {etapas.map((etapa, index) => (
               <motion.div
                 key={index}
@@ -86,14 +86,14 @@ export default function Slide58() {
                 {/* Conteúdo */}
                 <div className="flex-1 max-w-[280px]">
                   <div className="inline-block bg-cyan-400/20 px-3 py-1 rounded-full mb-1.5">
-                    <span className="text-[10px] font-semibold text-cyan-300 uppercase tracking-wide">
+                    <span className="text-xs font-semibold text-cyan-300 uppercase tracking-wide">
                       {etapa.periodo}
                     </span>
                   </div>
-                  <h3 className="text-base font-semibold text-white mb-1.5 leading-tight">
+                  <h3 className="text-lg font-semibold text-white mb-1.5 leading-tight">
                     {etapa.titulo}
                   </h3>
-                  <p className="text-xs text-gray-300 leading-relaxed">
+                  <p className="text-sm text-gray-300 leading-relaxed">
                     {etapa.descricao}
                   </p>
                 </div>
