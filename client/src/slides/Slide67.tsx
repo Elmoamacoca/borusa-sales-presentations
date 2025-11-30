@@ -38,49 +38,37 @@ export default function Slide67() {
           <MeshGradient className="w-full h-full" colors={blueColors} speed={0.15} minPixelRatio={1.0} />
         </div>
 
-        <motion.div
-          className="relative z-10 w-full h-full"
-          initial={{ paddingLeft: '0', paddingRight: '0' }}
-          animate={{
-            paddingLeft: step >= 1 ? '64px' : '0',
-            paddingRight: step >= 1 ? '64px' : '0'
-          }}
-          transition={{ duration: 0.4 }}
-        >
-          {/* Texto pequeno superior - Altura: 180px */}
-          <div style={{ position: 'absolute', top: '180px', left: step >= 1 ? '64px' : '50%', right: '64px', transform: step >= 1 ? 'none' : 'translateX(-50%)', width: step >= 1 ? 'auto' : '600px' }}>
+        {step === 0 ? (
+          // Estado inicial - Conteúdo centralizado
+          <div className="relative z-10 w-full h-full flex flex-col items-center justify-center px-16">
+            {/* Texto pequeno superior */}
             <motion.p
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1, textAlign: step >= 1 ? 'left' : 'center' }}
+              animate={{ opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.6 }}
-              className="text-base text-gray-300 font-light font-sans uppercase tracking-wide"
+              className="text-base text-gray-300 font-light font-sans uppercase tracking-wide text-center mb-12"
             >
               OPÇÃO DE FAZER PARTE DA IMPLEMENTAÇÃO<br />DA CÉLULA TÉRMINUS – NEST
             </motion.p>
-          </div>
 
-          {/* Título PREÇO DO PROGRAMA - Altura: 280px */}
-          <div style={{ position: 'absolute', top: '280px', left: step >= 1 ? '64px' : '50%', right: '64px', transform: step >= 1 ? 'none' : 'translateX(-50%)', width: step >= 1 ? 'auto' : '600px' }}>
+            {/* Título PREÇO DO PROGRAMA */}
             <motion.h1
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0, textAlign: step >= 1 ? 'left' : 'center' }}
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.7 }}
-              className="text-6xl font-light text-white font-sans leading-tight"
+              className="text-6xl font-light text-white font-sans leading-tight text-center mb-16"
             >
               PREÇO DO<br />PROGRAMA
             </motion.h1>
-          </div>
 
-          {/* PREÇO REGULAR - Altura: 480px */}
-          <div style={{ position: 'absolute', top: '480px', left: step >= 1 ? '88px' : '50%', right: '64px', transform: step >= 1 ? 'none' : 'translateX(-50%)', width: step >= 1 ? 'auto' : '600px' }}>
+            {/* PREÇO REGULAR */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.7 }}
-              className="relative space-y-5"
-              style={{ paddingLeft: step >= 1 ? '0' : '24px' }}
+              className="relative space-y-5 pl-6"
             >
-              <div className="absolute left-[-24px] top-0 bottom-0 w-1 bg-gradient-to-b from-cyan-400 to-blue-500" />
+              <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-cyan-400 to-blue-500" />
 
               <h2 className="text-3xl font-light text-cyan-400 font-sans mb-5">
                 PREÇO REGULAR
@@ -98,7 +86,61 @@ export default function Slide67() {
               </div>
             </motion.div>
           </div>
-        </motion.div>
+        ) : (
+          // Estado com lado direito - Posicionamento absoluto
+          <div className="relative z-10 w-full h-full">
+            {/* Texto pequeno superior - Altura: 180px */}
+            <div style={{ position: 'absolute', top: '180px', left: '64px', right: '64px' }}>
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.2, duration: 0.6 }}
+                className="text-base text-gray-300 font-light font-sans uppercase tracking-wide"
+              >
+                OPÇÃO DE FAZER PARTE DA IMPLEMENTAÇÃO<br />DA CÉLULA TÉRMINUS – NEST
+              </motion.p>
+            </div>
+
+            {/* Título PREÇO DO PROGRAMA - Altura: 280px */}
+            <div style={{ position: 'absolute', top: '280px', left: '64px', right: '64px' }}>
+              <motion.h1
+                initial={{ opacity: 0, x: -30 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.4, duration: 0.7 }}
+                className="text-6xl font-light text-white font-sans leading-tight"
+              >
+                PREÇO DO<br />PROGRAMA
+              </motion.h1>
+            </div>
+
+            {/* PREÇO REGULAR - Altura: 480px */}
+            <div style={{ position: 'absolute', top: '480px', left: '88px', right: '64px' }}>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6, duration: 0.7 }}
+                className="relative space-y-5"
+              >
+                <div className="absolute left-[-24px] top-0 bottom-0 w-1 bg-gradient-to-b from-cyan-400 to-blue-500" />
+
+                <h2 className="text-3xl font-light text-cyan-400 font-sans mb-5">
+                  PREÇO REGULAR
+                </h2>
+
+                <p className="text-5xl font-bold text-white font-sans mb-4">
+                  6x de R$ 4.000,00
+                </p>
+
+                <div className="flex items-center gap-3 text-white">
+                  <span className="text-2xl">♦</span>
+                  <p className="text-2xl font-light font-sans">
+                    À vista: R$ 20.000,00
+                  </p>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        )}
       </motion.div>
 
       {/* Lado Direito - Dourado com MeshGradient */}
