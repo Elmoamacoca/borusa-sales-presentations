@@ -90,7 +90,7 @@ export default function Slide58() {
                       {etapa.periodo}
                     </span>
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-1.5 leading-tight">
+                  <h3 className="text-lg font-light text-white mb-1.5 leading-tight font-sans">
                     {etapa.titulo}
                   </h3>
                   <p className="text-sm text-gray-300 leading-relaxed">
