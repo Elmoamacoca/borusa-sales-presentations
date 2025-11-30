@@ -31,7 +31,7 @@ export default function Slide67() {
       <motion.div
         initial={{ width: '100%' }}
         animate={{ width: step >= 1 ? '50%' : '100%' }}
-        transition={{ duration: 0.6, ease: 'easeInOut' }}
+        transition={{ duration: 0.4, ease: 'easeOut' }}
         className="relative"
       >
         <div className="absolute inset-0">
@@ -45,7 +45,7 @@ export default function Slide67() {
             paddingLeft: step >= 1 ? '64px' : '0',
             paddingRight: step >= 1 ? '64px' : '0'
           }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.4 }}
         >
           {/* Texto pequeno superior - Altura: 180px */}
           <div style={{ position: 'absolute', top: '180px', left: step >= 1 ? '64px' : '50%', right: '64px', transform: step >= 1 ? 'none' : 'translateX(-50%)', width: step >= 1 ? 'auto' : '600px' }}>
@@ -71,8 +71,8 @@ export default function Slide67() {
             </motion.h1>
           </div>
 
-          {/* PREÇO REGULAR - Altura: 480px */}
-          <div style={{ position: 'absolute', top: '480px', left: step >= 1 ? '88px' : '50%', right: '64px', transform: step >= 1 ? 'none' : 'translateX(-50%)', width: step >= 1 ? 'auto' : '600px' }}>
+          {/* PREÇO REGULAR - Altura: 420px */}
+          <div style={{ position: 'absolute', top: '420px', left: step >= 1 ? '88px' : '50%', right: '64px', transform: step >= 1 ? 'none' : 'translateX(-50%)', width: step >= 1 ? 'auto' : '600px' }}>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -108,7 +108,7 @@ export default function Slide67() {
             initial={{ width: 0, opacity: 0 }}
             animate={{ width: '50%', opacity: 1 }}
             exit={{ width: 0, opacity: 0 }}
-            transition={{ duration: 0.6, ease: 'easeInOut' }}
+            transition={{ duration: 0.4, ease: 'easeOut' }}
             className="relative overflow-hidden"
           >
             <div className="absolute inset-0">
@@ -141,8 +141,8 @@ export default function Slide67() {
                 </motion.h1>
               </div>
 
-              {/* Valores - Altura: 480px */}
-              <div style={{ position: 'absolute', top: '480px', left: '64px', right: '64px' }}>
+              {/* Valores - Altura: 420px */}
+              <div style={{ position: 'absolute', top: '420px', left: '64px', right: '64px' }}>
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: step >= 2 ? 1 : 0 }}
