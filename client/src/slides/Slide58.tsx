@@ -49,13 +49,13 @@ export default function Slide58() {
         <MeshGradient className="w-full h-full" colors={blueColors} speed={0.15} minPixelRatio={1.0} />
       </div>
 
-      <div className="relative z-10 w-full h-full flex flex-col items-center justify-center px-6 md:px-12 lg:px-16 py-4">
+      <div className="relative z-10 w-full h-full flex flex-col items-center justify-start px-6 md:px-12 lg:px-16 pt-12">
         {/* Título */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-4 mt-6"
+          className="text-center mb-8"
         >
           <h1 className="text-4xl md:text-5xl font-light text-white font-sans">
             JORNADA DE 90 DIAS
@@ -67,9 +67,9 @@ export default function Slide58() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
-          className="w-full max-w-6xl"
+          className="w-full max-w-6xl flex justify-center"
         >
-          <div className="grid grid-cols-2 gap-x-12 gap-y-5">
+          <div className="grid grid-cols-2 gap-x-12 gap-y-5 mx-auto">
             {etapas.map((etapa, index) => (
               <motion.div
                 key={index}
