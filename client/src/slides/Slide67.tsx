@@ -71,8 +71,8 @@ export default function Slide67() {
             </motion.h1>
           </div>
 
-          {/* PREÇO REGULAR - Altura: 420px */}
-          <div style={{ position: 'absolute', top: '420px', left: step >= 1 ? '88px' : '50%', right: '64px', transform: step >= 1 ? 'none' : 'translateX(-50%)', width: step >= 1 ? 'auto' : '600px' }}>
+          {/* PREÇO REGULAR - Altura: 480px */}
+          <div style={{ position: 'absolute', top: '480px', left: step >= 1 ? '88px' : '50%', right: '64px', transform: step >= 1 ? 'none' : 'translateX(-50%)', width: step >= 1 ? 'auto' : '600px' }}>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -141,8 +141,8 @@ export default function Slide67() {
                 </motion.h1>
               </div>
 
-              {/* Valores - Altura: 420px */}
-              <div style={{ position: 'absolute', top: '420px', left: '64px', right: '64px' }}>
+              {/* Valores - Altura: 480px */}
+              <div style={{ position: 'absolute', top: '480px', left: '64px', right: '64px' }}>
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: step >= 2 ? 1 : 0 }}
