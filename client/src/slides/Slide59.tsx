@@ -62,7 +62,7 @@ export default function Slide59() {
             transition={{ delay: 0.4, duration: 0.7 }}
             className="mb-8"
           >
-            <h1 className="text-5xl md:text-6xl font-light text-white font-sans leading-tight">
+            <h1 className="text-5xl md:text-6xl font-light text-white font-sans leading-tight whitespace-nowrap">
               GARANTIA DE <span className="text-yellow-400">R$20.000,00</span>
             </h1>
           </motion.div>
@@ -94,7 +94,7 @@ export default function Slide59() {
                   <h3 className="text-xl md:text-2xl font-bold text-green-400 mb-2 font-sans">
                     Opção 1
                   </h3>
-                  <p className="text-base md:text-lg text-gray-100 font-light font-sans leading-relaxed">
+                  <p className="text-base md:text-lg text-gray-100 font-normal font-sans leading-relaxed">
                     Receber 100% do valor de implementação de volta.
                   </p>
                 </div>
@@ -116,7 +116,7 @@ export default function Slide59() {
                   <h3 className="text-xl md:text-2xl font-bold text-green-400 mb-2 font-sans">
                     Opção 2
                   </h3>
-                  <p className="text-base md:text-lg text-gray-100 font-light font-sans leading-relaxed">
+                  <p className="text-base md:text-lg text-gray-100 font-normal font-sans leading-relaxed">
                     Manter tudo o que já foi implementado e usar 100% do valor investido como crédito para subir de nível na Célula Términus (Agente Kesher, Operador Havaia ou Instância Lapid).
                   </p>
                 </div>
