@@ -94,8 +94,8 @@ export default function Slide67() {
         </div>
 
         <div className="relative z-10 w-full h-full">
-          {/* Asterisco - Altura: 120px */}
-          <div style={{ position: 'absolute', top: '120px', left: '50%', transform: 'translateX(-50%)' }}>
+          {/* Asterisco - Altura: 80px */}
+          <div style={{ position: 'absolute', top: '80px', left: '50%', transform: 'translateX(-50%)' }}>
             <motion.div
               initial={{ opacity: 0, scale: 0, rotate: -180 }}
               animate={{ opacity: 0.3, scale: 1, rotate: 0 }}
@@ -125,8 +125,10 @@ export default function Slide67() {
               initial={{ opacity: 0 }}
               animate={{ opacity: showValor ? 1 : 0 }}
               transition={{ duration: 0.5 }}
-              className="space-y-5"
+              className="relative space-y-5"
             >
+              <div style={{ height: '52px' }}></div>
+              
               <p className="text-5xl font-bold text-white font-sans mb-4">
                 R$ 9.000,00 à vista
               </p>
