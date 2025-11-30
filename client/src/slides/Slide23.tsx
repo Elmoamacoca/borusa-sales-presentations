@@ -86,7 +86,7 @@ export default function Slide23() {
             src="/slide21-image.png"
             alt="O Paradoxo Petrobras"
             className="w-full h-full object-cover"
-            style={{ objectPosition: 'center 30%' }}
+            style={{ objectPosition: 'center top' }}
           />
           {/* Overlay sutil */}
           <div className="absolute inset-0 bg-black/10"></div>

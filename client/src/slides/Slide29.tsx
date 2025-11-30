@@ -54,7 +54,7 @@ export default function Slide29() {
           transition={{ delay: 0.3, duration: 0.8 }}
           className="text-center max-w-6xl"
         >
-          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight font-sans">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light text-white leading-tight font-sans">
             Sua nova estrutura comercial de{' '}
             <span className="relative inline-block">
               IA
@@ -62,7 +62,7 @@ export default function Slide29() {
                 initial={{ width: 0 }}
                 animate={{ width: "100%" }}
                 transition={{ delay: 0.8, duration: 0.6 }}
-                className="absolute bottom-2 left-0 h-2 bg-yellow-500"
+                className="absolute bottom-2 left-0 h-0.5 bg-yellow-500"
               />
             </span>
             {' '}para escalar com lucro previsível

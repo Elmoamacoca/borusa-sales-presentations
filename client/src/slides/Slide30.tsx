@@ -46,11 +46,11 @@ export default function Slide30() {
           animate={{ rotate: 360 }}
           transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
           style={{ willChange: "transform" }}
-          className="relative w-full max-w-4xl aspect-square flex items-center justify-center"
+          className="relative w-full max-w-2xl aspect-square flex items-center justify-center"
         >
           
           {/* SETOR OTIMIZA - Topo */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-80">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-64">
             <motion.div
               initial={{ opacity: 0, y: -30 }}
               animate={{ opacity: 1, y: 0, rotate: -360 }}
@@ -62,7 +62,7 @@ export default function Slide30() {
               style={{ willChange: "transform" }}
               className="text-center"
             >
-              <h3 className="text-xl font-bold text-white mb-3 tracking-wider">OTIMIZA</h3>
+              <h3 className="text-lg font-bold text-white mb-2 tracking-wider">OTIMIZA</h3>
               <div className="flex justify-center gap-2">
                 {['Processos', 'Tempo', 'Recursos'].map((item, i) => (
                   <motion.div
@@ -70,7 +70,7 @@ export default function Slide30() {
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.7 + i * 0.1, duration: 0.4 }}
-                    className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-3 py-2.5 min-w-[85px]"
+                    className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-2.5 py-2 min-w-[70px]"
                   >
                     <p className="text-white text-[11px] font-medium text-center leading-tight">{item}</p>
                   </motion.div>
@@ -80,7 +80,7 @@ export default function Slide30() {
           </div>
 
           {/* SETOR ESCALA - Direita baixo */}
-          <div className="absolute bottom-12 right-0 w-80">
+          <div className="absolute bottom-8 right-0 w-64">
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0, rotate: -360 }}
@@ -92,7 +92,7 @@ export default function Slide30() {
               style={{ willChange: "transform" }}
               className="text-center"
             >
-              <h3 className="text-xl font-bold text-white mb-3 tracking-wider">ESCALA</h3>
+              <h3 className="text-lg font-bold text-white mb-2 tracking-wider">ESCALA</h3>
               <div className="flex justify-center gap-2">
                 {['Atendimento', 'Conversão', 'Receita'].map((item, i) => (
                   <motion.div
@@ -100,7 +100,7 @@ export default function Slide30() {
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.8 + i * 0.1, duration: 0.4 }}
-                    className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-3 py-2.5 min-w-[85px]"
+                    className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-2.5 py-2 min-w-[70px]"
                   >
                     <p className="text-white text-[11px] font-medium text-center leading-tight">{item}</p>
                   </motion.div>
@@ -110,7 +110,7 @@ export default function Slide30() {
           </div>
 
           {/* SETOR APRENDE - Esquerda baixo */}
-          <div className="absolute bottom-12 left-0 w-80">
+          <div className="absolute bottom-8 left-0 w-64">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0, rotate: -360 }}
@@ -122,7 +122,7 @@ export default function Slide30() {
               style={{ willChange: "transform" }}
               className="text-center"
             >
-              <h3 className="text-xl font-bold text-white mb-3 tracking-wider">APRENDE</h3>
+              <h3 className="text-lg font-bold text-white mb-2 tracking-wider">APRENDE</h3>
               <div className="flex justify-center gap-2">
                 {['Padrões', 'Comportamento', 'Melhora'].map((item, i) => (
                   <motion.div
@@ -130,7 +130,7 @@ export default function Slide30() {
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.9 + i * 0.1, duration: 0.4 }}
-                    className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-3 py-2.5 min-w-[85px]"
+                    className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-2.5 py-2 min-w-[70px]"
                   >
                     <p className="text-white text-[11px] font-medium text-center leading-tight">{item}</p>
                   </motion.div>
@@ -251,10 +251,10 @@ export default function Slide30() {
               }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
               style={{ willChange: "transform" }}
-              className="relative w-32 h-32 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center shadow-2xl"
+              className="relative w-24 h-24 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center shadow-2xl"
             >
               <div className="text-center">
-                <div className="text-3xl font-bold text-gray-900">IA</div>
+                <div className="text-2xl font-bold text-gray-900">IA</div>
               </div>
             </motion.div>
           </div>

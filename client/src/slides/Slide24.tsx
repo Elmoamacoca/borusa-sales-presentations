@@ -122,8 +122,8 @@ export default function Slide24() {
           }}
         >
           <img
-            src="/slide21-image.png"
-            alt="Preço Exato na Bomba"
+            src="/slide24-image.png"
+            alt="Frentista no Posto de Gasolina"
             className="w-full h-full object-cover"
             style={{ objectPosition: 'center 30%' }}
           />

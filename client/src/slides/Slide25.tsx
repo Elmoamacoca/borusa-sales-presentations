@@ -107,7 +107,11 @@ export default function Slide25() {
                 
                 {/* Ícone */}
                 <div className="flex justify-center mb-4">
-                  <Icon className="w-10 h-10 text-yellow-500" strokeWidth={1.5} />
+                  <Icon 
+                    className="w-10 h-10" 
+                    strokeWidth={1.5}
+                    style={{ color: '#4a4a4a' }}
+                  />
                 </div>
                 
                 {/* Título */}
@@ -143,7 +147,10 @@ export default function Slide25() {
           <p className="text-lg md:text-xl font-light text-white leading-relaxed mb-2">
             IA é o novo petróleo e você está usando ela muito mal.
           </p>
-          <p className="text-lg md:text-xl font-semibold text-yellow-300 leading-relaxed">
+          <p 
+            className="text-lg md:text-xl font-semibold leading-relaxed"
+            style={{ color: '#4a4a4a' }}
+          >
             Com nosso sistema: IA calibrada para sua realidade, resolvendo seu problema comercial e pagando barato.
           </p>
         </motion.div>

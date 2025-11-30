@@ -71,10 +71,10 @@ export default function Slide31() {
         </AnimatePresence>
 
         {/* Container */}
-        <div className="relative w-full max-w-4xl aspect-square flex items-center justify-center">
+        <div className="relative w-full max-w-2xl aspect-square flex items-center justify-center">
           
           {/* SETOR OTIMIZA - Topo - z-index 20 quando focado */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-80">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-64">
             <motion.div
               initial={{ opacity: 0, y: -30 }}
               animate={{ 
@@ -94,7 +94,7 @@ export default function Slide31() {
                 animate={{
                   textShadow: focusedPillar === 'otimiza' ? '0 0 30px rgba(251, 191, 36, 1)' : '0 0 0px rgba(0,0,0,0)'
                 }}
-                className="text-xl font-bold text-white mb-3 tracking-wider"
+                className="text-lg font-bold text-white mb-2 tracking-wider"
               >
                 OTIMIZA
               </motion.h3>
@@ -109,7 +109,7 @@ export default function Slide31() {
                       boxShadow: focusedPillar === 'otimiza' ? '0 0 20px rgba(251, 191, 36, 0.8)' : '0 0 0px rgba(0,0,0,0)'
                     }}
                     transition={{ delay: 0.7 + i * 0.1, duration: 0.4 }}
-                    className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-3 py-2.5 min-w-[85px]"
+                    className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-2.5 py-2 min-w-[70px]"
                   >
                     <p className="text-white text-[11px] font-medium text-center leading-tight">{item}</p>
                   </motion.div>
@@ -119,7 +119,7 @@ export default function Slide31() {
           </div>
 
           {/* SETOR ESCALA - Direita baixo - z-index 20 quando focado */}
-          <div className="absolute bottom-12 right-0 w-80">
+          <div className="absolute bottom-8 right-0 w-64">
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={{ 
@@ -139,7 +139,7 @@ export default function Slide31() {
                 animate={{
                   textShadow: focusedPillar === 'escala' ? '0 0 30px rgba(34, 197, 94, 1)' : '0 0 0px rgba(0,0,0,0)'
                 }}
-                className="text-xl font-bold text-white mb-3 tracking-wider"
+                className="text-lg font-bold text-white mb-2 tracking-wider"
               >
                 ESCALA
               </motion.h3>
@@ -154,7 +154,7 @@ export default function Slide31() {
                       boxShadow: focusedPillar === 'escala' ? '0 0 20px rgba(34, 197, 94, 0.8)' : '0 0 0px rgba(0,0,0,0)'
                     }}
                     transition={{ delay: 0.8 + i * 0.1, duration: 0.4 }}
-                    className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-3 py-2.5 min-w-[85px]"
+                    className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-2.5 py-2 min-w-[70px]"
                   >
                     <p className="text-white text-[11px] font-medium text-center leading-tight">{item}</p>
                   </motion.div>
@@ -164,7 +164,7 @@ export default function Slide31() {
           </div>
 
           {/* SETOR APRENDE - Esquerda baixo - z-index 20 quando focado */}
-          <div className="absolute bottom-12 left-0 w-80">
+          <div className="absolute bottom-8 left-0 w-64">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ 
@@ -184,7 +184,7 @@ export default function Slide31() {
                 animate={{
                   textShadow: focusedPillar === 'aprende' ? '0 0 30px rgba(59, 130, 246, 1)' : '0 0 0px rgba(0,0,0,0)'
                 }}
-                className="text-xl font-bold text-white mb-3 tracking-wider"
+                className="text-lg font-bold text-white mb-2 tracking-wider"
               >
                 APRENDE
               </motion.h3>
@@ -199,7 +199,7 @@ export default function Slide31() {
                       boxShadow: focusedPillar === 'aprende' ? '0 0 20px rgba(59, 130, 246, 0.8)' : '0 0 0px rgba(0,0,0,0)'
                     }}
                     transition={{ delay: 0.9 + i * 0.1, duration: 0.4 }}
-                    className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-3 py-2.5 min-w-[85px]"
+                    className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-2.5 py-2 min-w-[70px]"
                   >
                     <p className="text-white text-[11px] font-medium text-center leading-tight">{item}</p>
                   </motion.div>
@@ -373,10 +373,10 @@ export default function Slide31() {
                 ease: "easeInOut" 
               }}
               style={{ willChange: "transform" }}
-              className="relative w-32 h-32 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center shadow-2xl"
+              className="relative w-24 h-24 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center shadow-2xl"
             >
               <div className="text-center">
-                <div className="text-3xl font-bold text-gray-900">IA</div>
+                <div className="text-2xl font-bold text-gray-900">IA</div>
               </div>
             </motion.div>
           </div>
@@ -391,11 +391,11 @@ export default function Slide31() {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.3 }}
-              className={`absolute z-30 max-w-md ${explanations[focusedPillar as keyof typeof explanations].position}`}
+              className={`absolute z-30 max-w-xs ${explanations[focusedPillar as keyof typeof explanations].position}`}
             >
               {/* SEM FUNDO - apenas borda */}
-              <div className="border-2 border-yellow-500/80 rounded-xl p-6">
-                <p className="text-white text-base leading-relaxed">
+              <div className="border-2 border-yellow-500/80 rounded-xl p-4">
+                <p className="text-white text-sm leading-relaxed">
                   {explanations[focusedPillar as keyof typeof explanations].text}
                 </p>
               </div>
