@@ -40,7 +40,7 @@ export default function Slide67() {
 
         {step === 0 ? (
           // Estado inicial - Conteúdo centralizado
-          <div className="relative z-10 w-full h-full flex flex-col items-center justify-center px-16">
+          <div className="relative z-10 w-full h-full flex flex-col items-center justify-center" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
             {/* Texto pequeno superior */}
             <motion.p
               initial={{ opacity: 0 }}
