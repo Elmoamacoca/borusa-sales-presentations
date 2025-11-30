@@ -40,7 +40,7 @@ export default function Slide67() {
 
         {step === 0 ? (
           // Estado inicial - Conteúdo centralizado
-          <div className="relative z-10 w-full h-full flex flex-col items-center justify-center" style={{ paddingLeft: '80px', paddingRight: '80px', transform: 'translateX(30px)' }}>
+          <div className="relative z-10 w-full h-full flex flex-col items-center justify-center" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
             {/* Texto pequeno superior */}
             <motion.p
               initial={{ opacity: 0 }}
@@ -67,7 +67,7 @@ export default function Slide67() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.7 }}
               className="relative space-y-5 pl-6"
-              style={{ marginLeft: '-12px' }}
+              style={{ transform: 'translateX(30px)' }}
             >
               <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-cyan-400 to-blue-500" />
 
