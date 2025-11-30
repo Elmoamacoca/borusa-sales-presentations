@@ -127,7 +127,7 @@ export default function Slide67() {
               transition={{ duration: 0.5 }}
               className="relative space-y-5"
             >
-              <div style={{ height: '52px' }}></div>
+              <div style={{ height: '32px' }}></div>
               
               <p className="text-5xl font-bold text-white font-sans mb-4">
                 R$ 9.000,00 à vista
