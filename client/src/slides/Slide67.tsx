@@ -67,7 +67,7 @@ export default function Slide67() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.7 }}
               className="relative space-y-5 pl-6"
-              style={{ transform: 'translateX(30px)' }}
+              style={{ transform: 'translateX(60px)' }}
             >
               <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-cyan-400 to-blue-500" />
 
