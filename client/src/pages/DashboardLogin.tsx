@@ -20,7 +20,7 @@ export default function DashboardLogin() {
     setError('');
 
     if (login(username, password)) {
-      setLocation('/dashboard');
+      setLocation('/dashboard/home');
     } else {
       setError('Usuário ou senha incorretos');
       setPassword('');
@@ -38,7 +38,7 @@ export default function DashboardLogin() {
               <Lock className="h-8 w-8 text-primary" />
             </div>
           </div>
-          <CardTitle className="text-2xl">Dashboard Borusa</CardTitle>
+          <CardTitle className="text-2xl">Borusa Solutions</CardTitle>
           <CardDescription>
             Acesse o painel de apresentações
           </CardDescription>

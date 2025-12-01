@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { usePresentationStore, setSlidesConfig } from '@/store/presentationStore';
-import { slidesConfig } from '@/config/slides.config';
+import { getSlidesByConfigId } from '@/config/slides.config';
 import { useKeyboardShortcuts } from '@/hooks/useKeyboardShortcuts';
 import { useDrawingShortcuts } from '@/hooks/useDrawingShortcuts';
 
@@ -11,14 +11,21 @@ import { LaserPointer } from '@/components/presentation/LaserPointer';
 import { SlideCounter } from '@/components/presentation/SlideCounter';
 import { useLaser } from '@/hooks/useLaser';
 
-export default function Presentation() {
+interface PresentationProps {
+  slidesConfigId: string;
+}
+
+export default function Presentation({ slidesConfigId }: PresentationProps) {
   const { currentSlideId } = usePresentationStore();
   const { active: laserActive } = useLaser();
+
+  // Carregar configuração de slides específica para esta apresentação
+  const slidesConfig = getSlidesByConfigId(slidesConfigId);
 
   // Inicializar configuração de slides
   useEffect(() => {
     setSlidesConfig(slidesConfig);
-  }, []);
+  }, [slidesConfig]);
 
   // Ativar atalhos de teclado
   useKeyboardShortcuts();
@@ -48,8 +55,8 @@ export default function Presentation() {
       {/* Laser */}
       <LaserPointer active={laserActive} />
 
-      {/* Contador de slides */}
-      <SlideCounter />
+      {/* Contador de slides - oculto para celula-terminus */}
+      {slidesConfigId !== 'celula-terminus' && <SlideCounter />}
 
       {/* Slide atual com animação */}
       <AnimatePresence mode="wait">

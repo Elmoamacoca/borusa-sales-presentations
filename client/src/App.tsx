@@ -1,7 +1,7 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch } from "wouter";
+import { Route, Switch, Redirect } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import DashboardLogin from "./pages/DashboardLogin";
@@ -11,10 +11,21 @@ import PresentationWrapper from "./pages/PresentationWrapper";
 function Router() {
   return (
     <Switch>
-      <Route path={"/"} component={DashboardLogin} />
-      <Route path="/dashboard" component={Dashboard} />
+      {/* Redireciona raiz para dashboard */}
+      <Route path="/">
+        {() => <Redirect to="/dashboard" />}
+      </Route>
+      
+      {/* Rotas do Dashboard */}
+      <Route path="/dashboard" component={DashboardLogin} />
+      <Route path="/dashboard/home" component={Dashboard} />
+      
+      {/* Rotas das Apresentações */}
       <Route path="/p/:slug" component={PresentationWrapper} />
-      <Route path={"/404"} component={NotFound} />
+      
+      {/* 404 */}
+      <Route path="/404" component={NotFound} />
+      
       {/* Final fallback route */}
       <Route component={NotFound} />
     </Switch>

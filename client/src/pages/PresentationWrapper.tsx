@@ -24,5 +24,6 @@ export default function PresentationWrapper() {
     return <PresentationLogin slug={slug} onSuccess={() => setShowPresentation(true)} />;
   }
 
-  return <Presentation />;
+  // Passar o slidesConfigId para a apresentação
+  return <Presentation slidesConfigId={presentation.slidesConfigId} />;
 }

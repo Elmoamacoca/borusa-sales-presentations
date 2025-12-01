@@ -1,94 +1,93 @@
 import { SlideConfig } from '@/store/presentationStore';
 import type { ComponentType } from 'react';
-import { celulaTerminusSlidesConfig } from './slides-celula-terminus.config';
 
 // Import slides
-import WelcomeSlide from '@/slides/WelcomeSlide';
-import MatheusFielSlide from '@/slides/MatheusFielSlide';
-import Slide2022 from '@/slides/Slide2022';
-import Slide2025 from '@/slides/Slide2025';
-import MissionSlide from '@/slides/MissionSlide';
-import MethodologySlide from '@/slides/MethodologySlide';
-import HydraNetSlide from '@/slides/HydraNetSlide';
-import AdaptedLogicSlide from '@/slides/AdaptedLogicSlide';
-import JourneySlide from '@/slides/JourneySlide';
-import ResultsSlide from '@/slides/ResultsSlide';
-import ObstaclesSlide from '@/slides/ObstaclesSlide';
-import OtimizacaoTempoSlide from '@/slides/OtimizacaoTempoSlide';
-import InvestimentoSlide from '@/slides/InvestimentoSlide';
-import Investimento2Slide from '@/slides/Investimento2Slide';
-import EstruturaSlide from '@/slides/EstruturaSlide';
-import PerguntaIASlide from '@/slides/PerguntaIASlide';
-import Investimento3Slide from '@/slides/Investimento3Slide';
-import Investimento4Slide from '@/slides/Investimento4Slide';
-import OtimizacaoTempo2Slide from '@/slides/OtimizacaoTempo2Slide';
-import Slide20 from '@/slides/Slide20';
-import Slide21 from '@/slides/Slide21';
-import Slide22 from '@/slides/Slide22';
-import Slide23 from '@/slides/Slide23';
-import Slide24 from '@/slides/Slide24';
-import Slide25 from '@/slides/Slide25';
-import Slide26 from '@/slides/Slide26';
-import Slide27 from '@/slides/Slide27';
-import Slide28 from '@/slides/Slide28';
-import Slide29 from '@/slides/Slide29';
-import Slide30 from '@/slides/Slide30';
-import Slide31 from '@/slides/Slide31';
-import Slide32 from '@/slides/Slide32';
-import Slide33 from '@/slides/Slide33';
-import Slide34 from '@/slides/Slide34';
-import Slide35 from '@/slides/Slide35';
-import Slide36 from '@/slides/Slide36';
-import Slide37 from '@/slides/Slide37';
-import Slide38 from '@/slides/Slide38';
-import Slide39 from '@/slides/Slide39';
-import Slide40 from '@/slides/Slide40';
-import Slide41 from '@/slides/Slide41';
-import Slide42 from '@/slides/Slide42';
-import Slide43 from '@/slides/Slide43';
-import Slide44 from '@/slides/Slide44';
-import Slide45 from '@/slides/Slide45';
-import Slide46 from '@/slides/Slide46';
-import Slide47 from '@/slides/Slide47';
-import Slide48 from '@/slides/Slide48';
-import Slide49 from '@/slides/Slide49';
-import Slide50 from '@/slides/Slide50';
-import Slide51 from '@/slides/Slide51';
-import Slide52 from '@/slides/Slide52';
-import Slide53 from '@/slides/Slide53';
-import Slide54 from '@/slides/Slide54';
-import Slide55 from '@/slides/Slide55';
-import Slide56 from '@/slides/Slide56';
-import Slide57 from '@/slides/Slide57';
-import Slide58 from '@/slides/Slide58';
-import Slide59 from '@/slides/Slide59';
-import Slide60 from '@/slides/Slide60';
-import Slide61 from '@/slides/Slide61';
-import Slide62 from '@/slides/Slide62';
-import Slide63 from '@/slides/Slide63';
-import Slide64 from '@/slides/Slide64';
-import Slide65 from '@/slides/Slide65';
-import Slide66 from '@/slides/Slide66';
-import Slide67 from '@/slides/Slide67';
-import Slide68 from '@/slides/Slide68';
-import Slide69 from '@/slides/Slide69';
-import Veil2 from '@/slides/Veil2';
-import Veil3 from '@/slides/Veil3';
-import Veil4 from '@/slides/Veil4';
-import Veil5 from '@/slides/Veil5';
-import Veil6 from '@/slides/Veil6';
-import Veil7 from '@/slides/Veil7';
-import Veil8 from '@/slides/Veil8';
-import Veil9 from '@/slides/Veil9';
-import Veil10 from '@/slides/Veil10';
-import Veil11 from '@/slides/Veil11';
-import Veil12 from '@/slides/Veil12';
-import Veil13 from '@/slides/Veil13';
-import Veil14 from '@/slides/Veil14';
-import Veil15 from '@/slides/Veil15';
-import Veil16 from '@/slides/Veil16';
-import Veil17 from '@/slides/Veil17';
-import Veil18 from '@/slides/Veil18';
+import WelcomeSlide from '@/slides-celula-terminus/WelcomeSlide';
+import MatheusFielSlide from '@/slides-celula-terminus/MatheusFielSlide';
+import Slide2022 from '@/slides-celula-terminus/Slide2022';
+import Slide2025 from '@/slides-celula-terminus/Slide2025';
+import MissionSlide from '@/slides-celula-terminus/MissionSlide';
+import MethodologySlide from '@/slides-celula-terminus/MethodologySlide';
+import HydraNetSlide from '@/slides-celula-terminus/HydraNetSlide';
+import AdaptedLogicSlide from '@/slides-celula-terminus/AdaptedLogicSlide';
+import JourneySlide from '@/slides-celula-terminus/JourneySlide';
+import ResultsSlide from '@/slides-celula-terminus/ResultsSlide';
+import ObstaclesSlide from '@/slides-celula-terminus/ObstaclesSlide';
+import OtimizacaoTempoSlide from '@/slides-celula-terminus/OtimizacaoTempoSlide';
+import InvestimentoSlide from '@/slides-celula-terminus/InvestimentoSlide';
+import Investimento2Slide from '@/slides-celula-terminus/Investimento2Slide';
+import EstruturaSlide from '@/slides-celula-terminus/EstruturaSlide';
+import PerguntaIASlide from '@/slides-celula-terminus/PerguntaIASlide';
+import Investimento3Slide from '@/slides-celula-terminus/Investimento3Slide';
+import Investimento4Slide from '@/slides-celula-terminus/Investimento4Slide';
+import OtimizacaoTempo2Slide from '@/slides-celula-terminus/OtimizacaoTempo2Slide';
+import Slide20 from '@/slides-celula-terminus/Slide20';
+import Slide21 from '@/slides-celula-terminus/Slide21';
+import Slide22 from '@/slides-celula-terminus/Slide22';
+import Slide23 from '@/slides-celula-terminus/Slide23';
+import Slide24 from '@/slides-celula-terminus/Slide24';
+import Slide25 from '@/slides-celula-terminus/Slide25';
+import Slide26 from '@/slides-celula-terminus/Slide26';
+import Slide27 from '@/slides-celula-terminus/Slide27';
+import Slide28 from '@/slides-celula-terminus/Slide28';
+import Slide29 from '@/slides-celula-terminus/Slide29';
+import Slide30 from '@/slides-celula-terminus/Slide30';
+import Slide31 from '@/slides-celula-terminus/Slide31';
+import Slide32 from '@/slides-celula-terminus/Slide32';
+import Slide33 from '@/slides-celula-terminus/Slide33';
+import Slide34 from '@/slides-celula-terminus/Slide34';
+import Slide35 from '@/slides-celula-terminus/Slide35';
+import Slide36 from '@/slides-celula-terminus/Slide36';
+import Slide37 from '@/slides-celula-terminus/Slide37';
+import Slide38 from '@/slides-celula-terminus/Slide38';
+import Slide39 from '@/slides-celula-terminus/Slide39';
+import Slide40 from '@/slides-celula-terminus/Slide40';
+import Slide41 from '@/slides-celula-terminus/Slide41';
+import Slide42 from '@/slides-celula-terminus/Slide42';
+import Slide43 from '@/slides-celula-terminus/Slide43';
+import Slide44 from '@/slides-celula-terminus/Slide44';
+import Slide45 from '@/slides-celula-terminus/Slide45';
+import Slide46 from '@/slides-celula-terminus/Slide46';
+import Slide47 from '@/slides-celula-terminus/Slide47';
+import Slide48 from '@/slides-celula-terminus/Slide48';
+import Slide49 from '@/slides-celula-terminus/Slide49';
+import Slide50 from '@/slides-celula-terminus/Slide50';
+import Slide51 from '@/slides-celula-terminus/Slide51';
+import Slide52 from '@/slides-celula-terminus/Slide52';
+import Slide53 from '@/slides-celula-terminus/Slide53';
+import Slide54 from '@/slides-celula-terminus/Slide54';
+import Slide55 from '@/slides-celula-terminus/Slide55';
+import Slide56 from '@/slides-celula-terminus/Slide56';
+import Slide57 from '@/slides-celula-terminus/Slide57';
+import Slide58 from '@/slides-celula-terminus/Slide58';
+import Slide59 from '@/slides-celula-terminus/Slide59';
+import Slide60 from '@/slides-celula-terminus/Slide60';
+import Slide61 from '@/slides-celula-terminus/Slide61';
+import Slide62 from '@/slides-celula-terminus/Slide62';
+import Slide63 from '@/slides-celula-terminus/Slide63';
+import Slide64 from '@/slides-celula-terminus/Slide64';
+import Slide65 from '@/slides-celula-terminus/Slide65';
+import Slide66 from '@/slides-celula-terminus/Slide66';
+import Slide67 from '@/slides-celula-terminus/Slide67';
+import Slide68 from '@/slides-celula-terminus/Slide68';
+import Slide69 from '@/slides-celula-terminus/Slide69';
+import Veil2 from '@/slides-celula-terminus/Veil2';
+import Veil3 from '@/slides-celula-terminus/Veil3';
+import Veil4 from '@/slides-celula-terminus/Veil4';
+import Veil5 from '@/slides-celula-terminus/Veil5';
+import Veil6 from '@/slides-celula-terminus/Veil6';
+import Veil7 from '@/slides-celula-terminus/Veil7';
+import Veil8 from '@/slides-celula-terminus/Veil8';
+import Veil9 from '@/slides-celula-terminus/Veil9';
+import Veil10 from '@/slides-celula-terminus/Veil10';
+import Veil11 from '@/slides-celula-terminus/Veil11';
+import Veil12 from '@/slides-celula-terminus/Veil12';
+import Veil13 from '@/slides-celula-terminus/Veil13';
+import Veil14 from '@/slides-celula-terminus/Veil14';
+import Veil15 from '@/slides-celula-terminus/Veil15';
+import Veil16 from '@/slides-celula-terminus/Veil16';
+import Veil17 from '@/slides-celula-terminus/Veil17';
+import Veil18 from '@/slides-celula-terminus/Veil18';
 
 
 export interface SlideDefinition extends SlideConfig {
@@ -96,7 +95,7 @@ export interface SlideDefinition extends SlideConfig {
   title?: string;
 }
 
-export const slidesConfig: SlideDefinition[] = [
+export const celulaTerminusSlidesConfig: SlideDefinition[] = [
   { id: 'welcome', order: 1, component: WelcomeSlide, title: 'Bem-vindo' },
   { id: 'matheus-fiel', order: 2, component: MatheusFielSlide, title: 'Gabriel Torres' },
   { id: 'slide-2022', order: 3, component: Slide2022, title: '2023' },
@@ -194,67 +193,3 @@ export const slidesConfig: SlideDefinition[] = [
   { id: 'veil-18', order: 18, component: Veil18, title: 'Programa de Implementação - VEIL', path: 'veil' },
 
 ];
-
-/**
- * Configurações de slides por apresentação
- * Cada apresentação pode ter seu próprio conjunto de slides
- */
-export const slidesConfigs: Record<string, SlideDefinition[]> = {
-  // Role-Play - Célula Terminus (configuração atual/original)
-  'role-play-celula-terminus': slidesConfig,
-  
-  // Célula Terminus (slides duplicados e independentes)
-  'celula-terminus': celulaTerminusSlidesConfig,
-  
-  // Agente Kesher (novos slides no futuro)
-  'agente-kesher': slidesConfig, // Temporariamente usando os mesmos slides
-  
-  // Operador Havaya (novos slides no futuro)
-  'operador-havaya': slidesConfig, // Temporariamente usando os mesmos slides
-  
-  // Default fallback
-  'default': slidesConfig,
-};
-
-/**
- * Obtém a configuração de slides para uma apresentação específica
- */
-export const getSlidesByConfigId = (configId: string): SlideDefinition[] => {
-  return slidesConfigs[configId] || slidesConfigs['default'];
-};
-
-/**
- * Helpers mantidos para compatibilidade (usam slidesConfig padrão)
- */
-export const getSlideById = (id: string): SlideDefinition | undefined => {
-  return slidesConfig.find((slide) => slide.id === id);
-};
-
-export const getTotalSlides = (): number => {
-  return slidesConfig.length;
-};
-
-export const getProgress = (currentSlideId: string): number => {
-  const currentSlide = getSlideById(currentSlideId);
-  if (!currentSlide) return 0;
-  return Math.round((currentSlide.order / getTotalSlides()) * 100);
-};
-
-/**
- * Helpers específicos para uma configuração de slides
- */
-export const getSlideByIdFromConfig = (configId: string, slideId: string): SlideDefinition | undefined => {
-  const config = getSlidesByConfigId(configId);
-  return config.find((slide) => slide.id === slideId);
-};
-
-export const getTotalSlidesFromConfig = (configId: string): number => {
-  return getSlidesByConfigId(configId).length;
-};
-
-export const getProgressFromConfig = (configId: string, currentSlideId: string): number => {
-  const currentSlide = getSlideByIdFromConfig(configId, currentSlideId);
-  if (!currentSlide) return 0;
-  const total = getTotalSlidesFromConfig(configId);
-  return Math.round((currentSlide.order / total) * 100);
-};

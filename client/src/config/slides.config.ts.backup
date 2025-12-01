@@ -1,6 +1,5 @@
 import { SlideConfig } from '@/store/presentationStore';
 import type { ComponentType } from 'react';
-import { celulaTerminusSlidesConfig } from './slides-celula-terminus.config';
 
 // Import slides
 import WelcomeSlide from '@/slides/WelcomeSlide';
@@ -195,37 +194,6 @@ export const slidesConfig: SlideDefinition[] = [
 
 ];
 
-/**
- * Configurações de slides por apresentação
- * Cada apresentação pode ter seu próprio conjunto de slides
- */
-export const slidesConfigs: Record<string, SlideDefinition[]> = {
-  // Role-Play - Célula Terminus (configuração atual/original)
-  'role-play-celula-terminus': slidesConfig,
-  
-  // Célula Terminus (slides duplicados e independentes)
-  'celula-terminus': celulaTerminusSlidesConfig,
-  
-  // Agente Kesher (novos slides no futuro)
-  'agente-kesher': slidesConfig, // Temporariamente usando os mesmos slides
-  
-  // Operador Havaya (novos slides no futuro)
-  'operador-havaya': slidesConfig, // Temporariamente usando os mesmos slides
-  
-  // Default fallback
-  'default': slidesConfig,
-};
-
-/**
- * Obtém a configuração de slides para uma apresentação específica
- */
-export const getSlidesByConfigId = (configId: string): SlideDefinition[] => {
-  return slidesConfigs[configId] || slidesConfigs['default'];
-};
-
-/**
- * Helpers mantidos para compatibilidade (usam slidesConfig padrão)
- */
 export const getSlideById = (id: string): SlideDefinition | undefined => {
   return slidesConfig.find((slide) => slide.id === id);
 };
@@ -238,23 +206,4 @@ export const getProgress = (currentSlideId: string): number => {
   const currentSlide = getSlideById(currentSlideId);
   if (!currentSlide) return 0;
   return Math.round((currentSlide.order / getTotalSlides()) * 100);
-};
-
-/**
- * Helpers específicos para uma configuração de slides
- */
-export const getSlideByIdFromConfig = (configId: string, slideId: string): SlideDefinition | undefined => {
-  const config = getSlidesByConfigId(configId);
-  return config.find((slide) => slide.id === slideId);
-};
-
-export const getTotalSlidesFromConfig = (configId: string): number => {
-  return getSlidesByConfigId(configId).length;
-};
-
-export const getProgressFromConfig = (configId: string, currentSlideId: string): number => {
-  const currentSlide = getSlideByIdFromConfig(configId, currentSlideId);
-  if (!currentSlide) return 0;
-  const total = getTotalSlidesFromConfig(configId);
-  return Math.round((currentSlide.order / total) * 100);
 };
