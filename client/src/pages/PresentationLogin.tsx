@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { usePresentationAuth } from '@/hooks/usePresentationAuth';
+import { useSecurePresentationAuth } from '@/hooks/useSecurePresentationAuth';
 import { getPresentationBySlug } from '@/config/presentations.config';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -16,7 +16,7 @@ interface PresentationLoginProps {
 export default function PresentationLogin({ slug, onSuccess }: PresentationLoginProps) {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const { login } = usePresentationAuth(slug);
+  const { login } = useSecurePresentationAuth(slug);
   const presentation = getPresentationBySlug(slug);
 
   const handleSubmit = (e: React.FormEvent) => {

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useLocation } from 'wouter';
-import { useDashboardAuth } from '@/hooks/useDashboardAuth';
+import { useSecureDashboardAuth } from '@/hooks/useSecureDashboardAuth';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -12,14 +12,14 @@ export default function DashboardLogin() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const { login } = useDashboardAuth();
+  const { login } = useSecureDashboardAuth();
   const [, setLocation] = useLocation();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
 
-    if (login(username, password)) {
+    const success = await login(username, password); if (success) {
       setLocation('/dashboard/home');
     } else {
       setError('Usuário ou senha incorretos');
