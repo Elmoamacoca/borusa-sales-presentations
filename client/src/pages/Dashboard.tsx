@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useLocation, Link } from 'wouter';
-import { useSecureDashboardAuth } from '@/hooks/useSecureDashboardAuth';
+import { useDashboardAuth } from '@/hooks/useDashboardAuth';
 import { 
   presentations, 
   categories, 
@@ -17,7 +17,7 @@ import BackgroundShader from '@/components/BackgroundShader';
 import { LogOut, Presentation, DollarSign, Key, ExternalLink, TrendingDown } from 'lucide-react';
 
 export default function Dashboard() {
-  const { isAuthenticated, logout } = useSecureDashboardAuth();
+  const { isAuthenticated, logout } = useDashboardAuth();
   const [, setLocation] = useLocation();
 
   useEffect(() => {
