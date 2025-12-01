@@ -2,8 +2,8 @@ import { motion } from 'framer-motion';
 import { MeshGradient } from "@paper-design/shaders-react";
 import { useState, useEffect } from 'react';
 
-export default function Slide66() {
-  const [showValues, setShowValues] = useState(false);
+export default function Veil18() {
+  const [step, setStep] = useState(0); // 0: apenas VALOR, 1: + SANGUE NO OLHO, 2: + preço
 
   // Tom de azul correto
   const blueColors = [
@@ -17,12 +17,12 @@ export default function Slide66() {
   const items = [
     "Plano de Ação Personalizado de 90 dias",
     "Grupo de WhatsApp do Projeto",
-    "IASDR operacional (recepção, triagem, qualificação básica, pipeline, reporting)",
-    "IA de Compromisso (agendamentos, lembretes, no-show, briefing pro closer)",
-    "IA de Follow-up (9 tentativas, retomada contextual, reengajamento multicanal)",
+    "IA SDR operacional (recepção, triagem, qualificação básica, pipeline, reporting)",
+    "IA de Compromisso (agendamentos, lembretes, confirmação)",
+    "IA de Follow-up (9 tentativas, retomada contextual, persistência estratégica)",
     "IA Estrategista (análise de funil, gargalos, recomendações de testes/ajustes)",
     "Infraestrutura completa + Portal do Cliente (VPS, integrações, painéis)",
-    "6 Tutorais 1:1 com o Gabriel",
+    "4 Consultorias 1:1 com o Gabriel",
     "Playbook Operacional da Célula Términus",
     "Trilha de Vídeos – Portal e Painéis",
     "Trilha de Vídeos – Automações e IAs",
@@ -33,27 +33,27 @@ export default function Slide66() {
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'ArrowRight') {
-        if (!showValues) {
+        if (step < 2) {
           e.preventDefault();
           e.stopPropagation();
           e.stopImmediatePropagation();
-          setShowValues(true);
+          setStep(step + 1);
         }
-        // Se showValues já é true, deixa avançar normalmente
+        // Se step === 2, deixa avançar para o próximo slide
       } else if (e.key === 'ArrowLeft') {
-        if (showValues) {
+        if (step > 0) {
           e.preventDefault();
           e.stopPropagation();
           e.stopImmediatePropagation();
-          setShowValues(false);
+          setStep(step - 1);
         }
-        // Se showValues é false, deixa voltar ao slide anterior
+        // Se step === 0, deixa voltar ao slide anterior
       }
     };
 
     window.addEventListener('keydown', handleKeyDown, true);
     return () => window.removeEventListener('keydown', handleKeyDown, true);
-  }, [showValues]);
+  }, [step]);
 
   return (
     <div className="fixed inset-0 w-screen h-screen overflow-hidden">
@@ -77,7 +77,7 @@ export default function Slide66() {
             className="mb-16"
           >
             <h1 className="text-3xl md:text-4xl font-bold text-white font-sans leading-tight">
-              PROGRAMA DE IMPLEMENTAÇÃO DA CÉLULA TÉRMINUS – NEST
+              PROGRAMA DE IMPLEMENTAÇÃO DA CÉLULA TÉRMINUS – VEIL
             </h1>
           </motion.div>
 
@@ -89,46 +89,56 @@ export default function Slide66() {
             className="relative pl-8"
           >
             {/* Linha vertical decorativa */}
-            <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-cyan-400 via-blue-500 to-cyan-400 shadow-lg shadow-cyan-500/50" />
+            <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-green-600 via-green-700 to-green-600 shadow-lg shadow-green-700/50" />
             
             <div className="space-y-6">
               {/* VALOR com destaque */}
               <motion.h2
                 animate={{
                   textShadow: [
-                    '0 0 20px rgba(34, 211, 238, 0.5)',
-                    '0 0 40px rgba(34, 211, 238, 0.8)',
-                    '0 0 20px rgba(34, 211, 238, 0.5)'
+                    '0 0 20px rgba(22, 163, 74, 0.5)',
+                    '0 0 40px rgba(22, 163, 74, 0.8)',
+                    '0 0 20px rgba(22, 163, 74, 0.5)'
                   ]
                 }}
                 transition={{
-                  duration: 2,
+                  duration: 1.5,
                   repeat: Infinity,
                   ease: "easeInOut"
                 }}
-                className="text-5xl md:text-6xl font-bold text-cyan-400 font-sans tracking-wide"
+                className="text-5xl md:text-6xl font-bold text-green-600 font-sans tracking-wide"
               >
                 VALOR
               </motion.h2>
               
-              {/* Preço à vista */}
-              <motion.p
-                animate={{ opacity: showValues ? 1 : 0 }}
-                transition={{ duration: 0.6 }}
-                className="text-3xl md:text-4xl font-bold text-white font-sans"
-                style={{ visibility: showValues ? 'visible' : 'hidden' }}
+              {/* SANGUE NO OLHO - aparece no step 1 */}
+              <motion.h3
+                animate={{ opacity: step >= 1 ? 1 : 0 }}
+                transition={{ opacity: { duration: 0.6 } }}
+                className="text-2xl md:text-3xl font-semibold text-green-400 font-sans mt-3"
+                style={{ visibility: step >= 1 ? 'visible' : 'hidden' }}
               >
-                R$30.000,00 - à vista
+                SANGUE NO OLHO
+              </motion.h3>
+              
+              {/* Preço à vista - aparece no step 2 */}
+              <motion.p
+                animate={{ opacity: step >= 2 ? 1 : 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-4xl md:text-5xl font-extrabold text-white font-sans mt-8"
+                style={{ visibility: step >= 2 ? 'visible' : 'hidden' }}
+              >
+                R$11.000,00 - à vista
               </motion.p>
               
-              {/* Parcelado */}
+              {/* Texto adicional - aparece no step 2 */}
               <motion.p
-                animate={{ opacity: showValues ? 1 : 0 }}
+                animate={{ opacity: step >= 2 ? 1 : 0 }}
                 transition={{ delay: 0.2, duration: 0.6 }}
-                className="text-2xl md:text-3xl font-light text-gray-300 font-sans"
-                style={{ visibility: showValues ? 'visible' : 'hidden' }}
+                className="text-2xl md:text-3xl font-medium text-gray-200 font-sans mt-2"
+                style={{ visibility: step >= 2 ? 'visible' : 'hidden' }}
               >
-                6x de R$5.000,00
+                (Pix ou até 12x no cartão)
               </motion.p>
             </div>
           </motion.div>
@@ -150,7 +160,7 @@ export default function Slide66() {
                 transition={{ delay: 0.6 + index * 0.05, duration: 0.5 }}
                 className="flex items-start gap-3 text-white"
               >
-                <div className="flex-shrink-0 w-2.5 h-2.5 rounded-full bg-cyan-400 mt-2 shadow-lg shadow-cyan-500/50" />
+                <div className="flex-shrink-0 w-2.5 h-2.5 rounded-full bg-green-600 mt-2 shadow-lg shadow-green-700/50" />
                 <p className="text-base md:text-lg font-light font-sans leading-relaxed">
                   {item}
                 </p>

@@ -98,13 +98,13 @@ export default function Slide67() {
               </h2>
 
               <p className="text-5xl font-bold text-white font-sans mb-4">
-                6x de R$ 4.000,00
+                6x de R$ 5.000,00
               </p>
 
               <div className="flex items-center gap-3 text-white">
                 <span className="text-2xl">♦</span>
                 <p className="text-2xl font-light font-sans">
-                  À vista: R$ 20.000,00
+                  À vista: R$ 30.000,00
                 </p>
               </div>
             </motion.div>
@@ -151,13 +151,13 @@ export default function Slide67() {
                 </h2>
 
                 <p className="text-5xl font-bold text-white font-sans mb-4">
-                  6x de R$ 4.000,00
+                  6x de R$ 5.000,00
                 </p>
 
                 <div className="flex items-center gap-3 text-white">
                   <span className="text-2xl">♦</span>
                   <p className="text-2xl font-light font-sans">
-                    À vista: R$ 20.000,00
+                    À vista: R$ 30.000,00
                   </p>
                 </div>
               </motion.div>
@@ -217,7 +217,7 @@ export default function Slide67() {
                   <div style={{ height: '32px' }}></div>
                   
                   <p className="text-5xl font-bold text-white font-sans mb-4">
-                    R$ 9.000,00 à vista
+                    R$ 18.000,00 à vista
                   </p>
 
                   <p className="text-2xl font-light font-sans text-white/90">

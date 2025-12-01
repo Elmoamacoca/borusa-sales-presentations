@@ -5,6 +5,7 @@ export interface SlideConfig {
   id: string;
   order: number;
   conditionalRoutes?: Record<string, string>;
+  path?: 'echo' | 'veil' | null; // null = caminho principal
 }
 
 interface PresentationState {
@@ -91,7 +92,10 @@ export const usePresentationStore = create<PresentationState>()(
     const current = get().getCurrentSlide();
     if (!current) return undefined;
     
-    const sortedSlides = [...slidesConfig].sort((a, b) => a.order - b.order);
+    // Filtrar apenas slides do mesmo caminho
+    const currentPath = current.path || null;
+    const pathSlides = slidesConfig.filter(s => (s.path || null) === currentPath);
+    const sortedSlides = [...pathSlides].sort((a, b) => a.order - b.order);
     const currentIndex = sortedSlides.findIndex((s) => s.id === current.id);
     
     return sortedSlides[currentIndex + 1];
@@ -101,7 +105,10 @@ export const usePresentationStore = create<PresentationState>()(
     const current = get().getCurrentSlide();
     if (!current) return undefined;
     
-    const sortedSlides = [...slidesConfig].sort((a, b) => a.order - b.order);
+    // Filtrar apenas slides do mesmo caminho
+    const currentPath = current.path || null;
+    const pathSlides = slidesConfig.filter(s => (s.path || null) === currentPath);
+    const sortedSlides = [...pathSlides].sort((a, b) => a.order - b.order);
     const currentIndex = sortedSlides.findIndex((s) => s.id === current.id);
     
     return sortedSlides[currentIndex - 1];

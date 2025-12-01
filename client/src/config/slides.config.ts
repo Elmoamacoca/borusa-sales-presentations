@@ -71,6 +71,23 @@ import Slide66 from '@/slides/Slide66';
 import Slide67 from '@/slides/Slide67';
 import Slide68 from '@/slides/Slide68';
 import Slide69 from '@/slides/Slide69';
+import Veil2 from '@/slides/Veil2';
+import Veil3 from '@/slides/Veil3';
+import Veil4 from '@/slides/Veil4';
+import Veil5 from '@/slides/Veil5';
+import Veil6 from '@/slides/Veil6';
+import Veil7 from '@/slides/Veil7';
+import Veil8 from '@/slides/Veil8';
+import Veil9 from '@/slides/Veil9';
+import Veil10 from '@/slides/Veil10';
+import Veil11 from '@/slides/Veil11';
+import Veil12 from '@/slides/Veil12';
+import Veil13 from '@/slides/Veil13';
+import Veil14 from '@/slides/Veil14';
+import Veil15 from '@/slides/Veil15';
+import Veil16 from '@/slides/Veil16';
+import Veil17 from '@/slides/Veil17';
+import Veil18 from '@/slides/Veil18';
 
 
 export interface SlideDefinition extends SlideConfig {
@@ -155,8 +172,25 @@ export const slidesConfig: SlideDefinition[] = [
       '2': 'slide-69'
     }
   },
-  { id: 'slide-68', order: 68, component: Slide68, title: 'Célula Términus NEST - Opção 1' },
-  { id: 'slide-69', order: 69, component: Slide69, title: 'Célula Términus NEST - Opção 2' },
+  { id: 'slide-68', order: 1, component: Slide68, title: 'Célula Términus ECHO', path: 'echo' },
+  { id: 'slide-69', order: 1, component: Slide69, title: 'Célula Términus VEIL', path: 'veil' },
+  { id: 'veil-2', order: 2, component: Veil2, title: 'Jay Abraham - VEIL', path: 'veil' },
+  { id: 'veil-3', order: 3, component: Veil3, title: 'Oportunidade de Acelerar - VEIL', path: 'veil' },
+  { id: 'veil-4', order: 4, component: Veil4, title: 'Implementação Híbrida MQL Machine - VEIL', path: 'veil' },
+  { id: 'veil-5', order: 5, component: Veil5, title: 'Plano de Ação Personalizado - VEIL', path: 'veil' },
+  { id: 'veil-6', order: 6, component: Veil6, title: 'Grupo do WhatsApp do Projeto - VEIL', path: 'veil' },
+  { id: 'veil-7', order: 7, component: Veil7, title: 'Visão Geral das IAs - VEIL', path: 'veil' },
+  { id: 'veil-8', order: 8, component: Veil8, title: 'IASDR - Porta de Entrada Inteligente - VEIL', path: 'veil' },
+  { id: 'veil-9', order: 9, component: Veil9, title: 'IA de Compromisso - Agenda Cheia - VEIL', path: 'veil' },
+  { id: 'veil-10', order: 10, component: Veil10, title: 'IA de Follow-up - Persistência Inteligente - VEIL', path: 'veil' },
+  { id: 'veil-11', order: 11, component: Veil11, title: 'IA Estrategista - Cérebro Tático - VEIL', path: 'veil' },
+  { id: 'veil-12', order: 12, component: Veil12, title: '6 Tutorias 1:1 - VEIL', path: 'veil' },
+  { id: 'veil-13', order: 13, component: Veil13, title: 'Playbook Operacional - VEIL', path: 'veil' },
+  { id: 'veil-14', order: 14, component: Veil14, title: 'Trilha de Vídeos: Portal e Painéis - VEIL', path: 'veil' },
+  { id: 'veil-15', order: 15, component: Veil15, title: 'Trilha de Vídeos: Automações e IAs - VEIL', path: 'veil' },
+  { id: 'veil-16', order: 16, component: Veil16, title: 'Inteligência Coletiva Borusa (BCF v2) - VEIL', path: 'veil' },
+  { id: 'veil-17', order: 17, component: Veil17, title: 'Bônus: Arsenal Open Source - VEIL', path: 'veil' },
+  { id: 'veil-18', order: 18, component: Veil18, title: 'Programa de Implementação - VEIL', path: 'veil' },
 
 ];
 
