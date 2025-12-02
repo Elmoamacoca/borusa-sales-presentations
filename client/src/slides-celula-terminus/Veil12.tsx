@@ -29,7 +29,7 @@ export default function Veil12() {
         >
           <p className="text-lg md:text-xl text-gray-300 leading-relaxed font-light font-sans">
             Além da implementação, você tem direito a{' '}
-            <span className="text-white font-semibold">6 tutorias individuais durante o ciclo</span>: pra falar de marketing, comercial, processo ou qualquer ponto crítico da operação.
+            <span className="text-white font-semibold">4 tutorias individuais durante o ciclo</span>: pra falar de marketing, comercial, processo ou qualquer ponto crítico da operação.
           </p>
 
           <p className="text-lg md:text-xl text-gray-300 leading-relaxed font-light font-sans">
