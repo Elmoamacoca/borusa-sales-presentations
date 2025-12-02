@@ -185,7 +185,7 @@ export const slidesConfig: SlideDefinition[] = [
   { id: 'veil-9', order: 9, component: Veil9, title: 'IA de Compromisso - Agenda Cheia - VEIL', path: 'veil' },
   { id: 'veil-10', order: 10, component: Veil10, title: 'IA de Follow-up - Persistência Inteligente - VEIL', path: 'veil' },
   { id: 'veil-11', order: 11, component: Veil11, title: 'IA Estrategista - Cérebro Tático - VEIL', path: 'veil' },
-  { id: 'veil-12', order: 12, component: Veil12, title: '6 Tutorias 1:1 - VEIL', path: 'veil' },
+  { id: 'veil-12', order: 12, component: Veil12, title: '4 Tutorias 1:1 - VEIL', path: 'veil' },
   { id: 'veil-13', order: 13, component: Veil13, title: 'Playbook Operacional - VEIL', path: 'veil' },
   { id: 'veil-14', order: 14, component: Veil14, title: 'Trilha de Vídeos: Portal e Painéis - VEIL', path: 'veil' },
   { id: 'veil-15', order: 15, component: Veil15, title: 'Trilha de Vídeos: Automações e IAs - VEIL', path: 'veil' },
