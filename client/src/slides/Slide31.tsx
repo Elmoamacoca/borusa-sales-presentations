@@ -30,10 +30,13 @@ export default function Slide31() {
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'ArrowRight' && internalState < 3) {
-        e.stopPropagation();
-        e.preventDefault();
-        setInternalState(prev => prev + 1);
+      if (e.key === 'ArrowRight') {
+        if (internalState < 3) {
+          e.stopPropagation();
+          e.preventDefault();
+          setInternalState(prev => prev + 1);
+        }
+        // Se internalState >= 3, deixa o evento passar normalmente para avançar o slide
       }
     };
 

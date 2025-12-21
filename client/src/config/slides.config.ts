@@ -33,7 +33,7 @@ import Slide27 from '@/slides/Slide27';
 import Slide28 from '@/slides/Slide28';
 import Slide29 from '@/slides/Slide29';
 import Slide30 from '@/slides/Slide30';
-import Slide31 from '@/slides/Slide31';
+
 import Slide32 from '@/slides/Slide32';
 import Slide33 from '@/slides/Slide33';
 import Slide34 from '@/slides/Slide34';
@@ -127,7 +127,7 @@ export const slidesConfig: SlideDefinition[] = [
   { id: 'slide-28', order: 28, component: Slide28, title: 'Funil Comercial Atual da Maioria' },
   { id: 'slide-29', order: 29, component: Slide29, title: 'Sua Nova Estrutura' },
   { id: 'slide-30', order: 30, component: Slide30, title: 'Arquitetura do Sistema IA' },
-  { id: 'slide-31', order: 31, component: Slide31, title: 'Sistema de Retroalimentação' },
+
   { id: 'slide-32', order: 32, component: Slide32, title: 'Slide 32' },
   { id: 'slide-33', order: 33, component: Slide33, title: 'Slide 33' },
   { id: 'slide-34', order: 34, component: Slide34, title: 'Slide 34' },

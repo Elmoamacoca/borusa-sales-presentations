@@ -52,11 +52,12 @@ const allowedOrigins = process.env.NODE_ENV === 'production'
 
 app.use(cors({
   origin: (origin, callback) => {
-    // Permitir requisições sem origin (Postman, curl, etc) apenas em dev
-    if (!origin && process.env.NODE_ENV !== 'production') {
+    // Em desenvolvimento, permitir qualquer origem
+    if (process.env.NODE_ENV !== 'production') {
       return callback(null, true);
     }
     
+    // Em producao, verificar a origem
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
@@ -198,10 +199,10 @@ const authenticateToken = (req: any, res: any, next: any) => {
 // Validadores de input
 const loginValidators = [
   body('username')
-    .isEmail()
-    .withMessage('Email inválido')
-    .isLength({ max: 100 })
-    .withMessage('Email muito longo')
+    .isString()
+    .withMessage('Usuário deve ser string')
+    .isLength({ min: 1, max: 100 })
+    .withMessage('Usuário deve ter entre 1 e 100 caracteres')
     .trim()
     .escape(),
   body('password')

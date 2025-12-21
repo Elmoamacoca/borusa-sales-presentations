@@ -37,39 +37,23 @@ export default function Slide28() {
           <div className="w-64 h-1 bg-red-500 mt-2"></div>
         </motion.div>
 
-        {/* Iframe do Excalidraw */}
+        {/* Imagem do Fluxo Comercial */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.4, duration: 0.6 }}
-          className="flex-1 w-full bg-white rounded-lg shadow-2xl overflow-hidden"
+          className="flex-1 w-full bg-white rounded-lg shadow-2xl overflow-auto flex items-center justify-center p-4"
           style={{ pointerEvents: 'auto' }}
         >
-          <iframe 
-            src="https://link.excalidraw.com/readonly/ZySHWfc8sbejBfOOHyrS" 
-            width="100%" 
-            height="100%" 
-            style={{ 
-              border: 'none',
-              pointerEvents: 'auto'
-            }}
-            title="Fluxo Comercial Atual"
-            allow="fullscreen"
-            sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
+          <img 
+            src="/fluxo-comercial-atual.jpg" 
+            alt="Fluxo Comercial Atual"
+            className="max-w-full h-auto object-contain"
+            style={{ maxHeight: '100%' }}
           />
         </motion.div>
 
-        {/* Dica de uso */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.8, duration: 0.5 }}
-          className="mt-3 text-center"
-        >
-          <p className="text-sm text-white/70 italic">
-            💡 Clique dentro do diagrama • Use scroll para zoom • Arraste para navegar
-          </p>
-        </motion.div>
+
       </div>
     </div>
   );
