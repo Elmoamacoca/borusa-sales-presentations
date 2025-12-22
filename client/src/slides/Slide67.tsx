@@ -236,15 +236,25 @@ export default function Slide67() {
                   transition={{ duration: 0.5 }}
                   className="relative space-y-5"
                 >
-                  <div style={{ height: '32px' }}></div>
-                  
-                  <p className="text-5xl font-bold text-white font-sans mb-4">
-                    R$ 18.000,00 à vista
-                  </p>
+                  {/* Implementação */}
+                  <div className="space-y-1">
+                    <p className="text-lg font-bold text-yellow-300 font-sans">
+                      Implementação
+                    </p>
+                    <p className="text-2xl font-bold text-white font-sans">
+                      R$18.000,00
+                    </p>
+                  </div>
 
-                  <p className="text-2xl font-light font-sans text-white/90">
-                    (Pix ou até 12x no cartão)
-                  </p>
+                  {/* Licença de Uso */}
+                  <div className="space-y-1">
+                    <p className="text-lg font-bold text-yellow-300 font-sans">
+                      Licença de Uso
+                    </p>
+                    <p className="text-2xl font-bold text-white font-sans">
+                      R$2.500,00/Mês
+                    </p>
+                  </div>
                 </motion.div>
               </div>
             </div>
