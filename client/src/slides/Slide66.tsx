@@ -120,7 +120,7 @@ export default function Slide66() {
               <motion.p
                 animate={{ opacity: showValues ? 1 : 0 }}
                 transition={{ duration: 0.6 }}
-                className="text-2xl md:text-3xl font-bold text-white font-sans"
+                className="text-xl md:text-2xl font-bold text-white font-sans whitespace-nowrap"
                 style={{ visibility: showValues ? 'visible' : 'hidden' }}
               >
                 Implementação - R$30.000,00 à vista
@@ -130,7 +130,7 @@ export default function Slide66() {
               <motion.p
                 animate={{ opacity: showValues ? 1 : 0 }}
                 transition={{ delay: 0.2, duration: 0.6 }}
-                className="text-lg md:text-xl font-light text-gray-300 font-sans"
+                className="text-base md:text-lg font-light text-gray-300 font-sans whitespace-nowrap"
                 style={{ visibility: showValues ? 'visible' : 'hidden' }}
               >
                 ou 6x de R$5.000,00
@@ -140,7 +140,7 @@ export default function Slide66() {
               <motion.p
                 animate={{ opacity: showValues ? 1 : 0 }}
                 transition={{ delay: 0.3, duration: 0.6 }}
-                className="text-2xl md:text-3xl font-bold text-white font-sans"
+                className="text-xl md:text-2xl font-bold text-white font-sans whitespace-nowrap"
                 style={{ visibility: showValues ? 'visible' : 'hidden' }}
               >
                 Licença de Uso - R$3.500,00/Mês
