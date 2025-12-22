@@ -88,6 +88,12 @@ import Veil15 from '@/slides-celula-terminus/Veil15';
 import Veil16 from '@/slides-celula-terminus/Veil16';
 import Veil17 from '@/slides-celula-terminus/Veil17';
 import Veil18 from '@/slides-celula-terminus/Veil18';
+import Veil19 from '@/slides-celula-terminus/Veil19';
+import Veil20 from '@/slides-celula-terminus/Veil20';
+import Veil21 from '@/slides-celula-terminus/Veil21';
+import Veil22 from '@/slides-celula-terminus/Veil22';
+import Veil23 from '@/slides-celula-terminus/Veil23';
+import Veil24 from '@/slides-celula-terminus/Veil24';
 
 
 export interface SlideDefinition extends SlideConfig {
@@ -190,6 +196,12 @@ export const celulaTerminusSlidesConfig: SlideDefinition[] = [
   { id: 'veil-15', order: 15, component: Veil15, title: 'Trilha de Vídeos: Automações e IAs - VEIL', path: 'veil' },
   { id: 'veil-16', order: 16, component: Veil16, title: 'Inteligência Coletiva Borusa (BCF v2) - VEIL', path: 'veil' },
   { id: 'veil-17', order: 17, component: Veil17, title: 'Bônus: Arsenal Open Source - VEIL', path: 'veil' },
-  { id: 'veil-18', order: 18, component: Veil18, title: 'Programa de Implementação - VEIL', path: 'veil' },
+  { id: 'veil-19', order: 18, component: Veil19, title: 'E Depois dos 90 Dias? - VEIL', path: 'veil' },
+  { id: 'veil-20', order: 19, component: Veil20, title: 'O Que Você Continua Recebendo - VEIL', path: 'veil' },
+  { id: 'veil-21', order: 20, component: Veil21, title: 'Suporte Contínuo - VEIL', path: 'veil' },
+  { id: 'veil-22', order: 21, component: Veil22, title: 'Data Moat - VEIL', path: 'veil' },
+  { id: 'veil-23', order: 22, component: Veil23, title: 'Release Notes - VEIL', path: 'veil' },
+  { id: 'veil-24', order: 23, component: Veil24, title: 'Você Nunca Fica Sozinho - VEIL', path: 'veil' },
+  { id: 'veil-18', order: 24, component: Veil18, title: 'Programa de Implementação - VEIL', path: 'veil' },
 
 ];
