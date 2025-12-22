@@ -123,8 +123,8 @@ export default function Slide67() {
         ) : (
           // Estado com lado direito - Posicionamento absoluto
           <div className="relative z-10 w-full h-full">
-            {/* Texto pequeno superior - Altura: 180px */}
-            <div style={{ position: 'absolute', top: '180px', left: '64px', right: '64px' }}>
+            {/* Texto pequeno superior - Altura: 60px */}
+            <div style={{ position: 'absolute', top: '60px', left: '64px', right: '64px' }}>
               <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -135,8 +135,8 @@ export default function Slide67() {
               </motion.p>
             </div>
 
-            {/* Título PREÇO DO PROGRAMA - Altura: 280px */}
-            <div style={{ position: 'absolute', top: '280px', left: '64px', right: '64px' }}>
+            {/* Título PREÇO DO PROGRAMA - Altura: 140px */}
+            <div style={{ position: 'absolute', top: '140px', left: '64px', right: '64px' }}>
               <motion.h1
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -147,8 +147,8 @@ export default function Slide67() {
               </motion.h1>
             </div>
 
-            {/* PREÇO REGULAR - Altura: 480px */}
-            <div style={{ position: 'absolute', top: '480px', left: '88px', right: '64px' }}>
+            {/* PREÇO REGULAR - Altura: 380px */}
+            <div style={{ position: 'absolute', top: '380px', left: '88px', right: '64px' }}>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -157,27 +157,27 @@ export default function Slide67() {
               >
                 <div className="absolute left-[-24px] top-0 bottom-0 w-1 bg-gradient-to-b from-cyan-400 to-blue-500" />
 
-                <h2 className="text-3xl font-light text-cyan-400 font-sans mb-6">
+                <h2 className="text-5xl font-light text-cyan-400 font-sans mb-6">
                   PREÇO REGULAR
                 </h2>
 
                 <div className="space-y-5">
                   {/* Implementação */}
                   <div className="space-y-1">
-                    <p className="text-lg font-bold text-cyan-400 font-sans">
+                    <p className="text-2xl font-bold text-cyan-400 font-sans">
                       Implementação
                     </p>
-                    <p className="text-2xl font-bold text-white font-sans">
+                    <p className="text-4xl font-bold text-white font-sans">
                       R$30.000,00 à vista
                     </p>
                   </div>
 
                   {/* Licença de Uso */}
                   <div className="space-y-1">
-                    <p className="text-lg font-bold text-cyan-400 font-sans">
+                    <p className="text-2xl font-bold text-cyan-400 font-sans">
                       Licença de Uso
                     </p>
-                    <p className="text-2xl font-bold text-white font-sans">
+                    <p className="text-4xl font-bold text-white font-sans">
                       R$3.500,00/Mês
                     </p>
                   </div>
@@ -203,21 +203,21 @@ export default function Slide67() {
             </div>
 
             <div className="relative z-10 w-full h-full">
-              {/* Asterisco - Altura: 80px */}
-              <div style={{ position: 'absolute', top: '80px', left: '50%', transform: 'translateX(-50%)' }}>
+              {/* Asterisco - Canto superior direito */}
+              <div style={{ position: 'absolute', top: '20px', right: '40px' }}>
                 <motion.div
                   initial={{ opacity: 0, scale: 0, rotate: -180 }}
                   animate={{ opacity: 0.3, scale: 1, rotate: 0 }}
                   transition={{ delay: 0.3, duration: 1 }}
                   className="text-white font-bold"
-                  style={{ fontSize: '180px' }}
+                  style={{ fontSize: '120px' }}
                 >
                   *
                 </motion.div>
               </div>
 
-              {/* Título VALOR SANGUE NO OLHO - Altura: 280px */}
-              <div style={{ position: 'absolute', top: '280px', left: '64px', right: '64px' }}>
+              {/* Título VALOR SANGUE NO OLHO - Altura: 140px */}
+              <div style={{ position: 'absolute', top: '140px', left: '64px', right: '64px' }}>
                 <motion.h1
                   initial={{ opacity: 0, x: 30 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -228,32 +228,40 @@ export default function Slide67() {
                 </motion.h1>
               </div>
 
-              {/* Valores - Altura: 480px */}
-              <div style={{ position: 'absolute', top: '480px', left: '64px', right: '64px' }}>
+              {/* PREÇO PROTAGONISTA - Altura: 380px (igual ao PREÇO REGULAR) */}
+              <div style={{ position: 'absolute', top: '380px', left: '88px', right: '64px' }}>
                 <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: step >= 2 ? 1 : 0 }}
-                  transition={{ duration: 0.5 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: step >= 2 ? 1 : 0, y: step >= 2 ? 0 : 20 }}
+                  transition={{ delay: 0.3, duration: 0.7 }}
                   className="relative space-y-5"
                 >
-                  {/* Implementação */}
-                  <div className="space-y-1">
-                    <p className="text-lg font-bold text-yellow-300 font-sans">
-                      Implementação
-                    </p>
-                    <p className="text-2xl font-bold text-white font-sans">
-                      R$18.000,00
-                    </p>
-                  </div>
+                  <div className="absolute left-[-24px] top-0 bottom-0 w-1 bg-gradient-to-b from-yellow-300 to-yellow-500" />
 
-                  {/* Licença de Uso */}
-                  <div className="space-y-1">
-                    <p className="text-lg font-bold text-yellow-300 font-sans">
-                      Licença de Uso
-                    </p>
-                    <p className="text-2xl font-bold text-white font-sans">
-                      R$2.500,00/Mês
-                    </p>
+                  <h2 className="text-5xl font-light text-yellow-300 font-sans mb-6">
+                    PREÇO PROTAGONISTA
+                  </h2>
+
+                  <div className="space-y-5">
+                    {/* Implementação */}
+                    <div className="space-y-1">
+                      <p className="text-2xl font-bold text-yellow-300 font-sans">
+                        Implementação
+                      </p>
+                      <p className="text-4xl font-bold text-white font-sans">
+                        R$18.000,00
+                      </p>
+                    </div>
+
+                    {/* Licença de Uso */}
+                    <div className="space-y-1">
+                      <p className="text-2xl font-bold text-yellow-300 font-sans">
+                        Licença de Uso
+                      </p>
+                      <p className="text-4xl font-bold text-white font-sans">
+                        R$2.500,00/Mês
+                      </p>
+                    </div>
                   </div>
                 </motion.div>
               </div>
