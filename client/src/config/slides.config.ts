@@ -60,10 +60,16 @@ import Slide54 from '@/slides/Slide54';
 import Slide55 from '@/slides/Slide55';
 import Slide56 from '@/slides/Slide56';
 import Slide57 from '@/slides/Slide57';
+import Slide57Recorrencia from '@/slides/Slide57Recorrencia';
 import Slide58 from '@/slides/Slide58';
+import Slide58Recorrencia from '@/slides/Slide58Recorrencia';
+import Slide59Recorrencia from '@/slides/Slide59Recorrencia';
 import Slide59 from '@/slides/Slide59';
+import Slide60Recorrencia from '@/slides/Slide60Recorrencia';
 import Slide60 from '@/slides/Slide60';
+import Slide61Recorrencia from '@/slides/Slide61Recorrencia';
 import Slide61 from '@/slides/Slide61';
+import Slide62Recorrencia from '@/slides/Slide62Recorrencia';
 import Slide62 from '@/slides/Slide62';
 import Slide63 from '@/slides/Slide63';
 import Slide64 from '@/slides/Slide64';
@@ -128,44 +134,50 @@ export const slidesConfig: SlideDefinition[] = [
   { id: 'slide-29', order: 29, component: Slide29, title: 'Sua Nova Estrutura' },
   { id: 'slide-30', order: 30, component: Slide30, title: 'Arquitetura do Sistema IA' },
 
-  { id: 'slide-32', order: 32, component: Slide32, title: 'Slide 32' },
-  { id: 'slide-33', order: 33, component: Slide33, title: 'Slide 33' },
-  { id: 'slide-34', order: 34, component: Slide34, title: 'Slide 34' },
-  { id: 'slide-35', order: 35, component: Slide35, title: 'Slide 35' },
-  { id: 'slide-36', order: 36, component: Slide36, title: 'Slide 36' },
-  { id: 'slide-37', order: 37, component: Slide37, title: 'Slide 37' },
-  { id: 'slide-38', order: 38, component: Slide38, title: 'Slide 38' },
-  { id: 'slide-39', order: 39, component: Slide39, title: 'A IA É O NOVO PETRÓLEO' },
-  { id: 'slide-40', order: 40, component: Slide40, title: 'Escalar Inside Sales B2B' },
-  { id: 'slide-41', order: 41, component: Slide41, title: 'Dúvidas?' },
-  { id: 'slide-42', order: 42, component: Slide42, title: 'Célula Términus - NEST' },
-  { id: 'slide-43', order: 43, component: Slide43, title: 'Implementação Híbrida MQL Machine' },
-  { id: 'slide-44', order: 44, component: Slide44, title: 'Plano de Ação Personalizado' },
-  { id: 'slide-45', order: 45, component: Slide45, title: 'Grupo do WhatsApp do Projeto' },
-  { id: 'slide-46', order: 46, component: Slide46, title: 'Visão Geral das IAs' },
-  { id: 'slide-47', order: 47, component: Slide47, title: 'IASDR - Porta de Entrada Inteligente' },
-  { id: 'slide-48', order: 48, component: Slide48, title: 'IA de Compromisso - Agenda Cheia' },
-  { id: 'slide-49', order: 49, component: Slide49, title: 'IA de Follow-up - Persistência Inteligente' },
-  { id: 'slide-50', order: 50, component: Slide50, title: 'IA Estrategista - Cérebro Tático' },
-  { id: 'slide-51', order: 51, component: Slide51, title: '6 Tutorias 1:1' },
-  { id: 'slide-52', order: 52, component: Slide52, title: 'Playbook Operacional' },
-  { id: 'slide-53', order: 53, component: Slide53, title: 'Trilha de Vídeos: Portal e Painéis' },
-  { id: 'slide-54', order: 54, component: Slide54, title: 'Trilha de Vídeos: Automações e IAs' },
-  { id: 'slide-55', order: 55, component: Slide55, title: 'Inteligência Coletiva Borusa (BCF v2)' },
-  { id: 'slide-56', order: 56, component: Slide56, title: 'Bônus: Arsenal Open Source' },
-  { id: 'slide-57', order: 57, component: Slide57, title: 'Em Resumo Como Será a Nossa Jornada Juntos?' },
-  { id: 'slide-58', order: 58, component: Slide58, title: 'Jornada de 90 Dias' },
-  { id: 'slide-59', order: 59, component: Slide59, title: 'Garantia de R$20.000,00' },
-  { id: 'slide-60', order: 60, component: Slide60, title: 'Dúvidas?' },
-  { id: 'slide-61', order: 61, component: Slide61, title: 'Quanto Vale?' },
-  { id: 'slide-62', order: 62, component: Slide62, title: 'Valor × Preço' },
-  { id: 'slide-63', order: 63, component: Slide63, title: 'Custo do Time 1:1' },
-  { id: 'slide-64', order: 64, component: Slide64, title: 'Valor × Preço × ROI' },
-  { id: 'slide-65', order: 65, component: Slide65, title: 'Valor da Implementação Célula Términus - NEST' },
-  { id: 'slide-66', order: 66, component: Slide66, title: 'Programa de Implementação Célula Términus - NEST' },
+  { id: 'slide-32', order: 31, component: Slide32, title: 'Slide 32' },
+  { id: 'slide-33', order: 31, component: Slide33, title: 'Slide 33' },
+  { id: 'slide-34', order: 32, component: Slide34, title: 'Slide 34' },
+  { id: 'slide-35', order: 33, component: Slide35, title: 'Slide 35' },
+  { id: 'slide-36', order: 34, component: Slide36, title: 'Slide 36' },
+  { id: 'slide-37', order: 35, component: Slide37, title: 'Slide 37' },
+  { id: 'slide-38', order: 36, component: Slide38, title: 'Slide 38' },
+  { id: 'slide-39', order: 37, component: Slide39, title: 'A IA É O NOVO PETRÓLEO' },
+  { id: 'slide-40', order: 38, component: Slide40, title: 'Escalar Inside Sales B2B' },
+  { id: 'slide-41', order: 39, component: Slide41, title: 'Dúvidas?' },
+  { id: 'slide-42', order: 40, component: Slide42, title: 'Célula Términus - NEST' },
+  { id: 'slide-43', order: 41, component: Slide43, title: 'Implementação Híbrida MQL Machine' },
+  { id: 'slide-44', order: 42, component: Slide44, title: 'Plano de Ação Personalizado' },
+  { id: 'slide-45', order: 43, component: Slide45, title: 'Grupo do WhatsApp do Projeto' },
+  { id: 'slide-46', order: 44, component: Slide46, title: 'Visão Geral das IAs' },
+  { id: 'slide-47', order: 45, component: Slide47, title: 'IASDR - Porta de Entrada Inteligente' },
+  { id: 'slide-48', order: 46, component: Slide48, title: 'IA de Compromisso - Agenda Cheia' },
+  { id: 'slide-49', order: 47, component: Slide49, title: 'IA de Follow-up - Persistência Inteligente' },
+  { id: 'slide-50', order: 48, component: Slide50, title: 'IA Estrategista - Cérebro Tático' },
+  { id: 'slide-51', order: 49, component: Slide51, title: '6 Tutorias 1:1' },
+  { id: 'slide-52', order: 50, component: Slide52, title: 'Playbook Operacional' },
+  { id: 'slide-53', order: 51, component: Slide53, title: 'Trilha de Vídeos: Portal e Painéis' },
+  { id: 'slide-54', order: 52, component: Slide54, title: 'Trilha de Vídeos: Automações e IAs' },
+  { id: 'slide-55', order: 53, component: Slide55, title: 'Inteligência Coletiva Borusa (BCF v2)' },
+  { id: 'slide-56', order: 54, component: Slide56, title: 'Bônus: Arsenal Open Source' },
+  { id: 'slide-57', order: 55, component: Slide57, title: 'Em Resumo Como Será a Nossa Jornada Juntos?' },
+  { id: 'slide-58', order: 56, component: Slide58, title: 'Jornada de 90 Dias' },
+  { id: 'slide-57-recorrencia', order: 57, component: Slide57Recorrencia, title: 'E DEPOIS DOS 90 DIAS?' },
+  { id: 'slide-58-recorrencia', order: 58, component: Slide58Recorrencia, title: 'Acesso ao Portal + BCF + IA Estrategista' },
+  { id: 'slide-59-recorrencia', order: 59, component: Slide59Recorrencia, title: 'Suporte Contínuo e Academy' },
+  { id: 'slide-60-recorrencia', order: 60, component: Slide60Recorrencia, title: 'Data Moat e Proteção' },
+  { id: 'slide-61-recorrencia', order: 61, component: Slide61Recorrencia, title: 'Release Notes e Evolução' },
+  { id: 'slide-62-recorrencia', order: 62, component: Slide62Recorrencia, title: 'Você Nunca Fica Sozinho' },
+  { id: 'slide-59', order: 63, component: Slide59, title: 'Garantia de R$20.000,00' },
+  { id: 'slide-60', order: 64, component: Slide60, title: 'Dúvidas?' },
+  { id: 'slide-61', order: 65, component: Slide61, title: 'Quanto Vale?' },
+  { id: 'slide-62', order: 66, component: Slide62, title: 'Valor × Preço' },
+  { id: 'slide-63', order: 67, component: Slide63, title: 'Custo do Time 1:1' },
+  { id: 'slide-64', order: 68, component: Slide64, title: 'Valor × Preço × ROI' },
+  { id: 'slide-65', order: 69, component: Slide65, title: 'Valor da Implementação Célula Términus - NEST' },
+  { id: 'slide-66', order: 70, component: Slide66, title: 'Programa de Implementação Célula Términus - NEST' },
   { 
     id: 'slide-67', 
-    order: 67, 
+    order: 71, 
     component: Slide67, 
     title: 'Preço do Programa vs Valor Sangue no Olho',
     conditionalRoutes: {

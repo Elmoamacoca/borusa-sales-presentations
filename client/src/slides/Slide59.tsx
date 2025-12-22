@@ -62,17 +62,16 @@ export default function Slide59() {
             transition={{ delay: 0.4, duration: 0.7 }}
             className="mb-8"
           >
-            <h1 className="text-5xl md:text-6xl font-light text-white font-sans leading-tight whitespace-nowrap">
-              GARANTIA DE <span className="text-yellow-400">R$20.000,00</span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white font-sans leading-tight">
+              <span className="text-yellow-400">GARANTIA</span> CONTRATUAL
             </h1>
           </motion.div>
-
-          {/* Subtítulo */}
+          {/* Subttítulo */}
           <motion.p
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.6, duration: 0.6 }}
-            className="text-xl md:text-2xl text-gray-200 font-light font-sans mb-8"
+            className="text-lg md:text-xl text-gray-200 font-light font-sans mb-8"
           >
             Caso contrário, você pode optar por:
           </motion.p>
@@ -91,10 +90,10 @@ export default function Slide59() {
                   <span className="text-xl font-bold text-white font-sans">1</span>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl md:text-2xl font-bold text-green-400 mb-2 font-sans">
+                  <h3 className="text-lg md:text-xl font-bold text-green-400 mb-2 font-sans">
                     Opção 1
                   </h3>
-                  <p className="text-base md:text-lg text-gray-100 font-normal font-sans leading-relaxed">
+                  <p className="text-sm md:text-base text-gray-100 font-normal font-sans leading-relaxed">
                     Receber 100% do valor de implementação de volta.
                   </p>
                 </div>
@@ -113,10 +112,10 @@ export default function Slide59() {
                   <span className="text-xl font-bold text-white font-sans">2</span>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl md:text-2xl font-bold text-green-400 mb-2 font-sans">
+                  <h3 className="text-lg md:text-xl font-bold text-green-400 mb-2 font-sans">
                     Opção 2
                   </h3>
-                  <p className="text-base md:text-lg text-gray-100 font-normal font-sans leading-relaxed">
+                  <p className="text-sm md:text-base text-gray-100 font-normal font-sans leading-relaxed">
                     Manter tudo o que já foi implementado e usar 100% do valor investido como crédito para subir de nível na Célula Términus (Agente Kesher, Operador Havaia ou Instância Lapid).
                   </p>
                 </div>
@@ -131,7 +130,7 @@ export default function Slide59() {
             transition={{ delay: 1.2, duration: 0.7 }}
             className="border-t border-gray-500/30 pt-5"
           >
-            <p className="text-base md:text-lg text-gray-400 font-light font-sans italic leading-relaxed">
+            <p className="text-sm md:text-base text-gray-400 font-light font-sans italic leading-relaxed">
               Condicionado a você seguir o plano de ação combinado e nos dar a chance de ajustar o sistema ao longo do projeto.
             </p>
           </motion.div>
