@@ -1,4 +1,5 @@
 import { Slide } from '@/components/presentation/Slide';
+import { OptimizedImage } from '@/components/OptimizedImage';
 import { motion } from 'framer-motion';
 
 export default function Investimento3Slide() {
@@ -32,10 +33,13 @@ export default function Investimento3Slide() {
             height: '100%',
           }}
         >
-          <img
+          <OptimizedImage
             src="/investimento3-office2000.png"
             alt="Investimento"
-            className="w-full h-full object-cover object-right"
+            priority={true}
+            containerClassName="w-full h-full"
+            objectFit="cover"
+            objectPosition="right"
           />
           {/* Overlay sutil */}
           <div className="absolute inset-0 bg-black/10"></div>

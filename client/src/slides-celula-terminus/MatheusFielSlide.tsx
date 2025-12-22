@@ -1,4 +1,5 @@
 import { Slide } from '@/components/presentation/Slide';
+import { OptimizedImage } from '@/components/OptimizedImage';
 import { motion } from 'framer-motion';
 import { Briefcase, TrendingUp, Brain, Award } from 'lucide-react';
 
@@ -14,10 +15,12 @@ export default function MatheusFielSlide() {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="flex justify-center"
           >
-            <img
+            <OptimizedImage
               src="/assets/gabriel-torres.png"
               alt="Gabriel Torres"
-              className="w-full max-w-md rounded-lg shadow-2xl"
+              priority={true}
+              containerClassName="w-full max-w-md rounded-lg shadow-2xl overflow-hidden"
+              objectFit="cover"
             />
           </motion.div>
 

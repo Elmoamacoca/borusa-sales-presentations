@@ -1,4 +1,5 @@
 import { Slide } from '@/components/presentation/Slide';
+import { OptimizedImage } from '@/components/OptimizedImage';
 import { motion } from 'framer-motion';
 
 export default function MissionSlide() {
@@ -13,10 +14,13 @@ export default function MissionSlide() {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="flex justify-center md:justify-end"
           >
-            <img
+            <OptimizedImage
               src="/assets/borusa-logo.png"
               alt="BORUSA"
-              className="w-80 md:w-96 lg:w-[28rem] opacity-90"
+              priority={true}
+              containerClassName="w-80 md:w-96 lg:w-[28rem]"
+              className="opacity-90"
+              objectFit="contain"
             />
           </motion.div>
 

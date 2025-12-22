@@ -1,4 +1,5 @@
 import { Slide } from '@/components/presentation/Slide';
+import { OptimizedImage } from '@/components/OptimizedImage';
 import { motion } from 'framer-motion';
 
 export default function InvestimentoSlide() {
@@ -64,10 +65,13 @@ export default function InvestimentoSlide() {
             height: '100%',
           }}
         >
-          <img
+          <OptimizedImage
             src="/investimento-oil.jpg"
             alt="Investimento"
-            className="w-full h-full object-cover object-center"
+            priority={true}
+            containerClassName="w-full h-full"
+            objectFit="cover"
+            objectPosition="center"
           />
           {/* Overlay sutil */}
           <div className="absolute inset-0 bg-black/10"></div>

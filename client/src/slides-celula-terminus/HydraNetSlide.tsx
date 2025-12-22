@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import { OptimizedImage } from '@/components/OptimizedImage';
 
 export default function HydraNetSlide() {
   const [isZoomed, setIsZoomed] = useState(false);
@@ -36,15 +37,13 @@ export default function HydraNetSlide() {
           className="flex items-center justify-center px-8 py-8"
         >
           <div className="relative inline-block">
-            <img
+            <OptimizedImage
               src="/assets/hydranet-tesla.png"
               alt="Tesla Computer Vision System"
               onClick={() => setIsZoomed(true)}
-              className="max-h-[85vh] w-auto object-contain rounded-lg border-2 border-yellow-500/30 shadow-2xl transition-transform duration-300 hover:scale-105 cursor-pointer"
-              style={{
-                imageRendering: 'high-quality',
-                WebkitFontSmoothing: 'antialiased',
-              }}
+              priority={true}
+              containerClassName="max-h-[85vh] w-auto rounded-lg border-2 border-yellow-500/30 shadow-2xl transition-transform duration-300 hover:scale-105 cursor-pointer overflow-hidden"
+              objectFit="contain"
             />
             {/* Brilho sutil atrás da imagem */}
             <div className="absolute inset-0 bg-yellow-500/10 blur-2xl rounded-lg -z-10"></div>

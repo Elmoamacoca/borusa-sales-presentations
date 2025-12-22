@@ -1,4 +1,5 @@
 import { Slide } from '@/components/presentation/Slide';
+import { OptimizedImage } from '@/components/OptimizedImage';
 import { motion } from 'framer-motion';
 
 export default function OtimizacaoTempoSlide() {
@@ -12,10 +13,13 @@ export default function OtimizacaoTempoSlide() {
         className="absolute top-0 left-0 right-0 h-[38vh] overflow-hidden"
         style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)' }}
       >
-        <img 
+        <OptimizedImage 
           src="/otimizacao-tempo-new.png" 
           alt="Otimização de Tempo"
-          className="w-full h-full object-cover object-center"
+          priority={true}
+          containerClassName="w-full h-full"
+          objectFit="cover"
+          objectPosition="center"
         />
         <div className="absolute inset-0 bg-black/30"></div>
         <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-[#0f0f0f] via-[#0f0f0f]/80 to-transparent"></div>
