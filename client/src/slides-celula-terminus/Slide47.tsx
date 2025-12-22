@@ -50,7 +50,7 @@ export default function Slide47() {
             className="space-y-6"
           >
             <p className="text-base md:text-lg font-light text-white leading-relaxed font-sans">
-              A <span className="text-yellow-400 font-semibold">IASDR</span> é a IA que recebe todo lead que entra, entende quem ele é, por que chegou até você e se faz sentido seguir adiante. Ela limpa a bagunça da entrada e garante que só chega no vendedor quem tem contexto mínimo e fit inicial.
+              A <span className="text-yellow-400 font-semibold">IA SDR</span> é a IA que recebe todo lead que entra, entende quem ele é, por que chegou até você e se faz sentido seguir adiante. Ela limpa a bagunça da entrada e garante que só chega no vendedor quem tem contexto mínimo e fit inicial.
             </p>
 
             <div>
