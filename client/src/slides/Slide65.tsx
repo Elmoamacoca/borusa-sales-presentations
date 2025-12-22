@@ -93,32 +93,32 @@ export default function Slide65() {
         />
       </div>
 
-      <div className="w-full h-full flex flex-col px-12 py-8 relative z-10">
+      <div className="w-full h-full flex flex-col px-10 py-4 relative z-10">
         {/* Título - Posição fixa no topo */}
-        <div className="mb-6">
-          <h1 className="text-2xl md:text-3xl font-light text-white font-sans text-center">
+        <div className="mb-3">
+          <h1 className="text-xl md:text-2xl font-light text-white font-sans text-center">
             VALOR DA IMPLEMENTAÇÃO 1:1 DA CÉLULA TÉRMINUS – NEST
           </h1>
         </div>
 
         {/* Container com altura fixa para evitar movimento */}
         <div className="flex-1 flex flex-col justify-center max-w-5xl mx-auto w-full">
-          {/* Lista de itens */}
-          <div className="space-y-2 mb-6">
+          {/* Lista de itens - espaçamento reduzido */}
+          <div className="space-y-0.5 mb-4">
             {items.map((item, index) => (
               <div
                 key={index}
-                className="flex items-center justify-between gap-6 text-white"
+                className="flex items-center justify-between gap-4 text-white"
                 style={{ visibility: index < visibleItems ? 'visible' : 'hidden' }}
               >
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: index < visibleItems ? 1 : 0, x: 0 }}
                   transition={{ duration: 0.4 }}
-                  className="flex items-start gap-2 flex-1"
+                  className="flex items-start gap-1.5 flex-1"
                 >
-                  <div className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-white mt-2" />
-                  <p className="text-sm md:text-base font-light font-sans leading-relaxed">
+                  <div className="flex-shrink-0 w-1 h-1 rounded-full bg-white mt-1.5" />
+                  <p className="text-xs md:text-sm font-light font-sans leading-tight">
                     {item.text}
                   </p>
                 </motion.div>
@@ -126,9 +126,9 @@ export default function Slide65() {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: index < visibleItems ? 1 : 0 }}
                   transition={{ duration: 0.4 }}
-                  className="flex-shrink-0 min-w-[130px] text-right"
+                  className="flex-shrink-0 min-w-[100px] text-right"
                 >
-                  <span className="text-sm md:text-base font-normal text-white font-sans">
+                  <span className="text-xs md:text-sm font-normal text-white font-sans">
                     {item.value}
                   </span>
                 </motion.div>
@@ -142,13 +142,13 @@ export default function Slide65() {
               initial={{ opacity: 0, y: 20, scale: 0.95 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ duration: 0.5 }}
-              className="bg-gradient-to-r from-green-900/40 to-green-800/30 border-2 border-green-500 rounded-xl px-6 py-4 mb-6"
+              className="bg-gradient-to-r from-green-900/40 to-green-800/30 border-2 border-green-500 rounded-xl px-4 py-3 mb-4"
             >
               <div className="flex items-center justify-between">
-                <h2 className="text-xl md:text-2xl font-bold text-white font-sans">
+                <h2 className="text-lg md:text-xl font-bold text-white font-sans">
                   TOTAL RECEBIDO (VALOR DE MERCADO):
                 </h2>
-                <p className="text-2xl md:text-3xl font-bold text-green-400 font-sans">
+                <p className="text-xl md:text-2xl font-bold text-green-400 font-sans">
                   R$ 190.500,00
                 </p>
               </div>
@@ -161,24 +161,24 @@ export default function Slide65() {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
-              className="text-center space-y-3"
+              className="text-center space-y-2"
             >
-              <p className="text-lg md:text-xl text-gray-300 font-light font-sans">
+              <p className="text-base md:text-lg text-gray-300 font-light font-sans">
                 Se você pudesse ter um desconto de <span className="text-white font-semibold">75%</span> desse valor…
               </p>
               
-              <p className="text-xl md:text-2xl text-yellow-400 font-light font-sans">
+              <p className="text-lg md:text-xl text-yellow-400 font-light font-sans">
                 você seria meu cliente hoje por
               </p>
               
               {/* Espaço reservado para o valor */}
-              <div className="min-h-[80px] flex items-center justify-center">
+              <div className="min-h-[60px] flex items-center justify-center">
                 {showValue && (
                   <motion.p
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.6 }}
-                    className="text-5xl md:text-6xl font-bold text-yellow-400 font-sans"
+                    className="text-4xl md:text-5xl font-bold text-yellow-400 font-sans"
                   >
                     R$ 47.625,00?
                   </motion.p>
