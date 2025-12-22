@@ -115,7 +115,7 @@ export default function Echo9() {
                 x="50" y="50" width="200" height="250"
                 rx="10"
                 fill="none"
-                stroke="#22c55e"
+                stroke="#a855f7"
                 strokeWidth="3"
                 filter="url(#glow2)"
               />
@@ -127,7 +127,7 @@ export default function Echo9() {
                 transition={{ delay: 0.8, duration: 0.5 }}
                 x="50" y="50" width="200" height="40"
                 rx="10"
-                fill="#22c55e"
+                fill="#a855f7"
                 fillOpacity="0.3"
               />
 
@@ -162,7 +162,7 @@ export default function Echo9() {
                         x={x} y={y} width="50" height="50"
                         rx="5"
                         fill="none"
-                        stroke="#22c55e"
+                        stroke="#a855f7"
                         strokeWidth="1.5"
                         strokeOpacity="0.4"
                       />
@@ -207,9 +207,9 @@ export default function Echo9() {
                     }}
                     x={x} y={y} width="50" height="50"
                     rx="5"
-                    fill="#22c55e"
+                    fill="#a855f7"
                     fillOpacity="0.4"
-                    stroke="#22c55e"
+                    stroke="#a855f7"
                     strokeWidth="2"
                   />
                 );
@@ -240,7 +240,7 @@ export default function Echo9() {
                       }}
                       d={`M ${x-4} ${y} L ${x+4} ${y} L ${x+3} ${y+5} L ${x-3} ${y+5} Z`}
                       fill="#ffffff"
-                      stroke="#22c55e"
+                      stroke="#a855f7"
                       strokeWidth="1"
                     />
                     <motion.circle
@@ -256,7 +256,7 @@ export default function Echo9() {
                         repeatDelay: 1
                       }}
                       cx={x} cy={y-2} r="1.5"
-                      fill="#22c55e"
+                      fill="#a855f7"
                     />
                   </motion.g>
                 );
@@ -268,7 +268,7 @@ export default function Echo9() {
                 animate={{ pathLength: 1, opacity: 0.6 }}
                 transition={{ delay: 2, duration: 1.5 }}
                 x1="70" y1="320" x2="230" y2="320"
-                stroke="#22c55e"
+                stroke="#a855f7"
                 strokeWidth="2"
               />
 
@@ -280,7 +280,7 @@ export default function Echo9() {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 2.5 + i * 0.3, duration: 0.5 }}
                     cx={90 + i * 70} cy="320" r="5"
-                    fill="#22c55e"
+                    fill="#a855f7"
                     filter="url(#glow2)"
                   />
                   <motion.text

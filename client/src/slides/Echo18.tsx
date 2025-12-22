@@ -77,7 +77,7 @@ export default function Echo18() {
             className="mb-16"
           >
             <h1 className="text-3xl md:text-4xl font-bold text-white font-sans leading-tight">
-              PROGRAMA DE IMPLEMENTAÇÃO DA CÉLULA TÉRMINUS – VEIL
+              PROGRAMA DE IMPLEMENTAÇÃO DA CÉLULA TÉRMINUS – ECHO
             </h1>
           </motion.div>
 
@@ -89,16 +89,16 @@ export default function Echo18() {
             className="relative pl-8"
           >
             {/* Linha vertical decorativa */}
-            <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-purple-600 via-green-700 to-purple-600 shadow-lg shadow-green-700/50" />
+            <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-purple-600 via-purple-700 to-purple-600 shadow-lg shadow-purple-700/50" />
             
             <div className="space-y-6">
               {/* VALOR com destaque */}
               <motion.h2
                 animate={{
                   textShadow: [
-                    '0 0 20px rgba(22, 163, 74, 0.5)',
-                    '0 0 40px rgba(22, 163, 74, 0.8)',
-                    '0 0 20px rgba(22, 163, 74, 0.5)'
+                    '0 0 20px rgba(168, 85, 247, 0.5)',
+                    '0 0 40px rgba(168, 85, 247, 0.8)',
+                    '0 0 20px rgba(168, 85, 247, 0.5)'
                   ]
                 }}
                 transition={{
@@ -128,7 +128,7 @@ export default function Echo18() {
                 className="text-4xl md:text-5xl font-extrabold text-white font-sans mt-8"
                 style={{ visibility: step >= 2 ? 'visible' : 'hidden' }}
               >
-                R$11.000,00 - à vista
+                R$7.000,00 - à vista
               </motion.p>
               
               {/* Texto adicional - aparece no step 2 */}
@@ -160,7 +160,7 @@ export default function Echo18() {
                 transition={{ delay: 0.6 + index * 0.05, duration: 0.5 }}
                 className="flex items-start gap-3 text-white"
               >
-                <div className="flex-shrink-0 w-2.5 h-2.5 rounded-full bg-purple-600 mt-2 shadow-lg shadow-green-700/50" />
+                <div className="flex-shrink-0 w-2.5 h-2.5 rounded-full bg-purple-600 mt-2 shadow-lg shadow-purple-700/50" />
                 <p className="text-base md:text-lg font-light font-sans leading-relaxed">
                   {item}
                 </p>

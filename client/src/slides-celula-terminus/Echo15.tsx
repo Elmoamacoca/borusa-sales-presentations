@@ -116,7 +116,7 @@ export default function Echo15() {
                       width="120" height="80" 
                       rx="6" 
                       fill="#000000" 
-                      stroke="#22c55e" 
+                      stroke="#a855f7" 
                       strokeWidth="2.5"
                       filter="url(#glowVideoIA)"
                     />
@@ -136,9 +136,9 @@ export default function Echo15() {
                       <circle 
                         cx={x + 60} cy={y + 40} 
                         r="18" 
-                        fill="#22c55e" 
+                        fill="#a855f7" 
                         fillOpacity="0.3" 
-                        stroke="#22c55e" 
+                        stroke="#a855f7" 
                         strokeWidth="2"
                       />
                       <polygon 
@@ -165,14 +165,14 @@ export default function Echo15() {
                       x={x + 10} y={y + 70} 
                       width="0" height="3" 
                       rx="1.5" 
-                      fill="#22c55e"
+                      fill="#a855f7"
                     />
                     
                     {/* Label da IA */}
                     <text 
                       x={x + 60} y={y + 95} 
                       textAnchor="middle" 
-                      fill="#22c55e" 
+                      fill="#a855f7" 
                       fontSize="9" 
                       fontWeight="700" 
                       className="font-sans"
@@ -187,9 +187,9 @@ export default function Echo15() {
                       transition={{ delay: 1.2 + i * 0.2, duration: 0.3 }}
                       cx={x + 105} cy={y + 15} 
                       r="8"
-                      fill="#22c55e"
+                      fill="#a855f7"
                       fillOpacity="0.4"
-                      stroke="#22c55e"
+                      stroke="#a855f7"
                       strokeWidth="1.5"
                     />
                   </motion.g>
@@ -203,7 +203,7 @@ export default function Echo15() {
                 transition={{ delay: 2.5, duration: 0.5 }}
                 x="150" y="370"
                 textAnchor="middle"
-                fill="#22c55e"
+                fill="#a855f7"
                 fontSize="10"
                 fontWeight="700"
                 className="font-sans"
@@ -217,7 +217,7 @@ export default function Echo15() {
                 transition={{ delay: 2.7, duration: 0.5 }}
                 x="150" y="385"
                 textAnchor="middle"
-                fill="#22c55e"
+                fill="#a855f7"
                 fontSize="8"
                 fontWeight="600"
                 className="font-sans"

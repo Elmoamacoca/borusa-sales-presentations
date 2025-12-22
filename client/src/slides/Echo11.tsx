@@ -104,13 +104,13 @@ export default function Echo11() {
                   </feMerge>
                 </filter>
                 <radialGradient id="radarGrad">
-                  <stop offset="0%" style={{ stopColor: '#22c55e', stopOpacity: 0.6 }} />
-                  <stop offset="100%" style={{ stopColor: '#22c55e', stopOpacity: 0 }} />
+                  <stop offset="0%" style={{ stopColor: '#a855f7', stopOpacity: 0.6 }} />
+                  <stop offset="100%" style={{ stopColor: '#a855f7', stopOpacity: 0 }} />
                 </radialGradient>
                 <linearGradient id="sweepGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" style={{ stopColor: '#22c55e', stopOpacity: 0 }} />
-                  <stop offset="50%" style={{ stopColor: '#22c55e', stopOpacity: 0.8 }} />
-                  <stop offset="100%" style={{ stopColor: '#22c55e', stopOpacity: 0 }} />
+                  <stop offset="0%" style={{ stopColor: '#a855f7', stopOpacity: 0 }} />
+                  <stop offset="50%" style={{ stopColor: '#a855f7', stopOpacity: 0.8 }} />
+                  <stop offset="100%" style={{ stopColor: '#a855f7', stopOpacity: 0 }} />
                 </linearGradient>
               </defs>
 
@@ -121,9 +121,9 @@ export default function Echo11() {
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ delay: 0.5, duration: 0.8 }}
                   cx="200" cy="200" r="35"
-                  fill="#22c55e"
+                  fill="#a855f7"
                   fillOpacity="0.3"
-                  stroke="#22c55e"
+                  stroke="#a855f7"
                   strokeWidth="3"
                   filter="url(#glowRadar)"
                 />
@@ -141,7 +141,7 @@ export default function Echo11() {
                   }}
                   cx="200" cy="200" r="35"
                   fill="none"
-                  stroke="#22c55e"
+                  stroke="#a855f7"
                   strokeWidth="2"
                 />
 
@@ -157,7 +157,7 @@ export default function Echo11() {
                   transition={{ delay: 0.7 + i * 0.1, duration: 0.6 }}
                   cx="200" cy="200" r={radius}
                   fill="none"
-                  stroke="#22c55e"
+                  stroke="#a855f7"
                   strokeWidth="1.5"
                   strokeDasharray="4 4"
                   opacity="0.3"
@@ -178,7 +178,7 @@ export default function Echo11() {
                     transition={{ delay: 1 + i * 0.05, duration: 0.5 }}
                     x1="200" y1="200"
                     x2={x2} y2={y2}
-                    stroke="#22c55e"
+                    stroke="#a855f7"
                     strokeWidth="1"
                   />
                 );
@@ -231,7 +231,7 @@ export default function Echo11() {
                       }}
                       transition={{ delay: point.delay, duration: 0.5 }}
                       cx={x} cy={y} r="5"
-                      fill="#22c55e"
+                      fill="#a855f7"
                       filter="url(#glowRadar)"
                     />
                     
@@ -248,7 +248,7 @@ export default function Echo11() {
                       }}
                       cx={x} cy={y} r="5"
                       fill="none"
-                      stroke="#22c55e"
+                      stroke="#a855f7"
                       strokeWidth="2"
                     />
 
@@ -264,10 +264,10 @@ export default function Echo11() {
                         rx="3" 
                         fill="#000000" 
                         fillOpacity="0.8"
-                        stroke="#22c55e"
+                        stroke="#a855f7"
                         strokeWidth="1"
                       />
-                      <text x={x} y={y - 17} textAnchor="middle" fill="#22c55e" fontSize="7" fontWeight="700" className="font-sans">
+                      <text x={x} y={y - 17} textAnchor="middle" fill="#a855f7" fontSize="7" fontWeight="700" className="font-sans">
                         {point.label}
                       </text>
                       <text x={x} y={y - 10} textAnchor="middle" fill="#ffffff" fontSize="9" fontWeight="700" className="font-sans">
@@ -285,7 +285,7 @@ export default function Echo11() {
                 transition={{ delay: 3, duration: 2, repeat: Infinity }}
                 x="200" y="380"
                 textAnchor="middle"
-                fill="#22c55e"
+                fill="#a855f7"
                 fontSize="12"
                 fontWeight="700"
                 className="font-sans"

@@ -17,7 +17,7 @@ export default function Echo4() {
             NO QUE CONSISTE A IMPLEMENTAÇÃO DA
           </h1>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-white mb-3 font-sans">
-            CÉLULA TÉRMINUS – <span className="text-purple-400">VEIL</span>
+            CÉLULA TÉRMINUS – <span className="text-purple-400">ECHO</span>
           </h2>
           <p className="text-base md:text-lg text-gray-300 italic font-light font-sans">
             (90 dias entre implantação e operação assistida)

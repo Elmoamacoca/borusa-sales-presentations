@@ -100,7 +100,7 @@ export default function Echo14() {
                   width="200" height="130" 
                   rx="8" 
                   fill="#000000" 
-                  stroke="#22c55e" 
+                  stroke="#a855f7" 
                   strokeWidth="3"
                   filter="url(#glowVideo)"
                 />
@@ -118,7 +118,7 @@ export default function Echo14() {
                   x="60" y="155" 
                   width="0" height="4" 
                   rx="2" 
-                  fill="#22c55e"
+                  fill="#a855f7"
                 />
                 
                 {/* Botão Play */}
@@ -129,12 +129,12 @@ export default function Echo14() {
                   }}
                   transition={{ duration: 2, repeat: Infinity }}
                 >
-                  <circle cx="150" cy="105" r="25" fill="#22c55e" fillOpacity="0.3" stroke="#22c55e" strokeWidth="2"/>
+                  <circle cx="150" cy="105" r="25" fill="#a855f7" fillOpacity="0.3" stroke="#a855f7" strokeWidth="2"/>
                   <polygon points="145,95 145,115 165,105" fill="#ffffff"/>
                 </motion.g>
                 
                 {/* Label */}
-                <text x="150" y="190" textAnchor="middle" fill="#22c55e" fontSize="10" fontWeight="700" className="font-sans">
+                <text x="150" y="190" textAnchor="middle" fill="#a855f7" fontSize="10" fontWeight="700" className="font-sans">
                   VÍDEO TUTORIAL
                 </text>
               </motion.g>
@@ -156,19 +156,19 @@ export default function Echo14() {
                     x="70" y={panel.y} 
                     width="160" height="45" 
                     rx="6" 
-                    fill="#22c55e" 
+                    fill="#a855f7" 
                     fillOpacity="0.1" 
-                    stroke="#22c55e" 
+                    stroke="#a855f7" 
                     strokeWidth="2"
                   />
                   
                   {/* Ícone */}
-                  <circle cx="95" cy={panel.y + 22} r="12" fill="#22c55e" fillOpacity="0.3"/>
+                  <circle cx="95" cy={panel.y + 22} r="12" fill="#a855f7" fillOpacity="0.3"/>
                   
                   {/* Label */}
                   <text 
                     x="115" y={panel.y + 20} 
-                    fill="#22c55e" 
+                    fill="#a855f7" 
                     fontSize="9" 
                     fontWeight="600" 
                     className="font-sans"
@@ -204,7 +204,7 @@ export default function Echo14() {
                       width="6" 
                       height="15" 
                       rx="1"
-                      fill="#22c55e"
+                      fill="#a855f7"
                       fillOpacity="0.6"
                     />
                   ))}
@@ -218,7 +218,7 @@ export default function Echo14() {
                 transition={{ delay: 2.5, duration: 0.5 }}
                 x="150" y="385"
                 textAnchor="middle"
-                fill="#22c55e"
+                fill="#a855f7"
                 fontSize="9"
                 fontWeight="600"
                 className="font-sans"
