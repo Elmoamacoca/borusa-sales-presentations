@@ -41,7 +41,7 @@ export default function Echo7() {
             className="space-y-6"
           >
             <p className="text-base md:text-lg lg:text-xl font-light text-white leading-relaxed mb-8">
-              Na Célula Términus – <span className="text-purple-400 font-semibold">VEIL</span> você passa a operar com quatro IAs especializadas:
+              Na Célula Términus – <span className="text-purple-400 font-semibold">ECHO</span> você passa a operar com quatro IAs especializadas:
             </p>
 
             <div className="space-y-5">

@@ -17,7 +17,8 @@ export default function Veil10() {
     'Retomada contextual (sempre usando histórico da conversa)',
     'Escalonamento pro humano quando a conversa pede vendedor',
     'Persistência estratégica (não vira spam, mas também não desiste)',
-    'Monitoramento contínuo das oportunidades em proposta'
+    'Comunicação via WhatsApp',
+    'Comunicação via E-mail'
   ];
 
   return (

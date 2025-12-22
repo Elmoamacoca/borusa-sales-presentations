@@ -14,7 +14,6 @@ export default function Echo8() {
   const features = [
     'Recepção inicial automática dos leads nos canais integrados',
     'Triagem leve (pergunta o básico sem cansar o lead)',
-    'Qualificação básica (fit, urgência, orçamento aproximado)',
     'Gestão de pipeline inicial (move o lead pelas primeiras etapas)',
     'Reporting básico do topo de funil',
     'Atuação multicanal (WhatsApp, e-mail, Instagram)'
@@ -50,7 +49,7 @@ export default function Echo8() {
             className="space-y-6"
           >
             <p className="text-base md:text-lg font-light text-white leading-relaxed font-sans">
-              A <span className="text-purple-400 font-semibold">IASDR</span> é a IA que recebe todo lead que entra, entende quem ele é, por que chegou até você e se faz sentido seguir adiante. Ela limpa a bagunça da entrada e garante que só chega no vendedor quem tem contexto mínimo e fit inicial.
+              A <span className="text-purple-400 font-semibold">IA SDR</span> é a IA que recebe todo lead que entra, entende quem ele é, por que chegou até você e se faz sentido seguir adiante. Ela limpa a bagunça da entrada e garante que só chega no vendedor quem tem contexto mínimo e fit inicial.
             </p>
 
             <div>

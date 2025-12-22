@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { MeshGradient } from "@paper-design/shaders-react";
-import { MessageCircle, Database, Wrench, Lock } from 'lucide-react';
+import { MessageCircle, Database, Monitor, Brain, Sparkles } from 'lucide-react';
 
 export default function Slide58Recorrencia() {
   const charcoalColors = [
@@ -28,7 +28,7 @@ export default function Slide58Recorrencia() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.6 }}
-          className="-mt-20 mb-24 text-center"
+          className="-mt-16 mb-12 text-center"
         >
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-light text-white mb-2 font-sans leading-tight">
             O QUE VOCÊ CONTINUA RECEBENDO
@@ -41,9 +41,9 @@ export default function Slide58Recorrencia() {
           </p>
         </motion.div>
 
-        {/* Grid de Entregáveis */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl w-full">
-          {/* Item 1 - WhatsApp */}
+        {/* Grid de Entregáveis - 4 itens em 2x2 */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-6xl w-full mb-8">
+          {/* Item 1 - Portal do Cliente */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -51,19 +51,19 @@ export default function Slide58Recorrencia() {
             className="flex gap-3 items-start"
           >
             <div className="flex-shrink-0 mt-1">
-              <MessageCircle className="w-6 h-6 text-yellow-400" />
+              <Monitor className="w-6 h-6 text-yellow-400" />
             </div>
             <div className="border-b-2 border-yellow-400 pb-3">
-              <h3 className="text-white text-base md:text-lg font-semibold mb-1.5 font-sans">
-                Grupo WhatsApp do Projeto
+              <h3 className="text-white text-base md:text-lg font-semibold mb-1 font-sans">
+                Acesso ao Portal do Cliente (Front-end)
               </h3>
-              <p className="text-gray-300 text-sm md:text-base leading-relaxed font-light font-sans">
-                C.S Exclusivo para sua operação - Suporte direto, dúvidas respondidas em tempo real e acompanhamento personalizado.
+              <p className="text-gray-300 text-sm leading-relaxed font-light font-sans">
+                Interface completa para acompanhar sua operação, métricas e resultados em tempo real.
               </p>
             </div>
           </motion.div>
 
-          {/* Item 2 - Base de Conhecimento */}
+          {/* Item 2 - BCF */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -71,19 +71,19 @@ export default function Slide58Recorrencia() {
             className="flex gap-3 items-start"
           >
             <div className="flex-shrink-0 mt-1">
-              <Database className="w-6 h-6 text-yellow-400" />
+              <Sparkles className="w-6 h-6 text-yellow-400" />
             </div>
             <div className="border-b-2 border-yellow-400 pb-3">
-              <h3 className="text-white text-base md:text-lg font-semibold mb-1.5 font-sans">
-                Atualizações de Base de Conhecimento
+              <h3 className="text-white text-base md:text-lg font-semibold mb-1 font-sans">
+                Borusa Client Federado (BCF)
               </h3>
-              <p className="text-gray-300 text-sm md:text-base leading-relaxed font-light font-sans">
-                Refinamento contínuo das técnicas de negociação, prompts otimizados e conhecimento curado específico para seu mercado.
+              <p className="text-gray-300 text-sm leading-relaxed font-light font-sans">
+                Releases semanais com novas funcionalidades, melhorias e otimizações do sistema.
               </p>
             </div>
           </motion.div>
 
-          {/* Item 3 - Correção de Bugs */}
+          {/* Item 3 - IA Estrategista */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -91,19 +91,19 @@ export default function Slide58Recorrencia() {
             className="flex gap-3 items-start"
           >
             <div className="flex-shrink-0 mt-1">
-              <Wrench className="w-6 h-6 text-yellow-400" />
+              <Brain className="w-6 h-6 text-yellow-400" />
             </div>
             <div className="border-b-2 border-yellow-400 pb-3">
-              <h3 className="text-white text-base md:text-lg font-semibold mb-1.5 font-sans">
-                Correção de Bugs
+              <h3 className="text-white text-base md:text-lg font-semibold mb-1 font-sans">
+                IA Estrategista
               </h3>
-              <p className="text-gray-300 text-sm md:text-base leading-relaxed font-light font-sans">
-                Correções prioritárias de qualquer problema identificado, melhorias de performance e otimizações contínuas do sistema.
+              <p className="text-gray-300 text-sm leading-relaxed font-light font-sans">
+                Monitoramento contínuo, identificação de gargalos e recomendações estratégicas para sua operação.
               </p>
             </div>
           </motion.div>
 
-          {/* Item 4 - Licença de Uso */}
+          {/* Item 4 - Base de Conhecimento */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -111,18 +111,38 @@ export default function Slide58Recorrencia() {
             className="flex gap-3 items-start"
           >
             <div className="flex-shrink-0 mt-1">
-              <Lock className="w-6 h-6 text-yellow-400" />
+              <Database className="w-6 h-6 text-yellow-400" />
             </div>
             <div className="border-b-2 border-yellow-400 pb-3">
-              <h3 className="text-white text-base md:text-lg font-semibold mb-1.5 font-sans">
-                Acesso a Licença de USO
+              <h3 className="text-white text-base md:text-lg font-semibold mb-1 font-sans">
+                Atualizações de Base de Conhecimento (Sentinela)
               </h3>
-              <p className="text-gray-300 text-sm md:text-base leading-relaxed font-light font-sans">
-                Licença ativa da Célula Términus com todas as IAs, integrações e features disponíveis durante todo o período de acompanhamento.
+              <p className="text-gray-300 text-sm leading-relaxed font-light font-sans">
+                Refinamento contínuo das técnicas de negociação, prompts otimizados e conhecimento curado.
               </p>
             </div>
           </motion.div>
         </div>
+
+        {/* Item 5 - WhatsApp - Centralizado embaixo */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8, duration: 0.6 }}
+          className="flex gap-3 items-start justify-center max-w-xl"
+        >
+          <div className="flex-shrink-0 mt-1">
+            <MessageCircle className="w-6 h-6 text-yellow-400" />
+          </div>
+          <div className="border-b-2 border-yellow-400 pb-3 text-center">
+            <h3 className="text-white text-base md:text-lg font-semibold mb-1 font-sans">
+              Grupo WhatsApp do Projeto
+            </h3>
+            <p className="text-gray-300 text-sm leading-relaxed font-light font-sans">
+              Suporte dedicado com dúvidas respondidas em tempo real e acompanhamento personalizado.
+            </p>
+          </div>
+        </motion.div>
       </div>
     </div>
   );

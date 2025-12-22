@@ -16,18 +16,23 @@ export default function Slide66() {
 
   const items = [
     "Plano de Ação Personalizado de 90 dias",
-    "Grupo de WhatsApp do Projeto",
-    "IASDR operacional (recepção, triagem, qualificação básica, pipeline, reporting)",
-    "IA de Compromisso (agendamentos, lembretes, no-show, briefing pro closer)",
-    "IA de Follow-up (9 tentativas, retomada contextual, reengajamento multicanal)",
-    "IA Estrategista (análise de funil, gargalos, recomendações de testes/ajustes)",
+    "Grupo de WhatsApp do Projeto (suporte dedicado)",
+    "IA SDR operacional (recepção, triagem, pipeline, reporting)",
+    "IA de Compromisso (agendamentos, lembretes, no-show, briefing)",
+    "IA de Follow-up (9 tentativas, retomada contextual, reengajamento)",
+    "IA Estrategista (análise de funil, gargalos, recomendações)",
     "Infraestrutura completa + Portal do Cliente (VPS, integrações, painéis)",
     "6 Tutorais 1:1 com o Gabriel",
-    "Playbook Operacional da Célula Términus",
-    "Trilha de Vídeos – Portal e Painéis",
     "Trilha de Vídeos – Automações e IAs",
-    "Bônus 1: Acesso antecipado à Inteligência Coletiva Borusa (BCF v2, em validação)",
-    "Bônus 2: Arsenal Open Source (\"Caixa de Pandora\")",
+    "Borusa Client Federado (BCF) - Releases semanais",
+    "Atualizações de Base de Conhecimento (Sentinela)",
+    "Reunião Mensal de Acompanhamento",
+    "QBR Trimestral (ROI acumulado + roadmap)",
+    "Release Notes Semanais",
+    "Data Moat (Proteção da memória da operação)",
+    "Borusa Academy (Portal de vídeos e treinamentos)",
+    "Bônus 1: Acesso antecipado à Inteligência Coletiva BCF v2 (em validação)",
+    "Bônus 2: Arsenal Open Source Proprietário (\"Caixa de Pandora\")",
   ];
 
   useEffect(() => {
@@ -125,10 +130,20 @@ export default function Slide66() {
               <motion.p
                 animate={{ opacity: showValues ? 1 : 0 }}
                 transition={{ delay: 0.2, duration: 0.6 }}
-                className="text-2xl md:text-3xl font-light text-gray-300 font-sans"
+                className="text-lg md:text-xl font-light text-gray-300 font-sans"
                 style={{ visibility: showValues ? 'visible' : 'hidden' }}
               >
-                6x de R$5.000,00
+                ou 6x de R$5.000,00 no cartão
+              </motion.p>
+              
+              {/* Licença de Uso */}
+              <motion.p
+                animate={{ opacity: showValues ? 1 : 0 }}
+                transition={{ delay: 0.3, duration: 0.6 }}
+                className="text-3xl md:text-4xl font-bold text-white font-sans"
+                style={{ visibility: showValues ? 'visible' : 'hidden' }}
+              >
+                Licença de Uso: R$3.500,00/Mês
               </motion.p>
             </div>
           </motion.div>
@@ -141,17 +156,17 @@ export default function Slide66() {
           transition={{ delay: 0.5, duration: 0.7 }}
           className="flex-1 flex items-center"
         >
-          <div className="space-y-3 w-full">
+          <div className="space-y-1.5 w-full">
             {items.map((item, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.6 + index * 0.05, duration: 0.5 }}
-                className="flex items-start gap-3 text-white"
+                transition={{ delay: 0.6 + index * 0.03, duration: 0.5 }}
+                className="flex items-start gap-2 text-white"
               >
-                <div className="flex-shrink-0 w-2.5 h-2.5 rounded-full bg-cyan-400 mt-2 shadow-lg shadow-cyan-500/50" />
-                <p className="text-base md:text-lg font-light font-sans leading-relaxed">
+                <div className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-cyan-400 mt-1.5 shadow-lg shadow-cyan-500/50" />
+                <p className="text-xs md:text-sm font-light font-sans leading-snug">
                   {item}
                 </p>
               </motion.div>

@@ -17,7 +17,7 @@ export default function Echo11() {
     'Relatórios de performance com leitura em linguagem simples',
     'Análise estatística básica (taxas, tempos médios, comparações)',
     'Recomendações estratégicas de ajuste (copy, cadência, segmentação)',
-    'Releases/insights periódicos via WhatsApp/e-mail'
+    'Identificação de Oportunidades'
   ];
 
   return (
