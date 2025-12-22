@@ -166,7 +166,7 @@ export default function Slide66() {
                 className="flex items-start gap-2 text-white"
               >
                 <div className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-cyan-400 mt-1.5 shadow-lg shadow-cyan-500/50" />
-                <p className="text-xs md:text-sm font-light font-sans leading-snug">
+                <p className="text-sm md:text-base font-light font-sans leading-snug">
                   {item}
                 </p>
               </motion.div>
