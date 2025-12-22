@@ -93,19 +93,30 @@ export default function Slide67() {
             >
               <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-cyan-400 to-blue-500" />
 
-              <h2 className="text-3xl font-light text-cyan-400 font-sans mb-5">
+              <h2 className="text-3xl font-light text-cyan-400 font-sans mb-8">
                 PREÇO REGULAR
               </h2>
 
-              <p className="text-5xl font-bold text-white font-sans mb-4">
-                6x de R$ 5.000,00
-              </p>
+              <div className="space-y-6">
+                {/* Implementação */}
+                <div className="space-y-1">
+                  <p className="text-xl font-bold text-cyan-400 font-sans">
+                    Implementação
+                  </p>
+                  <p className="text-3xl font-bold text-white font-sans">
+                    R$30.000,00 à vista
+                  </p>
+                </div>
 
-              <div className="flex items-center gap-3 text-white">
-                <span className="text-2xl">♦</span>
-                <p className="text-2xl font-light font-sans">
-                  À vista: R$ 30.000,00
-                </p>
+                {/* Licença de Uso */}
+                <div className="space-y-1">
+                  <p className="text-xl font-bold text-cyan-400 font-sans">
+                    Licença de Uso
+                  </p>
+                  <p className="text-3xl font-bold text-white font-sans">
+                    R$3.500,00/Mês
+                  </p>
+                </div>
               </div>
             </motion.div>
           </div>
@@ -146,19 +157,30 @@ export default function Slide67() {
               >
                 <div className="absolute left-[-24px] top-0 bottom-0 w-1 bg-gradient-to-b from-cyan-400 to-blue-500" />
 
-                <h2 className="text-3xl font-light text-cyan-400 font-sans mb-5">
+                <h2 className="text-3xl font-light text-cyan-400 font-sans mb-6">
                   PREÇO REGULAR
                 </h2>
 
-                <p className="text-5xl font-bold text-white font-sans mb-4">
-                  6x de R$ 5.000,00
-                </p>
+                <div className="space-y-5">
+                  {/* Implementação */}
+                  <div className="space-y-1">
+                    <p className="text-lg font-bold text-cyan-400 font-sans">
+                      Implementação
+                    </p>
+                    <p className="text-2xl font-bold text-white font-sans">
+                      R$30.000,00 à vista
+                    </p>
+                  </div>
 
-                <div className="flex items-center gap-3 text-white">
-                  <span className="text-2xl">♦</span>
-                  <p className="text-2xl font-light font-sans">
-                    À vista: R$ 30.000,00
-                  </p>
+                  {/* Licença de Uso */}
+                  <div className="space-y-1">
+                    <p className="text-lg font-bold text-cyan-400 font-sans">
+                      Licença de Uso
+                    </p>
+                    <p className="text-2xl font-bold text-white font-sans">
+                      R$3.500,00/Mês
+                    </p>
+                  </div>
                 </div>
               </motion.div>
             </div>
