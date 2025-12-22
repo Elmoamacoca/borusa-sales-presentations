@@ -101,6 +101,28 @@ import Veil21 from '@/slides/Veil21';
 import Veil22 from '@/slides/Veil22';
 import Veil23 from '@/slides/Veil23';
 import Veil24 from '@/slides/Veil24';
+import Echo2 from '@/slides/Echo2';
+import Echo3 from '@/slides/Echo3';
+import Echo4 from '@/slides/Echo4';
+import Echo5 from '@/slides/Echo5';
+import Echo6 from '@/slides/Echo6';
+import Echo7 from '@/slides/Echo7';
+import Echo8 from '@/slides/Echo8';
+import Echo9 from '@/slides/Echo9';
+import Echo10 from '@/slides/Echo10';
+import Echo11 from '@/slides/Echo11';
+import Echo12 from '@/slides/Echo12';
+import Echo13 from '@/slides/Echo13';
+import Echo14 from '@/slides/Echo14';
+import Echo15 from '@/slides/Echo15';
+import Echo16 from '@/slides/Echo16';
+import Echo17 from '@/slides/Echo17';
+import Echo18 from '@/slides/Echo18';
+import Echo20 from '@/slides/Echo20';
+import Echo21 from '@/slides/Echo21';
+import Echo22 from '@/slides/Echo22';
+import Echo23 from '@/slides/Echo23';
+import Echo24 from '@/slides/Echo24';
 
 
 export interface SlideDefinition extends SlideConfig {
@@ -215,6 +237,28 @@ export const slidesConfig: SlideDefinition[] = [
   { id: 'veil-23', order: 21, component: Veil23, title: 'Release Notes - VEIL', path: 'veil' },
   { id: 'veil-24', order: 22, component: Veil24, title: 'Você Nunca Fica Sozinho - VEIL', path: 'veil' },
   { id: 'veil-18', order: 23, component: Veil18, title: 'Programa de Implementação - VEIL', path: 'veil' },
+  { id: 'echo-2', order: 2, component: Echo2, title: 'Jay Abraham - ECHO', path: 'echo' },
+  { id: 'echo-3', order: 3, component: Echo3, title: 'Oportunidade de Acelerar - ECHO', path: 'echo' },
+  { id: 'echo-4', order: 4, component: Echo4, title: 'Implementação Híbrida MQL Machine - ECHO', path: 'echo' },
+  { id: 'echo-5', order: 5, component: Echo5, title: 'Plano de Ação Personalizado - ECHO', path: 'echo' },
+  { id: 'echo-6', order: 6, component: Echo6, title: 'Grupo do WhatsApp do Projeto - ECHO', path: 'echo' },
+  { id: 'echo-7', order: 7, component: Echo7, title: 'Visão Geral das IAs - ECHO', path: 'echo' },
+  { id: 'echo-8', order: 8, component: Echo8, title: 'IA SDR - Porta de Entrada Inteligente - ECHO', path: 'echo' },
+  { id: 'echo-9', order: 9, component: Echo9, title: 'IA de Compromisso - Agenda Cheia - ECHO', path: 'echo' },
+  { id: 'echo-10', order: 10, component: Echo10, title: 'IA de Follow-up - Persistência Inteligente - ECHO', path: 'echo' },
+  { id: 'echo-11', order: 11, component: Echo11, title: 'IA Estrategista - Cérebro Tático - ECHO', path: 'echo' },
+  { id: 'echo-12', order: 12, component: Echo12, title: 'Tutorias 1:1 - ECHO', path: 'echo' },
+  { id: 'echo-13', order: 13, component: Echo13, title: 'Playbook Operacional - ECHO', path: 'echo' },
+  { id: 'echo-14', order: 14, component: Echo14, title: 'Trilha de Vídeos: Portal e Painéis - ECHO', path: 'echo' },
+  { id: 'echo-15', order: 15, component: Echo15, title: 'Trilha de Vídeos: Automações e IAs - ECHO', path: 'echo' },
+  { id: 'echo-16', order: 16, component: Echo16, title: 'Inteligência Coletiva Borusa (BCF v2) - ECHO', path: 'echo' },
+  { id: 'echo-17', order: 17, component: Echo17, title: 'Bônus: Arsenal Open Source - ECHO', path: 'echo' },
+  { id: 'echo-20', order: 18, component: Echo20, title: 'O Que Você Continua Recebendo - ECHO', path: 'echo' },
+  { id: 'echo-21', order: 19, component: Echo21, title: 'Suporte Contínuo - ECHO', path: 'echo' },
+  { id: 'echo-22', order: 20, component: Echo22, title: 'Data Moat - ECHO', path: 'echo' },
+  { id: 'echo-23', order: 21, component: Echo23, title: 'Release Notes - ECHO', path: 'echo' },
+  { id: 'echo-24', order: 22, component: Echo24, title: 'Você Nunca Fica Sozinho - ECHO', path: 'echo' },
+  { id: 'echo-18', order: 23, component: Echo18, title: 'Programa de Implementação - ECHO', path: 'echo' },
 
 ];
 
