@@ -48,7 +48,7 @@ export default function Veil7() {
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 w-2 h-2 rounded-full bg-green-400 mt-2"></div>
                 <p className="text-base md:text-lg font-light text-white leading-relaxed">
-                  <span className="font-semibold text-green-400">IASDR:</span> entrada e triagem dos leads;
+                  <span className="font-semibold text-green-400">IA SDR:</span> entrada e triagem dos leads;
                 </p>
               </div>
 
@@ -94,7 +94,7 @@ export default function Veil7() {
             {/* Grid de 4 cards */}
             <div className="grid grid-cols-1 gap-6">
               
-              {/* Card 1: IASDR */}
+              {/* Card 1: IA SDR */}
               <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -107,7 +107,7 @@ export default function Veil7() {
                     <Brain className="w-7 h-7 text-black" />
                   </div>
                   <div>
-                    <h3 className="text-white font-bold text-xl mb-1 font-sans">IASDR</h3>
+                    <h3 className="text-white font-bold text-xl mb-1 font-sans">IA SDR</h3>
                     <p className="text-gray-300 text-sm font-sans">Entrada e triagem dos leads</p>
                   </div>
                 </div>
