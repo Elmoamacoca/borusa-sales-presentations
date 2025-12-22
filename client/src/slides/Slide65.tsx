@@ -115,10 +115,10 @@ export default function Slide65() {
         {/* Container com scroll */}
         <div 
           ref={scrollContainerRef}
-          className="flex-1 overflow-y-auto max-w-5xl mx-auto w-full scrollbar-thin scrollbar-thumb-white/20 scrollbar-track-transparent"
+          className="flex-1 overflow-y-auto max-w-5xl mx-auto w-full [&::-webkit-scrollbar]:hidden"
           style={{
-            scrollbarWidth: 'thin',
-            scrollbarColor: 'rgba(255,255,255,0.2) transparent'
+            scrollbarWidth: 'none',
+            msOverflowStyle: 'none'
           }}
         >
           {/* Lista de itens */}
