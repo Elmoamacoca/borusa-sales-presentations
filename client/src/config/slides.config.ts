@@ -2,6 +2,9 @@ import { SlideConfig } from '@/store/presentationStore';
 import type { ComponentType } from 'react';
 import { rolePlayVeilSlidesConfig } from './slides-role-play-veil.config';
 import { rolePlayEchoSlidesConfig } from './slides-role-play-echo.config';
+import { ctNestSlidesConfig } from './slides-ct-nest.config';
+import { ctVeilSlidesConfig } from './slides-ct-veil.config';
+import { ctEchoSlidesConfig } from './slides-ct-echo.config';
 
 // Import slides
 import WelcomeSlide from '@/slides/WelcomeSlide';
@@ -272,6 +275,15 @@ export const slidesConfigs: Record<string, SlideDefinition[]> = {
   
   // Role-Play - Célula Terminus ECHO (slides independentes)
   'role-play-echo': rolePlayEchoSlidesConfig,
+  
+  // Célula Terminus - NEST (produção - sem contador)
+  'ct-nest': ctNestSlidesConfig,
+  
+  // Célula Terminus - VEIL (produção - sem contador)
+  'ct-veil': ctVeilSlidesConfig,
+  
+  // Célula Terminus - ECHO (produção - sem contador)
+  'ct-echo': ctEchoSlidesConfig,
   
   // Agente Kesher (novos slides no futuro)
   'agente-kesher': slidesConfig, // Temporariamente usando os mesmos slides

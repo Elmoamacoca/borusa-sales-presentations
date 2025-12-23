@@ -84,8 +84,8 @@ export default function Presentation({ slidesConfigId }: PresentationProps) {
       {/* Laser */}
       <LaserPointer active={laserActive} />
 
-      {/* Contador de slides - oculto para celula-terminus */}
-      {slidesConfigId !== 'celula-terminus' && <SlideCounter />}
+      {/* Contador de slides - oculto para categoria Célula Terminus (produção) */}
+      {!slidesConfigId.startsWith('ct-') && <SlideCounter />}
 
       {/* Slide atual com animação */}
       <AnimatePresence mode="wait">

@@ -80,6 +80,59 @@ export const presentations: PresentationConfig[] = [
     createdAt: '2025-12-22',
   },
   
+  // Célula Terminus - NEST (Produção)
+  {
+    id: 'ct-nest-001',
+    slug: 'n4k8p2',
+    password: 'nest2025',
+    name: 'Apresentação Célula Terminus',
+    product: 'Célula Terminus - NEST',
+    anchorTicket: '30.000,00',
+    liveTicket: '18.000,00',
+    downsellProducts: [
+      { name: 'Célula Terminus - ECHO - R$ 7.000,00', status: 'active' },
+      { name: 'Célula Terminus - VEIL - R$ 11.000,00', status: 'active' }
+    ],
+    status: 'available',
+    category: 'celula-terminus',
+    slidesConfigId: 'ct-nest',
+    createdAt: '2025-12-23',
+  },
+  
+  // Célula Terminus - VEIL (Produção)
+  {
+    id: 'ct-veil-001',
+    slug: 'v2m7k9',
+    password: 'veil2025',
+    name: 'Apresentação Célula Terminus',
+    product: 'Célula Terminus - VEIL',
+    anchorTicket: '18.000,00',
+    liveTicket: '11.000,00',
+    downsellProducts: [
+      { name: 'Célula Terminus - ECHO - R$ 7.000,00', status: 'active' }
+    ],
+    status: 'available',
+    category: 'celula-terminus',
+    slidesConfigId: 'ct-veil',
+    createdAt: '2025-12-23',
+  },
+  
+  // Célula Terminus - ECHO (Produção)
+  {
+    id: 'ct-echo-001',
+    slug: 'e5n3m8',
+    password: 'echo2025',
+    name: 'Apresentação Célula Terminus',
+    product: 'Célula Terminus - ECHO',
+    anchorTicket: '12.000,00',
+    liveTicket: '7.000,00',
+    downsellProducts: [],
+    status: 'available',
+    category: 'celula-terminus',
+    slidesConfigId: 'ct-echo',
+    createdAt: '2025-12-23',
+  },
+  
   // Agente Kesher
   {
     id: 'ak-produto-001',
