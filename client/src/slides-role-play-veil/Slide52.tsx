@@ -19,10 +19,10 @@ export default function Slide52() {
   ];
 
   const ias = [
-    { name: 'IA SDR', icon: Brain, color: '#d4a017' },
-    { name: 'IA Compromisso', icon: Calendar, color: '#d4a017' },
-    { name: 'IA Follow-up', icon: RefreshCw, color: '#d4a017' },
-    { name: 'IA Estrategista', icon: Lightbulb, color: '#d4a017' }
+    { name: 'IA SDR', icon: Brain, color: '#22c55e' },
+    { name: 'IA Compromisso', icon: Calendar, color: '#22c55e' },
+    { name: 'IA Follow-up', icon: RefreshCw, color: '#22c55e' },
+    { name: 'IA Estrategista', icon: Lightbulb, color: '#22c55e' }
   ];
 
   return (
@@ -108,7 +108,7 @@ export default function Slide52() {
                   width="200" height="300" 
                   rx="8" 
                   fill="#1a1a1a" 
-                  stroke="#d4a017" 
+                  stroke="#22c55e" 
                   strokeWidth="3"
                   filter="url(#glowDoc)"
                 />
@@ -118,7 +118,7 @@ export default function Slide52() {
                   x="50" y="50" 
                   width="200" height="50" 
                   rx="8" 
-                  fill="#d4a017" 
+                  fill="#22c55e" 
                   fillOpacity="0.3"
                 />
                 
@@ -128,13 +128,13 @@ export default function Slide52() {
                   animate={{ scale: 1 }}
                   transition={{ delay: 0.8, duration: 0.4 }}
                 >
-                  <circle cx="90" cy="75" r="15" fill="#d4a017" fillOpacity="0.4"/>
+                  <circle cx="90" cy="75" r="15" fill="#22c55e" fillOpacity="0.4"/>
                   <text x="90" y="82" textAnchor="middle" fill="#ffffff" fontSize="18">📋</text>
                 </motion.g>
                 
                 {/* Título */}
                 <text x="120" y="72" fill="#ffffff" fontSize="12" fontWeight="700" className="font-sans">PLAYBOOK</text>
-                <text x="120" y="88" fill="#d4a017" fontSize="10" fontWeight="600" className="font-sans">Célula Términus</text>
+                <text x="120" y="88" fill="#22c55e" fontSize="10" fontWeight="600" className="font-sans">Célula Términus</text>
               </motion.g>
 
               {/* 4 Seções das IAs */}
@@ -154,9 +154,9 @@ export default function Slide52() {
                       x="65" y={y} 
                       width="170" height="45" 
                       rx="6" 
-                      fill="#d4a017" 
+                      fill="#22c55e" 
                       fillOpacity="0.1" 
-                      stroke="#d4a017" 
+                      stroke="#22c55e" 
                       strokeWidth="2"
                     />
                     
@@ -172,9 +172,9 @@ export default function Slide52() {
                     </text>
                     
                     {/* Linhas de descrição (simulando texto) */}
-                    <line x1="100" y1={y + 26} x2="220" y2={y + 26} stroke="#d4a017" strokeWidth="1.5" opacity="0.5"/>
-                    <line x1="100" y1={y + 32} x2="200" y2={y + 32} stroke="#d4a017" strokeWidth="1.5" opacity="0.4"/>
-                    <line x1="100" y1={y + 38} x2="210" y2={y + 38} stroke="#d4a017" strokeWidth="1.5" opacity="0.3"/>
+                    <line x1="100" y1={y + 26} x2="220" y2={y + 26} stroke="#22c55e" strokeWidth="1.5" opacity="0.5"/>
+                    <line x1="100" y1={y + 32} x2="200" y2={y + 32} stroke="#22c55e" strokeWidth="1.5" opacity="0.4"/>
+                    <line x1="100" y1={y + 38} x2="210" y2={y + 38} stroke="#22c55e" strokeWidth="1.5" opacity="0.3"/>
                     
                     {/* Ícone da IA */}
                     <motion.circle
@@ -182,9 +182,9 @@ export default function Slide52() {
                       animate={{ scale: 1 }}
                       transition={{ delay: 1.2 + i * 0.2, duration: 0.3 }}
                       cx="80" cy={y + 22} r="10"
-                      fill="#d4a017"
+                      fill="#22c55e"
                       fillOpacity="0.3"
-                      stroke="#d4a017"
+                      stroke="#22c55e"
                       strokeWidth="2"
                     />
                     
@@ -201,7 +201,7 @@ export default function Slide52() {
                       }}
                       cx="80" cy={y + 22} r="10"
                       fill="none"
-                      stroke="#d4a017"
+                      stroke="#22c55e"
                       strokeWidth="2"
                     />
                   </motion.g>
@@ -215,7 +215,7 @@ export default function Slide52() {
                 transition={{ delay: 2.5, duration: 0.5 }}
                 x="150" y="370"
                 textAnchor="middle"
-                fill="#d4a017"
+                fill="#22c55e"
                 fontSize="9"
                 fontWeight="600"
                 className="font-sans"

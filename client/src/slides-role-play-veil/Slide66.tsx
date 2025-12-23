@@ -17,22 +17,23 @@ export default function Slide66() {
   const items = [
     "Plano de Ação Personalizado de 90 dias",
     "Grupo de WhatsApp do Projeto (suporte dedicado)",
-    "IA SDR operacional (recepção, triagem, pipeline, reporting)",
-    "IA de Compromisso (agendamentos, lembretes, no-show, briefing)",
-    "IA de Follow-up (9 tentativas, retomada contextual, reengajamento)",
-    "IA Estrategista (análise de funil, gargalos, recomendações)",
+    "IA SDR operacional (recepção, triagem, qualificação básica, pipeline, reporting)",
+    "IA de Compromisso (lembretes, confirmação, convite de calendário)",
+    "IA de Follow-up (9 tentativas, retomada contextual, persistência estratégica)",
+    "IA Estrategista (monitoramento, gargalos, relatórios, recomendações, releases)",
     "Infraestrutura completa + Portal do Cliente (VPS, integrações, painéis)",
-    "6 Tutorais 1:1 com o Gabriel",
+    "4 Tutorias 1:1 com o Gabriel",
+    "Playbook Operacional da Célula Términus",
+    "Trilha de Vídeos – Portal e Painéis",
     "Trilha de Vídeos – Automações e IAs",
-    "Borusa Client Federado (BCF) - Releases semanais",
-    "Atualizações de Base de Conhecimento (Sentinela)",
+    "Atualizações de Base de Conhecimento",
+    "Correção de Bugs e Otimizações",
     "Reunião Mensal de Acompanhamento",
     "QBR Trimestral (ROI acumulado + roadmap)",
-    "Release Notes Semanais",
-    "Data Moat (Proteção da memória da operação)",
     "Borusa Academy (Portal de vídeos e treinamentos)",
+    "Data Moat (Proteção da memória da operação)",
     "Bônus 1: Acesso antecipado à Inteligência Coletiva BCF v2 (em validação)",
-    "Bônus 2: Arsenal Open Source Proprietário (\"Caixa de Pandora\")",
+    "Bônus 2: Arsenal Open Source (\"Caixa de Pandora\")",
   ];
 
   useEffect(() => {
@@ -127,7 +128,7 @@ export default function Slide66() {
                   Implementação
                 </p>
                 <p className="text-2xl md:text-3xl font-bold text-white font-sans">
-                  R$30.000,00 à vista
+                  R$18.000,00 à vista
                 </p>
               </motion.div>
               
@@ -142,7 +143,7 @@ export default function Slide66() {
                   Licença de Uso
                 </p>
                 <p className="text-2xl md:text-3xl font-bold text-white font-sans">
-                  R$3.500,00/Mês
+                  R$2.500,00/Mês
                 </p>
               </motion.div>
             </div>

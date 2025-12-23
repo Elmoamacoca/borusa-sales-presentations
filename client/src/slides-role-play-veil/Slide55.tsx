@@ -75,9 +75,9 @@ export default function Slide55() {
                 </filter>
                 
                 <linearGradient id="pulseGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stopColor="#d4a017" stopOpacity="0"/>
-                  <stop offset="50%" stopColor="#d4a017" stopOpacity="1"/>
-                  <stop offset="100%" stopColor="#d4a017" stopOpacity="0"/>
+                  <stop offset="0%" stopColor="#22c55e" stopOpacity="0"/>
+                  <stop offset="50%" stopColor="#22c55e" stopOpacity="1"/>
+                  <stop offset="100%" stopColor="#22c55e" stopOpacity="0"/>
                 </linearGradient>
               </defs>
 
@@ -88,7 +88,7 @@ export default function Slide55() {
                 transition={{ delay: 0.5, duration: 0.5 }}
                 x="150" y="30"
                 textAnchor="middle"
-                fill="#d4a017"
+                fill="#22c55e"
                 fontSize="12"
                 fontWeight="700"
                 className="font-sans"
@@ -112,7 +112,7 @@ export default function Slide55() {
                       y1={nodeFrom.y}
                       x2={nodeTo.x}
                       y2={nodeTo.y}
-                      stroke="#d4a017"
+                      stroke="#22c55e"
                       strokeWidth="1.5"
                     />
                     
@@ -165,7 +165,7 @@ export default function Slide55() {
                       cx={node.x}
                       cy={node.y}
                       r={isCenter ? 30 : 20}
-                      fill="#d4a017"
+                      fill="#22c55e"
                     />
                     
                     {/* Círculo principal */}
@@ -176,8 +176,8 @@ export default function Slide55() {
                       cx={node.x}
                       cy={node.y}
                       r={isCenter ? 18 : 12}
-                      fill={isCenter ? "#d4a017" : "#1a1a1a"}
-                      stroke="#d4a017"
+                      fill={isCenter ? "#22c55e" : "#1a1a1a"}
+                      stroke="#22c55e"
                       strokeWidth={isCenter ? 3 : 2}
                       filter="url(#glowNetwork)"
                     />
@@ -198,7 +198,7 @@ export default function Slide55() {
                       cy={node.y}
                       r={8}
                       fill="none"
-                      stroke="#d4a017"
+                      stroke="#22c55e"
                       strokeWidth="2"
                     />
                     
@@ -236,14 +236,14 @@ export default function Slide55() {
                           cx={node.x}
                           cy={node.y - 20}
                           r="6"
-                          fill="#d4a017"
+                          fill="#22c55e"
                           fillOpacity="0.3"
                         />
                         <text
                           x={node.x}
                           y={node.y - 17}
                           textAnchor="middle"
-                          fill="#d4a017"
+                          fill="#22c55e"
                           fontSize="8"
                           fontWeight="700"
                         >
@@ -265,16 +265,16 @@ export default function Slide55() {
                   x="40" y="390"
                   width="220" height="45"
                   rx="6"
-                  fill="#d4a017"
+                  fill="#22c55e"
                   fillOpacity="0.1"
-                  stroke="#d4a017"
+                  stroke="#22c55e"
                   strokeWidth="2"
                 />
                 
                 <text
                   x="150" y="408"
                   textAnchor="middle"
-                  fill="#d4a017"
+                  fill="#22c55e"
                   fontSize="10"
                   fontWeight="700"
                   className="font-sans"

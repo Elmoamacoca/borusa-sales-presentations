@@ -98,8 +98,8 @@ export default function Slide47() {
             <svg viewBox="0 0 300 400" className="w-full h-full">
               <defs>
                 <linearGradient id="funnelGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-                  <stop offset="0%" style={{ stopColor: '#d4a017', stopOpacity: 0.3 }} />
-                  <stop offset="100%" style={{ stopColor: '#d4a017', stopOpacity: 0.1 }} />
+                  <stop offset="0%" style={{ stopColor: '#22c55e', stopOpacity: 0.3 }} />
+                  <stop offset="100%" style={{ stopColor: '#22c55e', stopOpacity: 0.1 }} />
                 </linearGradient>
                 <filter id="glow">
                   <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
@@ -117,7 +117,7 @@ export default function Slide47() {
                 transition={{ delay: 0.5, duration: 1.5 }}
                 d="M 50 50 L 250 50 L 200 200 L 200 350 L 100 350 L 100 200 Z"
                 fill="url(#funnelGrad)"
-                stroke="#d4a017"
+                stroke="#22c55e"
                 strokeWidth="3"
                 filter="url(#glow)"
               />
@@ -128,7 +128,7 @@ export default function Slide47() {
                 animate={{ opacity: 0.6, pathLength: 1 }}
                 transition={{ delay: 1, duration: 0.8 }}
                 x1="70" y1="120" x2="230" y2="120"
-                stroke="#d4a017"
+                stroke="#22c55e"
                 strokeWidth="2"
                 strokeDasharray="5,5"
               />
@@ -137,7 +137,7 @@ export default function Slide47() {
                 animate={{ opacity: 0.6, pathLength: 1 }}
                 transition={{ delay: 1.2, duration: 0.8 }}
                 x1="90" y1="190" x2="210" y2="190"
-                stroke="#d4a017"
+                stroke="#22c55e"
                 strokeWidth="2"
                 strokeDasharray="5,5"
               />
@@ -203,7 +203,7 @@ export default function Slide47() {
                       repeatDelay: 1,
                       ease: "easeIn"
                     }}
-                    fill="#d4a017"
+                    fill="#22c55e"
                     filter="url(#glow)"
                   />
                 );
@@ -215,13 +215,13 @@ export default function Slide47() {
                 animate={{ opacity: 0.8, pathLength: 1 }}
                 transition={{ delay: 2.5, duration: 1 }}
                 d="M 150 360 L 150 390"
-                stroke="#d4a017"
+                stroke="#22c55e"
                 strokeWidth="3"
                 markerEnd="url(#arrow)"
               />
               <defs>
                 <marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-                  <polygon points="0 0, 10 5, 0 10" fill="#d4a017" />
+                  <polygon points="0 0, 10 5, 0 10" fill="#22c55e" />
                 </marker>
               </defs>
 
@@ -231,7 +231,7 @@ export default function Slide47() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 3, duration: 0.5 }}
                 x="180" y="380"
-                fill="#d4a017"
+                fill="#22c55e"
                 fontSize="11"
                 fontWeight="700"
                 className="font-sans"

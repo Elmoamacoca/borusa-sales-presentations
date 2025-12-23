@@ -78,7 +78,7 @@ export default function Slide56() {
                   width="80" height="100" 
                   rx="6" 
                   fill="#1a1a1a" 
-                  stroke="#d4a017" 
+                  stroke="#22c55e" 
                   strokeWidth="3"
                   filter="url(#glowStack)"
                 />
@@ -90,9 +90,9 @@ export default function Slide56() {
                       x="120" y={200 + i * 25} 
                       width="60" height="18" 
                       rx="3" 
-                      fill="#d4a017" 
+                      fill="#22c55e" 
                       fillOpacity="0.2"
-                      stroke="#d4a017"
+                      stroke="#22c55e"
                       strokeWidth="1.5"
                     />
                     <motion.circle
@@ -104,7 +104,7 @@ export default function Slide56() {
                       }}
                       cx="130" cy={209 + i * 25} 
                       r="3"
-                      fill="#d4a017"
+                      fill="#22c55e"
                     />
                   </motion.g>
                 ))}
@@ -113,7 +113,7 @@ export default function Slide56() {
                 <text 
                   x="150" y="300" 
                   textAnchor="middle" 
-                  fill="#d4a017" 
+                  fill="#22c55e" 
                   fontSize="11" 
                   fontWeight="700" 
                   className="font-sans"
@@ -141,7 +141,7 @@ export default function Slide56() {
                       y1="230"
                       x2={x}
                       y2={y}
-                      stroke="#d4a017"
+                      stroke="#22c55e"
                       strokeWidth="2"
                       strokeDasharray="5,5"
                     />
@@ -162,7 +162,7 @@ export default function Slide56() {
                       cx="150"
                       cy="230"
                       r="4"
-                      fill="#d4a017"
+                      fill="#22c55e"
                       filter="url(#glowStack)"
                     />
                     
@@ -177,7 +177,7 @@ export default function Slide56() {
                         width="70" height="50" 
                         rx="6" 
                         fill="#1a1a1a" 
-                        stroke="#d4a017" 
+                        stroke="#22c55e" 
                         strokeWidth="2.5"
                         filter="url(#glowStack)"
                       />
@@ -186,7 +186,7 @@ export default function Slide56() {
                       <circle 
                         cx={x} cy={y - 8} 
                         r="10" 
-                        fill="#d4a017" 
+                        fill="#22c55e" 
                         fillOpacity="0.3"
                       />
                       
@@ -194,7 +194,7 @@ export default function Slide56() {
                       <text 
                         x={x} y={y + 15} 
                         textAnchor="middle" 
-                        fill="#d4a017" 
+                        fill="#22c55e" 
                         fontSize="8" 
                         fontWeight="700" 
                         className="font-sans"
@@ -226,7 +226,7 @@ export default function Slide56() {
                 transition={{ delay: 0.5, duration: 0.5 }}
                 x="150" y="80"
                 textAnchor="middle"
-                fill="#d4a017"
+                fill="#22c55e"
                 fontSize="12"
                 fontWeight="700"
                 className="font-sans"
@@ -244,15 +244,15 @@ export default function Slide56() {
                   x="90" y="370"
                   width="120" height="30"
                   rx="15"
-                  fill="#d4a017"
+                  fill="#22c55e"
                   fillOpacity="0.2"
-                  stroke="#d4a017"
+                  stroke="#22c55e"
                   strokeWidth="2"
                 />
                 <text
                   x="150" y="390"
                   textAnchor="middle"
-                  fill="#d4a017"
+                  fill="#22c55e"
                   fontSize="11"
                   fontWeight="700"
                   className="font-sans"

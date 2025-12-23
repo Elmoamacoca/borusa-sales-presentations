@@ -104,8 +104,8 @@ export default function Slide49() {
                     <feMergeNode in="SourceGraphic"/>
                   </feMerge>
                 </filter>
-                <marker id="arrowYellow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
-                  <polygon points="0 0, 8 4, 0 8" fill="#d4a017" />
+                <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+                  <polygon points="0 0, 8 4, 0 8" fill="#22c55e" />
                 </marker>
               </defs>
 
@@ -115,9 +115,9 @@ export default function Slide49() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.5, duration: 0.6 }}
                 cx="150" cy="175" r="30"
-                fill="#d4a017"
+                fill="#22c55e"
                 fillOpacity="0.3"
-                stroke="#d4a017"
+                stroke="#22c55e"
                 strokeWidth="3"
                 filter="url(#glow3)"
               />
@@ -141,7 +141,7 @@ export default function Slide49() {
                 animate={{ pathLength: 1, opacity: 0.4 }}
                 transition={{ delay: 1, duration: 2 }}
                 cx="150" cy="175" r="90"
-                stroke="#d4a017"
+                stroke="#22c55e"
                 strokeWidth="2"
                 fill="none"
                 strokeDasharray="5 5"
@@ -168,7 +168,7 @@ export default function Slide49() {
                         duration: 0.5
                       }}
                       cx={x} cy={y} r="8"
-                      fill="#d4a017"
+                      fill="#22c55e"
                       stroke="#ffffff"
                       strokeWidth="2"
                       filter="url(#glow3)"
@@ -204,9 +204,9 @@ export default function Slide49() {
                       }}
                       x1={x} y1={y}
                       x2={150 + Math.cos(rad) * 35} y2={175 + Math.sin(rad) * 35}
-                      stroke="#d4a017"
+                      stroke="#22c55e"
                       strokeWidth="2"
-                      markerEnd="url(#arrowYellow)"
+                      markerEnd="url(#arrowGreen)"
                     />
                   </motion.g>
                 );
@@ -235,7 +235,7 @@ export default function Slide49() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 3.5, duration: 0.5 }}
               >
-                <rect x="40" y="280" width="80" height="20" rx="10" fill="#d4a017" fillOpacity="0.2" stroke="#d4a017" strokeWidth="1.5"/>
+                <rect x="40" y="280" width="80" height="20" rx="10" fill="#22c55e" fillOpacity="0.2" stroke="#22c55e" strokeWidth="1.5"/>
                 <text x="80" y="294" textAnchor="middle" fill="#ffffff" fontSize="9" fontWeight="600" className="font-sans">WhatsApp</text>
               </motion.g>
 
@@ -244,7 +244,7 @@ export default function Slide49() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 3.7, duration: 0.5 }}
               >
-                <rect x="180" y="280" width="80" height="20" rx="10" fill="#d4a017" fillOpacity="0.2" stroke="#d4a017" strokeWidth="1.5"/>
+                <rect x="180" y="280" width="80" height="20" rx="10" fill="#22c55e" fillOpacity="0.2" stroke="#22c55e" strokeWidth="1.5"/>
                 <text x="220" y="294" textAnchor="middle" fill="#ffffff" fontSize="9" fontWeight="600" className="font-sans">E-mail</text>
               </motion.g>
 

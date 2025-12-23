@@ -116,7 +116,7 @@ export default function Slide54() {
                       width="120" height="80" 
                       rx="6" 
                       fill="#000000" 
-                      stroke="#d4a017" 
+                      stroke="#22c55e" 
                       strokeWidth="2.5"
                       filter="url(#glowVideoIA)"
                     />
@@ -136,9 +136,9 @@ export default function Slide54() {
                       <circle 
                         cx={x + 60} cy={y + 40} 
                         r="18" 
-                        fill="#d4a017" 
+                        fill="#22c55e" 
                         fillOpacity="0.3" 
-                        stroke="#d4a017" 
+                        stroke="#22c55e" 
                         strokeWidth="2"
                       />
                       <polygon 
@@ -165,14 +165,14 @@ export default function Slide54() {
                       x={x + 10} y={y + 70} 
                       width="0" height="3" 
                       rx="1.5" 
-                      fill="#d4a017"
+                      fill="#22c55e"
                     />
                     
                     {/* Label da IA */}
                     <text 
                       x={x + 60} y={y + 95} 
                       textAnchor="middle" 
-                      fill="#d4a017" 
+                      fill="#22c55e" 
                       fontSize="9" 
                       fontWeight="700" 
                       className="font-sans"
@@ -187,9 +187,9 @@ export default function Slide54() {
                       transition={{ delay: 1.2 + i * 0.2, duration: 0.3 }}
                       cx={x + 105} cy={y + 15} 
                       r="8"
-                      fill="#d4a017"
+                      fill="#22c55e"
                       fillOpacity="0.4"
-                      stroke="#d4a017"
+                      stroke="#22c55e"
                       strokeWidth="1.5"
                     />
                   </motion.g>
@@ -203,7 +203,7 @@ export default function Slide54() {
                 transition={{ delay: 2.5, duration: 0.5 }}
                 x="150" y="370"
                 textAnchor="middle"
-                fill="#d4a017"
+                fill="#22c55e"
                 fontSize="10"
                 fontWeight="700"
                 className="font-sans"
@@ -217,7 +217,7 @@ export default function Slide54() {
                 transition={{ delay: 2.7, duration: 0.5 }}
                 x="150" y="385"
                 textAnchor="middle"
-                fill="#d4a017"
+                fill="#22c55e"
                 fontSize="8"
                 fontWeight="600"
                 className="font-sans"

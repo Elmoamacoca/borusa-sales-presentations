@@ -20,23 +20,17 @@ export default function Slide67() {
         e.stopPropagation();
         setStep(step - 1);
       }
-      // Bloquear seta direita no step 2
+      // Bloquear seta direita no step 2 - apenas tecla 1 funciona
       else if (e.key === 'ArrowRight' && step === 2) {
         e.preventDefault();
         e.stopPropagation();
         // Não faz nada - bloqueia a navegação
       }
-      // Navegação condicional com teclas 1 e 2 (apenas no step 2)
-      else if (step === 2) {
-        if (e.key === '1') {
-          e.preventDefault();
-          e.stopPropagation();
-          setCurrentSlide('slide-68');
-        } else if (e.key === '2') {
-          e.preventDefault();
-          e.stopPropagation();
-          setCurrentSlide('slide-69');
-        }
+      // Navegação condicional com tecla 1 (apenas no step 2) - vai para ECHO
+      else if (step === 2 && e.key === '1') {
+        e.preventDefault();
+        e.stopPropagation();
+        setCurrentSlide('slide-68');
       }
     };
 
@@ -45,7 +39,7 @@ export default function Slide67() {
   }, [step, setCurrentSlide]);
 
   const blueColors = ["#0a0a0a", "#1a2332", "#2d3e50", "#3d5a80", "#1a1a1a"];
-  const greenColors = ["#166534", "#22c55e", "#4ade80", "#166534", "#14532d"];
+  const yellowColors = ["#854d0e", "#eab308", "#facc15", "#ca8a04", "#713f12"];
 
   return (
     <div className="fixed inset-0 w-screen h-screen overflow-hidden flex">
@@ -104,7 +98,7 @@ export default function Slide67() {
                     Implementação
                   </p>
                   <p className="text-3xl font-bold text-white font-sans">
-                    R$30.000,00 à vista
+                    R$18.000,00 à vista
                   </p>
                 </div>
 
@@ -114,7 +108,7 @@ export default function Slide67() {
                     Licença de Uso
                   </p>
                   <p className="text-3xl font-bold text-white font-sans">
-                    R$3.500,00/Mês
+                    R$2.500,00/Mês
                   </p>
                 </div>
               </div>
@@ -168,7 +162,7 @@ export default function Slide67() {
                       Implementação
                     </p>
                     <p className="text-4xl font-bold text-white font-sans">
-                      R$30.000,00 à vista
+                      R$18.000,00 à vista
                     </p>
                   </div>
 
@@ -178,7 +172,7 @@ export default function Slide67() {
                       Licença de Uso
                     </p>
                     <p className="text-4xl font-bold text-white font-sans">
-                      R$3.500,00/Mês
+                      R$2.500,00/Mês
                     </p>
                   </div>
                 </div>
@@ -199,7 +193,7 @@ export default function Slide67() {
             className="relative overflow-hidden"
           >
             <div className="absolute inset-0">
-              <MeshGradient className="w-full h-full" colors={greenColors} speed={0.15} minPixelRatio={1.0} />
+              <MeshGradient className="w-full h-full" colors={yellowColors} speed={0.15} minPixelRatio={1.0} />
             </div>
 
             <div className="relative z-10 w-full h-full">
@@ -236,30 +230,30 @@ export default function Slide67() {
                   transition={{ delay: 0.3, duration: 0.7 }}
                   className="relative space-y-5"
                 >
-                  <div className="absolute left-[-24px] top-0 bottom-0 w-1 bg-gradient-to-b from-green-300 to-green-500" />
+                  <div className="absolute left-[-24px] top-0 bottom-0 w-1 bg-gradient-to-b from-yellow-300 to-yellow-500" />
 
-                  <h2 className="text-5xl font-light text-green-300 font-sans mb-6">
+                  <h2 className="text-5xl font-light text-yellow-300 font-sans mb-6">
                     PREÇO PROTAGONISTA
                   </h2>
 
                   <div className="space-y-5">
                     {/* Implementação */}
                     <div className="space-y-1">
-                      <p className="text-2xl font-bold text-green-300 font-sans">
+                      <p className="text-2xl font-bold text-yellow-300 font-sans">
                         Implementação
                       </p>
                       <p className="text-4xl font-bold text-white font-sans">
-                        R$18.000,00
+                        R$11.000,00
                       </p>
                     </div>
 
                     {/* Licença de Uso */}
                     <div className="space-y-1">
-                      <p className="text-2xl font-bold text-green-300 font-sans">
+                      <p className="text-2xl font-bold text-yellow-300 font-sans">
                         Licença de Uso
                       </p>
                       <p className="text-4xl font-bold text-white font-sans">
-                        R$2.500,00/Mês
+                        R$1.500,00/Mês
                       </p>
                     </div>
                   </div>

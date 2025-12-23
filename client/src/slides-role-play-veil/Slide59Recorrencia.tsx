@@ -100,7 +100,7 @@ export default function Slide59Recorrencia() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.5 }}
                 className="bg-gradient-to-r from-green-400/20 to-green-600/10 border-2 border-green-400 rounded-xl p-5 backdrop-blur-md"
-                style={{ boxShadow: '0 4px 20px rgba(212, 160, 23, 0.3)' }}
+                style={{ boxShadow: '0 4px 20px rgba(34, 197, 94, 0.3)' }}
               >
                 <div className="flex items-center gap-4">
                   <div className="bg-green-400 p-3 rounded-lg flex-shrink-0">
@@ -119,7 +119,7 @@ export default function Slide59Recorrencia() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6, duration: 0.5 }}
                 className="bg-gradient-to-r from-green-400/20 to-green-600/10 border-2 border-green-400 rounded-xl p-5 backdrop-blur-md"
-                style={{ boxShadow: '0 4px 20px rgba(212, 160, 23, 0.3)' }}
+                style={{ boxShadow: '0 4px 20px rgba(34, 197, 94, 0.3)' }}
               >
                 <div className="flex items-center gap-4">
                   <div className="bg-green-400 p-3 rounded-lg flex-shrink-0">
@@ -138,7 +138,7 @@ export default function Slide59Recorrencia() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.7, duration: 0.5 }}
                 className="bg-gradient-to-r from-green-400/20 to-green-600/10 border-2 border-green-400 rounded-xl p-5 backdrop-blur-md"
-                style={{ boxShadow: '0 4px 20px rgba(212, 160, 23, 0.3)' }}
+                style={{ boxShadow: '0 4px 20px rgba(34, 197, 94, 0.3)' }}
               >
                 <div className="flex items-center gap-4">
                   <div className="bg-green-400 p-3 rounded-lg flex-shrink-0">
@@ -157,7 +157,7 @@ export default function Slide59Recorrencia() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8, duration: 0.5 }}
                 className="bg-gradient-to-r from-green-400/20 to-green-600/10 border-2 border-green-400 rounded-xl p-5 backdrop-blur-md"
-                style={{ boxShadow: '0 4px 20px rgba(212, 160, 23, 0.3)' }}
+                style={{ boxShadow: '0 4px 20px rgba(34, 197, 94, 0.3)' }}
               >
                 <div className="flex items-center gap-4">
                   <div className="bg-green-400 p-3 rounded-lg flex-shrink-0">

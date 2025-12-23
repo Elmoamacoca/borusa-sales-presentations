@@ -44,9 +44,9 @@ export default function Slide61() {
           <motion.div
             animate={{ 
               textShadow: [
-                '0 0 40px rgba(212, 160, 23, 0.6)',
-                '0 0 80px rgba(212, 160, 23, 1)',
-                '0 0 40px rgba(212, 160, 23, 0.6)'
+                '0 0 40px rgba(34, 197, 94, 0.6)',
+                '0 0 80px rgba(34, 197, 94, 1)',
+                '0 0 40px rgba(34, 197, 94, 0.6)'
               ]
             }}
             transition={{

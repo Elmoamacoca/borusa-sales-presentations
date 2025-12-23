@@ -208,7 +208,7 @@ export const rolePlayVeilSlidesConfig: SlideDefinition[] = [
     title: 'Preço do Programa vs Valor Sangue no Olho',
     conditionalRoutes: {
       '1': 'slide-68',
-      '2': 'slide-69'
+
     }
   },
   { id: 'slide-68', order: 1, component: Slide68, title: 'Célula Términus ECHO', path: 'echo' },

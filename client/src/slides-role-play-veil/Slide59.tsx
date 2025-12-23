@@ -46,7 +46,7 @@ export default function Slide59() {
             alt="Business Guarantee Certificate"
             className="w-full h-full object-cover"
             style={{
-              filter: 'drop-shadow(0 0 40px rgba(212, 160, 23, 0.3))'
+              filter: 'drop-shadow(0 0 40px rgba(34, 197, 94, 0.3))'
             }}
           />
           {/* Fade overlay no canto inferior */}
