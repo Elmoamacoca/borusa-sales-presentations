@@ -1,128 +1,126 @@
 import { SlideConfig } from '@/store/presentationStore';
 import type { ComponentType } from 'react';
-import { celulaTerminusSlidesConfig } from './slides-celula-terminus.config';
-import { rolePlayVeilSlidesConfig } from './slides-role-play-veil.config';
-import { rolePlayEchoSlidesConfig } from './slides-role-play-echo.config';
+
 
 // Import slides
-import WelcomeSlide from '@/slides/WelcomeSlide';
-import MatheusFielSlide from '@/slides/MatheusFielSlide';
-import Slide2022 from '@/slides/Slide2022';
-import Slide2025 from '@/slides/Slide2025';
-import MissionSlide from '@/slides/MissionSlide';
-import MethodologySlide from '@/slides/MethodologySlide';
-import HydraNetSlide from '@/slides/HydraNetSlide';
-import AdaptedLogicSlide from '@/slides/AdaptedLogicSlide';
-import JourneySlide from '@/slides/JourneySlide';
-import ResultsSlide from '@/slides/ResultsSlide';
-import ObstaclesSlide from '@/slides/ObstaclesSlide';
-import OtimizacaoTempoSlide from '@/slides/OtimizacaoTempoSlide';
-import InvestimentoSlide from '@/slides/InvestimentoSlide';
-import Investimento2Slide from '@/slides/Investimento2Slide';
-import EstruturaSlide from '@/slides/EstruturaSlide';
-import PerguntaIASlide from '@/slides/PerguntaIASlide';
-import Investimento3Slide from '@/slides/Investimento3Slide';
-import Investimento4Slide from '@/slides/Investimento4Slide';
-import OtimizacaoTempo2Slide from '@/slides/OtimizacaoTempo2Slide';
-import Slide20 from '@/slides/Slide20';
-import Slide21 from '@/slides/Slide21';
-import Slide22 from '@/slides/Slide22';
-import Slide23 from '@/slides/Slide23';
-import Slide24 from '@/slides/Slide24';
-import Slide25 from '@/slides/Slide25';
-import Slide26 from '@/slides/Slide26';
-import Slide27 from '@/slides/Slide27';
-import Slide28 from '@/slides/Slide28';
-import Slide29 from '@/slides/Slide29';
-import Slide30 from '@/slides/Slide30';
+import WelcomeSlide from '@/slides-role-play-echo/WelcomeSlide';
+import MatheusFielSlide from '@/slides-role-play-echo/MatheusFielSlide';
+import Slide2022 from '@/slides-role-play-echo/Slide2022';
+import Slide2025 from '@/slides-role-play-echo/Slide2025';
+import MissionSlide from '@/slides-role-play-echo/MissionSlide';
+import MethodologySlide from '@/slides-role-play-echo/MethodologySlide';
+import HydraNetSlide from '@/slides-role-play-echo/HydraNetSlide';
+import AdaptedLogicSlide from '@/slides-role-play-echo/AdaptedLogicSlide';
+import JourneySlide from '@/slides-role-play-echo/JourneySlide';
+import ResultsSlide from '@/slides-role-play-echo/ResultsSlide';
+import ObstaclesSlide from '@/slides-role-play-echo/ObstaclesSlide';
+import OtimizacaoTempoSlide from '@/slides-role-play-echo/OtimizacaoTempoSlide';
+import InvestimentoSlide from '@/slides-role-play-echo/InvestimentoSlide';
+import Investimento2Slide from '@/slides-role-play-echo/Investimento2Slide';
+import EstruturaSlide from '@/slides-role-play-echo/EstruturaSlide';
+import PerguntaIASlide from '@/slides-role-play-echo/PerguntaIASlide';
+import Investimento3Slide from '@/slides-role-play-echo/Investimento3Slide';
+import Investimento4Slide from '@/slides-role-play-echo/Investimento4Slide';
+import OtimizacaoTempo2Slide from '@/slides-role-play-echo/OtimizacaoTempo2Slide';
+import Slide20 from '@/slides-role-play-echo/Slide20';
+import Slide21 from '@/slides-role-play-echo/Slide21';
+import Slide22 from '@/slides-role-play-echo/Slide22';
+import Slide23 from '@/slides-role-play-echo/Slide23';
+import Slide24 from '@/slides-role-play-echo/Slide24';
+import Slide25 from '@/slides-role-play-echo/Slide25';
+import Slide26 from '@/slides-role-play-echo/Slide26';
+import Slide27 from '@/slides-role-play-echo/Slide27';
+import Slide28 from '@/slides-role-play-echo/Slide28';
+import Slide29 from '@/slides-role-play-echo/Slide29';
+import Slide30 from '@/slides-role-play-echo/Slide30';
 
-import Slide32 from '@/slides/Slide32';
-import Slide33 from '@/slides/Slide33';
-import Slide34 from '@/slides/Slide34';
-import Slide35 from '@/slides/Slide35';
-import Slide36 from '@/slides/Slide36';
-import Slide37 from '@/slides/Slide37';
-import Slide38 from '@/slides/Slide38';
-import Slide39 from '@/slides/Slide39';
-import Slide40 from '@/slides/Slide40';
-import Slide41 from '@/slides/Slide41';
-import Slide42 from '@/slides/Slide42';
-import Slide43 from '@/slides/Slide43';
-import Slide44 from '@/slides/Slide44';
-import Slide45 from '@/slides/Slide45';
-import Slide46 from '@/slides/Slide46';
-import Slide47 from '@/slides/Slide47';
-import Slide48 from '@/slides/Slide48';
-import Slide49 from '@/slides/Slide49';
-import Slide50 from '@/slides/Slide50';
-import Slide51 from '@/slides/Slide51';
-import Slide52 from '@/slides/Slide52';
-import Slide53 from '@/slides/Slide53';
-import Slide54 from '@/slides/Slide54';
-import Slide55 from '@/slides/Slide55';
-import Slide56 from '@/slides/Slide56';
-import Slide57 from '@/slides/Slide57';
-import Slide57Recorrencia from '@/slides/Slide57Recorrencia';
-import Slide58 from '@/slides/Slide58';
-import Slide58Recorrencia from '@/slides/Slide58Recorrencia';
-import Slide59Recorrencia from '@/slides/Slide59Recorrencia';
-import Slide59 from '@/slides/Slide59';
-import Slide60Recorrencia from '@/slides/Slide60Recorrencia';
-import Slide60 from '@/slides/Slide60';
-import Slide61Recorrencia from '@/slides/Slide61Recorrencia';
-import Slide61 from '@/slides/Slide61';
-import Slide62Recorrencia from '@/slides/Slide62Recorrencia';
-import Slide62 from '@/slides/Slide62';
-import Slide63 from '@/slides/Slide63';
-import Slide64 from '@/slides/Slide64';
-import Slide65 from '@/slides/Slide65';
-import Slide66 from '@/slides/Slide66';
-import Slide67 from '@/slides/Slide67';
-import Slide68 from '@/slides/Slide68';
-import Slide69 from '@/slides/Slide69';
-import Veil2 from '@/slides/Veil2';
-import Veil3 from '@/slides/Veil3';
-import Veil4 from '@/slides/Veil4';
-import Veil5 from '@/slides/Veil5';
-import Veil6 from '@/slides/Veil6';
-import Veil7 from '@/slides/Veil7';
-import Veil8 from '@/slides/Veil8';
-import Veil9 from '@/slides/Veil9';
-import Veil10 from '@/slides/Veil10';
-import Veil11 from '@/slides/Veil11';
-import Veil12 from '@/slides/Veil12';
-import Veil13 from '@/slides/Veil13';
-import Veil14 from '@/slides/Veil14';
-import Veil15 from '@/slides/Veil15';
-import Veil16 from '@/slides/Veil16';
-import Veil17 from '@/slides/Veil17';
-import Veil18 from '@/slides/Veil18';
-import Veil19 from '@/slides/Veil19';
-import Veil20 from '@/slides/Veil20';
-import Veil21 from '@/slides/Veil21';
-import Veil22 from '@/slides/Veil22';
-import Veil24 from '@/slides/Veil24';
-import Echo2 from '@/slides/Echo2';
-import Echo3 from '@/slides/Echo3';
-import Echo4 from '@/slides/Echo4';
-import Echo5 from '@/slides/Echo5';
-import Echo6 from '@/slides/Echo6';
-import Echo7 from '@/slides/Echo7';
-import Echo8 from '@/slides/Echo8';
-import Echo9 from '@/slides/Echo9';
-import Echo10 from '@/slides/Echo10';
-import Echo11 from '@/slides/Echo11';
-import Echo12 from '@/slides/Echo12';
-import Echo13 from '@/slides/Echo13';
-import Echo14 from '@/slides/Echo14';
-import Echo15 from '@/slides/Echo15';
-import Echo16 from '@/slides/Echo16';
-import Echo17 from '@/slides/Echo17';
-import Echo18 from '@/slides/Echo18';
-import Echo20 from '@/slides/Echo20';
-import Echo21 from '@/slides/Echo21';
-import Echo22 from '@/slides/Echo22';
-import Echo24 from '@/slides/Echo24';
+import Slide32 from '@/slides-role-play-echo/Slide32';
+import Slide33 from '@/slides-role-play-echo/Slide33';
+import Slide34 from '@/slides-role-play-echo/Slide34';
+import Slide35 from '@/slides-role-play-echo/Slide35';
+import Slide36 from '@/slides-role-play-echo/Slide36';
+import Slide37 from '@/slides-role-play-echo/Slide37';
+import Slide38 from '@/slides-role-play-echo/Slide38';
+import Slide39 from '@/slides-role-play-echo/Slide39';
+import Slide40 from '@/slides-role-play-echo/Slide40';
+import Slide41 from '@/slides-role-play-echo/Slide41';
+import Slide42 from '@/slides-role-play-echo/Slide42';
+import Slide43 from '@/slides-role-play-echo/Slide43';
+import Slide44 from '@/slides-role-play-echo/Slide44';
+import Slide45 from '@/slides-role-play-echo/Slide45';
+import Slide46 from '@/slides-role-play-echo/Slide46';
+import Slide47 from '@/slides-role-play-echo/Slide47';
+import Slide48 from '@/slides-role-play-echo/Slide48';
+import Slide49 from '@/slides-role-play-echo/Slide49';
+import Slide50 from '@/slides-role-play-echo/Slide50';
+import Slide51 from '@/slides-role-play-echo/Slide51';
+import Slide52 from '@/slides-role-play-echo/Slide52';
+import Slide53 from '@/slides-role-play-echo/Slide53';
+import Slide54 from '@/slides-role-play-echo/Slide54';
+import Slide55 from '@/slides-role-play-echo/Slide55';
+import Slide56 from '@/slides-role-play-echo/Slide56';
+import Slide57 from '@/slides-role-play-echo/Slide57';
+import Slide57Recorrencia from '@/slides-role-play-echo/Slide57Recorrencia';
+import Slide58 from '@/slides-role-play-echo/Slide58';
+import Slide58Recorrencia from '@/slides-role-play-echo/Slide58Recorrencia';
+import Slide59Recorrencia from '@/slides-role-play-echo/Slide59Recorrencia';
+import Slide59 from '@/slides-role-play-echo/Slide59';
+import Slide60Recorrencia from '@/slides-role-play-echo/Slide60Recorrencia';
+import Slide60 from '@/slides-role-play-echo/Slide60';
+import Slide61Recorrencia from '@/slides-role-play-echo/Slide61Recorrencia';
+import Slide61 from '@/slides-role-play-echo/Slide61';
+import Slide62Recorrencia from '@/slides-role-play-echo/Slide62Recorrencia';
+import Slide62 from '@/slides-role-play-echo/Slide62';
+import Slide63 from '@/slides-role-play-echo/Slide63';
+import Slide64 from '@/slides-role-play-echo/Slide64';
+import Slide65 from '@/slides-role-play-echo/Slide65';
+import Slide66 from '@/slides-role-play-echo/Slide66';
+import Slide67 from '@/slides-role-play-echo/Slide67';
+import Slide68 from '@/slides-role-play-echo/Slide68';
+import Slide69 from '@/slides-role-play-echo/Slide69';
+import Veil2 from '@/slides-role-play-echo/Veil2';
+import Veil3 from '@/slides-role-play-echo/Veil3';
+import Veil4 from '@/slides-role-play-echo/Veil4';
+import Veil5 from '@/slides-role-play-echo/Veil5';
+import Veil6 from '@/slides-role-play-echo/Veil6';
+import Veil7 from '@/slides-role-play-echo/Veil7';
+import Veil8 from '@/slides-role-play-echo/Veil8';
+import Veil9 from '@/slides-role-play-echo/Veil9';
+import Veil10 from '@/slides-role-play-echo/Veil10';
+import Veil11 from '@/slides-role-play-echo/Veil11';
+import Veil12 from '@/slides-role-play-echo/Veil12';
+import Veil13 from '@/slides-role-play-echo/Veil13';
+import Veil14 from '@/slides-role-play-echo/Veil14';
+import Veil15 from '@/slides-role-play-echo/Veil15';
+import Veil16 from '@/slides-role-play-echo/Veil16';
+import Veil17 from '@/slides-role-play-echo/Veil17';
+import Veil18 from '@/slides-role-play-echo/Veil18';
+import Veil19 from '@/slides-role-play-echo/Veil19';
+import Veil20 from '@/slides-role-play-echo/Veil20';
+import Veil21 from '@/slides-role-play-echo/Veil21';
+import Veil22 from '@/slides-role-play-echo/Veil22';
+import Veil24 from '@/slides-role-play-echo/Veil24';
+import Echo2 from '@/slides-role-play-echo/Echo2';
+import Echo3 from '@/slides-role-play-echo/Echo3';
+import Echo4 from '@/slides-role-play-echo/Echo4';
+import Echo5 from '@/slides-role-play-echo/Echo5';
+import Echo6 from '@/slides-role-play-echo/Echo6';
+import Echo7 from '@/slides-role-play-echo/Echo7';
+import Echo8 from '@/slides-role-play-echo/Echo8';
+import Echo9 from '@/slides-role-play-echo/Echo9';
+import Echo10 from '@/slides-role-play-echo/Echo10';
+import Echo11 from '@/slides-role-play-echo/Echo11';
+import Echo12 from '@/slides-role-play-echo/Echo12';
+import Echo13 from '@/slides-role-play-echo/Echo13';
+import Echo14 from '@/slides-role-play-echo/Echo14';
+import Echo15 from '@/slides-role-play-echo/Echo15';
+import Echo16 from '@/slides-role-play-echo/Echo16';
+import Echo17 from '@/slides-role-play-echo/Echo17';
+import Echo18 from '@/slides-role-play-echo/Echo18';
+import Echo20 from '@/slides-role-play-echo/Echo20';
+import Echo21 from '@/slides-role-play-echo/Echo21';
+import Echo22 from '@/slides-role-play-echo/Echo22';
+import Echo24 from '@/slides-role-play-echo/Echo24';
 
 
 export interface SlideDefinition extends SlideConfig {
@@ -130,7 +128,7 @@ export interface SlideDefinition extends SlideConfig {
   title?: string;
 }
 
-export const slidesConfig: SlideDefinition[] = [
+export const rolePlayEchoSlidesConfig: SlideDefinition[] = [
   { id: 'welcome', order: 1, component: WelcomeSlide, title: 'Bem-vindo' },
   { id: 'matheus-fiel', order: 2, component: MatheusFielSlide, title: 'Gabriel Torres' },
   { id: 'slide-2022', order: 3, component: Slide2022, title: '2023' },
@@ -172,7 +170,7 @@ export const slidesConfig: SlideDefinition[] = [
   { id: 'slide-39', order: 37, component: Slide39, title: 'A IA É O NOVO PETRÓLEO' },
   { id: 'slide-40', order: 38, component: Slide40, title: 'Escalar Inside Sales B2B' },
   { id: 'slide-41', order: 39, component: Slide41, title: 'Dúvidas?' },
-  { id: 'slide-42', order: 40, component: Slide42, title: 'Célula Términus - NEST' },
+  { id: 'slide-42', order: 40, component: Slide42, title: 'Célula Termínus - VEIL' },
   { id: 'slide-43', order: 41, component: Slide43, title: 'Implementação Híbrida MQL Machine' },
   { id: 'slide-44', order: 42, component: Slide44, title: 'Plano de Ação Personalizado' },
   { id: 'slide-45', order: 43, component: Slide45, title: 'Grupo do WhatsApp do Projeto' },
@@ -210,7 +208,7 @@ export const slidesConfig: SlideDefinition[] = [
     title: 'Preço do Programa vs Valor Sangue no Olho',
     conditionalRoutes: {
       '1': 'slide-68',
-      '2': 'slide-69'
+
     }
   },
   { id: 'slide-68', order: 1, component: Slide68, title: 'Célula Términus ECHO', path: 'echo' },
@@ -259,73 +257,3 @@ export const slidesConfig: SlideDefinition[] = [
   { id: 'echo-18', order: 22, component: Echo18, title: 'Programa de Implementação - ECHO', path: 'echo' },
 
 ];
-
-/**
- * Configurações de slides por apresentação
- * Cada apresentação pode ter seu próprio conjunto de slides
- */
-export const slidesConfigs: Record<string, SlideDefinition[]> = {
-  // Role-Play - Célula Terminus NEST (configuração original)
-  'role-play-celula-terminus': slidesConfig,
-  
-  // Role-Play - Célula Terminus VEIL (slides independentes)
-  'role-play-veil': rolePlayVeilSlidesConfig,
-  
-  // Role-Play - Célula Terminus ECHO (slides independentes)
-  'role-play-echo': rolePlayEchoSlidesConfig,
-  
-  // Célula Terminus (slides duplicados e independentes)
-  'celula-terminus': celulaTerminusSlidesConfig,
-  
-  // Agente Kesher (novos slides no futuro)
-  'agente-kesher': slidesConfig, // Temporariamente usando os mesmos slides
-  
-  // Operador Havaya (novos slides no futuro)
-  'operador-havaya': slidesConfig, // Temporariamente usando os mesmos slides
-  
-  // Default fallback
-  'default': slidesConfig,
-};
-
-/**
- * Obtém a configuração de slides para uma apresentação específica
- */
-export const getSlidesByConfigId = (configId: string): SlideDefinition[] => {
-  return slidesConfigs[configId] || slidesConfigs['default'];
-};
-
-/**
- * Helpers mantidos para compatibilidade (usam slidesConfig padrão)
- */
-export const getSlideById = (id: string): SlideDefinition | undefined => {
-  return slidesConfig.find((slide) => slide.id === id);
-};
-
-export const getTotalSlides = (): number => {
-  return slidesConfig.length;
-};
-
-export const getProgress = (currentSlideId: string): number => {
-  const currentSlide = getSlideById(currentSlideId);
-  if (!currentSlide) return 0;
-  return Math.round((currentSlide.order / getTotalSlides()) * 100);
-};
-
-/**
- * Helpers específicos para uma configuração de slides
- */
-export const getSlideByIdFromConfig = (configId: string, slideId: string): SlideDefinition | undefined => {
-  const config = getSlidesByConfigId(configId);
-  return config.find((slide) => slide.id === slideId);
-};
-
-export const getTotalSlidesFromConfig = (configId: string): number => {
-  return getSlidesByConfigId(configId).length;
-};
-
-export const getProgressFromConfig = (configId: string, currentSlideId: string): number => {
-  const currentSlide = getSlideByIdFromConfig(configId, currentSlideId);
-  if (!currentSlide) return 0;
-  const total = getTotalSlidesFromConfig(configId);
-  return Math.round((currentSlide.order / total) * 100);
-};

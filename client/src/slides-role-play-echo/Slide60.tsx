@@ -1,7 +1,7 @@
 import { Slide } from '@/components/presentation/Slide';
 import { motion } from 'framer-motion';
 
-export default function Slide41() {
+export default function Slide60() {
   return (
     <Slide>
       <div className="w-full h-full flex items-center justify-center gap-12 px-16">

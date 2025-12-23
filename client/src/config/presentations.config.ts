@@ -53,7 +53,7 @@ export const presentations: PresentationConfig[] = [
     password: 'veil2025',
     name: 'Apresentação Célula Terminus',
     product: 'Célula Terminus - VEIL',
-    anchorTicket: '30.000,00',
+    anchorTicket: '18.000,00',
     liveTicket: '11.000,00',
     downsellProducts: [
       { name: 'Célula Terminus - ECHO - R$ 7.000,00', status: 'active' }
@@ -61,6 +61,22 @@ export const presentations: PresentationConfig[] = [
     status: 'available',
     category: 'role-play',
     slidesConfigId: 'role-play-veil',
+    createdAt: '2025-12-22',
+  },
+  
+  // Role-Play - ECHO
+  {
+    id: 'rp-celula-terminus-echo-001',
+    slug: 'e8k2m4',
+    password: 'echo2025',
+    name: 'Apresentação Célula Terminus',
+    product: 'Célula Terminus - ECHO',
+    anchorTicket: '12.000,00',
+    liveTicket: '7.000,00',
+    downsellProducts: [],
+    status: 'available',
+    category: 'role-play',
+    slidesConfigId: 'role-play-echo',
     createdAt: '2025-12-22',
   },
   
