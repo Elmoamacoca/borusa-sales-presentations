@@ -27,7 +27,7 @@ export interface PresentationConfig {
 }
 
 export const presentations: PresentationConfig[] = [
-  // Role-Play
+  // Role-Play - NEST
   {
     id: 'rp-celula-terminus-001',
     slug: 'a7k9m2',
@@ -37,13 +37,31 @@ export const presentations: PresentationConfig[] = [
     anchorTicket: '30.000,00',
     liveTicket: '18.000,00',
     downsellProducts: [
-      { name: 'Célula Terminus - ECHO - R$ 7.000,00', status: 'unavailable' },
+      { name: 'Célula Terminus - ECHO - R$ 7.000,00', status: 'active' },
       { name: 'Célula Terminus - VEIL - R$ 11.000,00', status: 'active' }
     ],
     status: 'available',
     category: 'role-play',
     slidesConfigId: 'role-play-celula-terminus',
     createdAt: '2025-01-19',
+  },
+  
+  // Role-Play - VEIL
+  {
+    id: 'rp-celula-terminus-veil-001',
+    slug: 'v7k9m3',
+    password: 'veil2025',
+    name: 'Apresentação Célula Terminus',
+    product: 'Célula Terminus - VEIL',
+    anchorTicket: '30.000,00',
+    liveTicket: '11.000,00',
+    downsellProducts: [
+      { name: 'Célula Terminus - ECHO - R$ 7.000,00', status: 'active' }
+    ],
+    status: 'available',
+    category: 'role-play',
+    slidesConfigId: 'role-play-veil',
+    createdAt: '2025-12-22',
   },
   
   // Célula Terminus
@@ -56,7 +74,7 @@ export const presentations: PresentationConfig[] = [
     anchorTicket: '30.000,00',
     liveTicket: '18.000,00',
     downsellProducts: [
-      { name: 'Célula Terminus - ECHO - R$ 7.000,00', status: 'unavailable' },
+      { name: 'Célula Terminus - ECHO - R$ 7.000,00', status: 'active' },
       { name: 'Célula Terminus - VEIL - R$ 11.000,00', status: 'active' }
     ],
     status: 'available',
