@@ -80,25 +80,6 @@ export const presentations: PresentationConfig[] = [
     createdAt: '2025-12-22',
   },
   
-  // Célula Terminus
-  {
-    id: 'ct-premium',
-    name: 'Apresentação Célula Terminus',
-    slug: 'x3p8w1',
-    password: 'emp2025',
-    product: 'Célula Terminus - NEST',
-    anchorTicket: '30.000,00',
-    liveTicket: '18.000,00',
-    downsellProducts: [
-      { name: 'Célula Terminus - ECHO - R$ 7.000,00', status: 'active' },
-      { name: 'Célula Terminus - VEIL - R$ 11.000,00', status: 'active' }
-    ],
-    status: 'available',
-    category: 'celula-terminus',
-    slidesConfigId: 'celula-terminus',
-    createdAt: '2025-01-19',
-  },
-  
   // Agente Kesher
   {
     id: 'ak-produto-001',

@@ -1,6 +1,5 @@
 import { SlideConfig } from '@/store/presentationStore';
 import type { ComponentType } from 'react';
-import { celulaTerminusSlidesConfig } from './slides-celula-terminus.config';
 import { rolePlayVeilSlidesConfig } from './slides-role-play-veil.config';
 import { rolePlayEchoSlidesConfig } from './slides-role-play-echo.config';
 
@@ -273,9 +272,6 @@ export const slidesConfigs: Record<string, SlideDefinition[]> = {
   
   // Role-Play - Célula Terminus ECHO (slides independentes)
   'role-play-echo': rolePlayEchoSlidesConfig,
-  
-  // Célula Terminus (slides duplicados e independentes)
-  'celula-terminus': celulaTerminusSlidesConfig,
   
   // Agente Kesher (novos slides no futuro)
   'agente-kesher': slidesConfig, // Temporariamente usando os mesmos slides
