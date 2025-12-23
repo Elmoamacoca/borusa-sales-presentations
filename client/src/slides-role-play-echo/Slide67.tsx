@@ -1,12 +1,12 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { MeshGradient } from "@paper-design/shaders-react";
-import { usePresentationStore } from '../store/presentationStore';
+
 
 export default function Slide67() {
   const [step, setStep] = useState(0); // 0 = inicial, 1 = mostra lado direito, 2 = mostra valor
 
-  const { setCurrentSlide } = usePresentationStore();
+  
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -20,23 +20,12 @@ export default function Slide67() {
         e.stopPropagation();
         setStep(step - 1);
       }
-      // Bloquear seta direita no step 2 - apenas tecla 1 funciona
-      else if (e.key === 'ArrowRight' && step === 2) {
-        e.preventDefault();
-        e.stopPropagation();
-        // Não faz nada - bloqueia a navegação
-      }
-      // Navegação condicional com tecla 1 (apenas no step 2) - vai para ECHO
-      else if (step === 2 && e.key === '1') {
-        e.preventDefault();
-        e.stopPropagation();
-        setCurrentSlide('slide-68');
-      }
+      // Permitir navegação normal após step 2
     };
 
     window.addEventListener('keydown', handleKeyDown, true);
     return () => window.removeEventListener('keydown', handleKeyDown, true);
-  }, [step, setCurrentSlide]);
+  }, [step]);
 
   const blueColors = ["#0a0a0a", "#1a2332", "#2d3e50", "#3d5a80", "#1a1a1a"];
   const yellowColors = ["#854d0e", "#eab308", "#facc15", "#ca8a04", "#713f12"];
@@ -64,7 +53,7 @@ export default function Slide67() {
               transition={{ delay: 0.2, duration: 0.6 }}
               className="text-base text-gray-300 font-light font-sans uppercase tracking-wide text-center mb-12"
             >
-              OPÇÃO DE FAZER PARTE DA IMPLEMENTAÇÃO<br />DA CÉLULA TÉRMINUS – VEIL
+              OPÇÃO DE FAZER PARTE DA IMPLEMENTAÇÃO<br />DA CÉLULA TÉRMINUS – ECHO
             </motion.p>
 
             {/* Título PREÇO DO PROGRAMA */}
@@ -98,7 +87,7 @@ export default function Slide67() {
                     Implementação
                   </p>
                   <p className="text-3xl font-bold text-white font-sans">
-                    R$18.000,00 à vista
+                    R$12.000,00 à vista
                   </p>
                 </div>
 
@@ -108,7 +97,7 @@ export default function Slide67() {
                     Licença de Uso
                   </p>
                   <p className="text-3xl font-bold text-white font-sans">
-                    R$2.500,00/Mês
+                    R$1.500,00/Mês
                   </p>
                 </div>
               </div>
@@ -125,7 +114,7 @@ export default function Slide67() {
                 transition={{ delay: 0.2, duration: 0.6 }}
                 className="text-base text-gray-300 font-light font-sans uppercase tracking-wide"
               >
-                OPÇÃO DE FAZER PARTE DA IMPLEMENTAÇÃO<br />DA CÉLULA TÉRMINUS – VEIL
+                OPÇÃO DE FAZER PARTE DA IMPLEMENTAÇÃO<br />DA CÉLULA TÉRMINUS – ECHO
               </motion.p>
             </div>
 
@@ -162,7 +151,7 @@ export default function Slide67() {
                       Implementação
                     </p>
                     <p className="text-4xl font-bold text-white font-sans">
-                      R$18.000,00 à vista
+                      R$12.000,00 à vista
                     </p>
                   </div>
 
@@ -172,7 +161,7 @@ export default function Slide67() {
                       Licença de Uso
                     </p>
                     <p className="text-4xl font-bold text-white font-sans">
-                      R$2.500,00/Mês
+                      R$1.500,00/Mês
                     </p>
                   </div>
                 </div>
@@ -243,7 +232,7 @@ export default function Slide67() {
                         Implementação
                       </p>
                       <p className="text-4xl font-bold text-white font-sans">
-                        R$11.000,00
+                        R$7.000,00
                       </p>
                     </div>
 
@@ -253,7 +242,7 @@ export default function Slide67() {
                         Licença de Uso
                       </p>
                       <p className="text-4xl font-bold text-white font-sans">
-                        R$1.500,00/Mês
+                        R$1.000,00/Mês
                       </p>
                     </div>
                   </div>

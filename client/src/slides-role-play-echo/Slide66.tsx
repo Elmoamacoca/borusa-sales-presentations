@@ -16,13 +16,13 @@ export default function Slide66() {
 
   const items = [
     "Plano de Ação Personalizado de 90 dias",
-    "Grupo de WhatsApp do Projeto (suporte dedicado)",
-    "IA SDR operacional (recepção, triagem, qualificação básica, pipeline, reporting)",
+    "Grupo de WhatsApp do Projeto",
+    "IA SDR operacional (recepção, triagem leve, pipeline inicial, reporting básico)",
     "IA de Compromisso (lembretes, confirmação, convite de calendário)",
-    "IA de Follow-up (9 tentativas, retomada contextual, persistência estratégica)",
-    "IA Estrategista (monitoramento, gargalos, relatórios, recomendações, releases)",
+    "IA de Follow-up (9 tentativas, retomada contextual, escalonamento)",
+    "IA Estrategista (monitoramento, gargalos, relatórios, recomendações)",
     "Infraestrutura completa + Portal do Cliente (VPS, integrações, painéis)",
-    "4 Tutorias 1:1 com o Gabriel",
+    "2 Tutorias 1:1 com o Gabriel",
     "Playbook Operacional da Célula Términus",
     "Trilha de Vídeos – Portal e Painéis",
     "Trilha de Vídeos – Automações e IAs",
@@ -83,7 +83,7 @@ export default function Slide66() {
             className="mb-16"
           >
             <h1 className="text-3xl md:text-4xl font-bold text-white font-sans leading-tight">
-              PROGRAMA DE IMPLEMENTAÇÃO DA CÉLULA TÉRMINUS – VEIL
+              PROGRAMA DE IMPLEMENTAÇÃO DA CÉLULA TÉRMINUS – ECHO
             </h1>
           </motion.div>
 
@@ -128,7 +128,7 @@ export default function Slide66() {
                   Implementação
                 </p>
                 <p className="text-2xl md:text-3xl font-bold text-white font-sans">
-                  R$18.000,00 à vista
+                  R$12.000,00 à vista
                 </p>
               </motion.div>
               
@@ -143,7 +143,7 @@ export default function Slide66() {
                   Licença de Uso
                 </p>
                 <p className="text-2xl md:text-3xl font-bold text-white font-sans">
-                  R$2.500,00/Mês
+                  R$1.500,00/Mês
                 </p>
               </motion.div>
             </div>

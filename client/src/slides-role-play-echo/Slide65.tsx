@@ -21,12 +21,12 @@ export default function Slide65() {
   const items = [
     { text: "Plano de Ação Personalizado de 90 dias", value: "R$ 5.000,00" },
     { text: "Grupo de WhatsApp do Projeto", value: "R$ 3.000,00" },
-    { text: "IA SDR operacional (recepção, triagem, qualificação básica, pipeline, reporting)", value: "R$ 20.000,00" },
-    { text: "IA de Compromisso (agendamentos, lembretes, no-show, briefing)", value: "R$ 15.000,00" },
-    { text: "IA de Follow-up (9 tentativas, retomada contextual, reengajamento)", value: "R$ 20.000,00" },
-    { text: "IA Estrategista (análise de funil, gargalos, recomendações)", value: "R$ 18.000,00" },
-    { text: "Infraestrutura completa + Portal do Cliente (VPS, integrações, painel)", value: "R$ 25.000,00" },
-    { text: "4 Tutorias 1:1 com o Gabriel", value: "R$ 12.000,00" },
+    { text: "IA SDR operacional (recepção, triagem leve, pipeline inicial, reporting básico)", value: "R$ 20.000,00" },
+    { text: "IA de Compromisso (lembretes, confirmação, convite de calendário)", value: "R$ 15.000,00" },
+    { text: "IA de Follow-up (9 tentativas, retomada contextual, escalonamento)", value: "R$ 20.000,00" },
+    { text: "IA Estrategista (monitoramento, gargalos, relatórios, recomendações)", value: "R$ 18.000,00" },
+    { text: "Infraestrutura completa + Portal do Cliente (VPS, integrações, painéis)", value: "R$ 25.000,00" },
+    { text: "2 Tutorias 1:1 com o Gabriel", value: "R$ 6.000,00" },
     { text: "Playbook Operacional da Célula Términus", value: "R$ 4.000,00" },
     { text: "Trilha de Vídeos – Portal e Painéis", value: "R$ 3.500,00" },
     { text: "Trilha de Vídeos – Automações e IAs", value: "R$ 4.500,00" },
@@ -109,7 +109,7 @@ export default function Slide65() {
         {/* Título - Posição fixa no topo */}
         <div className="mb-4 flex-shrink-0">
           <h1 className="text-2xl md:text-3xl font-light text-white font-sans text-center">
-            VALOR DA IMPLEMENTAÇÃO 1:1 DA CÉLULA TÉRMINUS – VEIL
+            VALOR DA IMPLEMENTAÇÃO 1:1 DA CÉLULA TÉRMINUS – ECHO
           </h1>
         </div>
 
@@ -161,14 +161,14 @@ export default function Slide65() {
               initial={{ opacity: 0, y: 20, scale: 0.95 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ duration: 0.5 }}
-              className="bg-gradient-to-r from-purple-900/40 to-purple-800/30 border-2 border-purple-500 rounded-xl px-6 py-4 mb-6"
+              className="bg-gradient-to-r from-green-900/40 to-green-800/30 border-2 border-green-500 rounded-xl px-6 py-4 mb-6"
             >
               <div className="flex items-center justify-between">
                 <h2 className="text-xl md:text-2xl font-bold text-white font-sans">
                   TOTAL RECEBIDO (VALOR DE MERCADO):
                 </h2>
-                <p className="text-2xl md:text-3xl font-bold text-purple-400 font-sans">
-                  R$ 192.000,00
+                <p className="text-2xl md:text-3xl font-bold text-green-400 font-sans">
+                  R$ 186.000,00
                 </p>
               </div>
             </motion.div>
@@ -199,7 +199,7 @@ export default function Slide65() {
                     transition={{ duration: 0.6 }}
                     className="text-5xl md:text-6xl font-bold text-yellow-400 font-sans"
                   >
-                    R$ 47.625,00?
+                    R$ 46.500,00?
                   </motion.p>
                 )}
               </div>
