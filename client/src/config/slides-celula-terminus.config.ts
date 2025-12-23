@@ -92,7 +92,6 @@ import Veil19 from '@/slides-celula-terminus/Veil19';
 import Veil20 from '@/slides-celula-terminus/Veil20';
 import Veil21 from '@/slides-celula-terminus/Veil21';
 import Veil22 from '@/slides-celula-terminus/Veil22';
-import Veil23 from '@/slides-celula-terminus/Veil23';
 import Veil24 from '@/slides-celula-terminus/Veil24';
 import Echo2 from '@/slides-celula-terminus/Echo2';
 import Echo3 from '@/slides-celula-terminus/Echo3';
@@ -114,7 +113,6 @@ import Echo18 from '@/slides-celula-terminus/Echo18';
 import Echo20 from '@/slides-celula-terminus/Echo20';
 import Echo21 from '@/slides-celula-terminus/Echo21';
 import Echo22 from '@/slides-celula-terminus/Echo22';
-import Echo23 from '@/slides-celula-terminus/Echo23';
 import Echo24 from '@/slides-celula-terminus/Echo24';
 
 
@@ -221,9 +219,8 @@ export const celulaTerminusSlidesConfig: SlideDefinition[] = [
   { id: 'veil-20', order: 18, component: Veil20, title: 'O Que Você Continua Recebendo - VEIL', path: 'veil' },
   { id: 'veil-21', order: 19, component: Veil21, title: 'Suporte Contínuo - VEIL', path: 'veil' },
   { id: 'veil-22', order: 20, component: Veil22, title: 'Data Moat - VEIL', path: 'veil' },
-  { id: 'veil-23', order: 21, component: Veil23, title: 'Release Notes - VEIL', path: 'veil' },
-  { id: 'veil-24', order: 22, component: Veil24, title: 'Você Nunca Fica Sozinho - VEIL', path: 'veil' },
-  { id: 'veil-18', order: 23, component: Veil18, title: 'Programa de Implementação - VEIL', path: 'veil' },
+  { id: 'veil-24', order: 21, component: Veil24, title: 'Você Nunca Fica Sozinho - VEIL', path: 'veil' },
+  { id: 'veil-18', order: 22, component: Veil18, title: 'Programa de Implementação - VEIL', path: 'veil' },
   { id: 'echo-2', order: 2, component: Echo2, title: 'Jay Abraham - ECHO', path: 'echo' },
   { id: 'echo-3', order: 3, component: Echo3, title: 'Oportunidade de Acelerar - ECHO', path: 'echo' },
   { id: 'echo-4', order: 4, component: Echo4, title: 'Implementação Híbrida MQL Machine - ECHO', path: 'echo' },
@@ -243,8 +240,7 @@ export const celulaTerminusSlidesConfig: SlideDefinition[] = [
   { id: 'echo-20', order: 18, component: Echo20, title: 'O Que Você Continua Recebendo - ECHO', path: 'echo' },
   { id: 'echo-21', order: 19, component: Echo21, title: 'Suporte Contínuo - ECHO', path: 'echo' },
   { id: 'echo-22', order: 20, component: Echo22, title: 'Data Moat - ECHO', path: 'echo' },
-  { id: 'echo-23', order: 21, component: Echo23, title: 'Release Notes - ECHO', path: 'echo' },
-  { id: 'echo-24', order: 22, component: Echo24, title: 'Você Nunca Fica Sozinho - ECHO', path: 'echo' },
-  { id: 'echo-18', order: 23, component: Echo18, title: 'Programa de Implementação - ECHO', path: 'echo' },
+  { id: 'echo-24', order: 21, component: Echo24, title: 'Você Nunca Fica Sozinho - ECHO', path: 'echo' },
+  { id: 'echo-18', order: 22, component: Echo18, title: 'Programa de Implementação - ECHO', path: 'echo' },
 
 ];

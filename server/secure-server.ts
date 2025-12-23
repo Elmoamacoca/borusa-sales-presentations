@@ -45,25 +45,9 @@ app.use(helmet({
   },
 }));
 
-// CORS configurado corretamente
-const allowedOrigins = process.env.NODE_ENV === 'production'
-  ? (process.env.ALLOWED_ORIGINS?.split(',') || [])
-  : ['http://localhost:3000', 'http://localhost:5173'];
-
+// CORS configurado corretamente - permitir todas as origens para demo
 app.use(cors({
-  origin: (origin, callback) => {
-    // Em desenvolvimento, permitir qualquer origem
-    if (process.env.NODE_ENV !== 'production') {
-      return callback(null, true);
-    }
-    
-    // Em producao, verificar a origem
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
+  origin: true,
   credentials: true
 }));
 
