@@ -12,13 +12,14 @@ export default function Slide50() {
   ];
 
   const features = [
-    'Monitoramento contínuo da operação comercial',
-    'Identificação de gargalos por etapa do funil',
-    'Relatórios de performance com leitura em linguagem simples',
-    'Análise estatística básica (taxas, tempos médios, comparações)',
-    'Recomendações estratégicas de ajuste (copy, cadência, segmentação)',
-    'Releases/insights periódicos via WhatsApp/e-mail',
-    'Identificação de Oportunidades'
+    'Monitoramento Contínuo',
+    'Identificação de Gargalos',
+    'Identificação de Oportunidades',
+    'Relatórios de Performance',
+    'Análise Estatística',
+    'Recomendações Estratégicas',
+    'Releases/Notas',
+    'Testes A/B Automáticos'
   ];
 
   return (
@@ -33,13 +34,13 @@ export default function Slide50() {
       </div>
 
       <div className="w-full h-full flex relative z-10">
-        {/* Conteúdo à Esquerda - 50% */}
-        <div className="w-[50%] h-full flex flex-col justify-center px-8 md:px-12 lg:px-16 relative z-10">
+        {/* Conteúdo à Esquerda - 60% */}
+        <div className="w-[60%] h-full flex flex-col justify-center px-8 md:px-12 lg:px-16 relative z-10">
           <motion.h1
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="text-lg md:text-xl font-semibold text-white mb-6 font-sans leading-tight"
+            className="text-lg md:text-xl font-semibold text-white mb-5 font-sans leading-tight"
           >
             <span className="text-yellow-400 font-bold">IA ESTRATEGISTA</span> <span className="text-white">–</span> O CÉREBRO TÁTICO
           </motion.h1>
@@ -59,17 +60,17 @@ export default function Slide50() {
                 Nesta versão da Célula Términus você recebe:
               </p>
 
-              <div className="space-y-4">
+              <div className="space-y-2.5">
                 {features.map((item, index) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.5 + index * 0.1, duration: 0.4 }}
-                    className="flex items-start gap-3 bg-yellow-400/5 border-l-2 border-yellow-400 pl-4 py-2.5 rounded-r"
+                    transition={{ delay: 0.5 + index * 0.08, duration: 0.4 }}
+                    className="flex items-start gap-2.5 bg-yellow-400/5 border-l-2 border-yellow-400 pl-3 py-2 rounded-r"
                   >
-                    <CheckCircle2 className="w-5 h-5 text-yellow-400 flex-shrink-0 mt-0.5" />
-                    <p className="text-sm md:text-base font-light text-white leading-relaxed font-sans">
+                    <CheckCircle2 className="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5" />
+                    <p className="text-xs md:text-sm font-light text-white leading-snug font-sans">
                       {item}
                     </p>
                   </motion.div>
@@ -79,23 +80,23 @@ export default function Slide50() {
           </motion.div>
         </div>
 
-        {/* Animação à Direita - 50% - RADAR TÁTICO */}
+        {/* Animação à Direita - 40% - RADAR TÁTICO */}
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.3, duration: 0.8 }}
-          className="w-[50%] h-full relative overflow-hidden flex items-center justify-center"
+          className="w-[40%] h-full relative overflow-hidden flex items-center justify-center"
           style={{
             position: 'absolute',
             right: 0,
             top: 0,
-            width: '50vw',
+            width: '40vw',
             height: '100%',
           }}
         >
           <div className="relative w-full h-full flex items-center justify-center">
             
-            <svg viewBox="0 0 400 400" className="w-full h-auto max-h-full">
+            <svg viewBox="0 0 400 400" className="w-[75%] h-auto max-h-[75%]">
               <defs>
                 <filter id="glowRadar">
                   <feGaussianBlur stdDeviation="5" result="coloredBlur"/>

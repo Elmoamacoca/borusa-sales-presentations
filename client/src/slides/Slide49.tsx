@@ -17,6 +17,7 @@ export default function Slide49() {
     'Retomada contextual (sempre usando histórico da conversa)',
     'Escalonamento pro humano quando a conversa pede vendedor',
     'Persistência estratégica (não vira spam, mas também não desiste)',
+    'Atuação multicanal (WhatsApp, e-mail, Instagram)',
     'Reengajamento multicanal (WhatsApp + e-mail)'
   ];
 

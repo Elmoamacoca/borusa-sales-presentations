@@ -21,20 +21,20 @@ export default function Slide65() {
   const items = [
     { text: "Plano de Ação Personalizado de 90 dias", value: "R$ 5.000,00" },
     { text: "Grupo de WhatsApp do Projeto", value: "R$ 3.000,00" },
-    { text: "IASDR operacional (recepção, triagem, qualificação básica, pipeline, reporting)", value: "R$ 20.000,00" },
-    { text: "IA de Compromisso (agendamentos, lembretes, no-show, briefing)", value: "R$ 15.000,00" },
-    { text: "IA de Follow-up (9 tentativas, retomada contextual, reengajamento)", value: "R$ 20.000,00" },
-    { text: "IA Estrategista (análise de funil, gargalos, recomendações)", value: "R$ 18.000,00" },
-    { text: "Infraestrutura completa + Portal do Cliente (VPS, integrações, painel)", value: "R$ 25.000,00" },
-    { text: "6 Tutorais 1:1 com o Gabriel", value: "R$ 12.000,00" },
-    { text: "Trilha de Vídeos – Automações + IAs", value: "R$ 4.500,00" },
-    { text: "Borusa Client Federado (BCF) - Releases semanais", value: "R$ 8.000,00" },
-    { text: "Atualizações de Base de Conhecimento (Sentinela)", value: "R$ 6.000,00" },
-    { text: "Reunião Mensal de Acompanhamento", value: "R$ 9.000,00" },
-    { text: "QBR Trimestral (ROI acumulado + roadmap)", value: "R$ 5.000,00" },
-    { text: "Release Notes Semanais", value: "R$ 3.000,00" },
-    { text: "Data Moat (Proteção da memória da operação)", value: "R$ 7.000,00" },
-    { text: "Borusa Academy (Portal de vídeos e treinamentos)", value: "R$ 5.000,00" },
+    { text: "IA SDR operacional (recepção, triagem, qualificação básica, pipeline, reporting)", value: "R$ 9.000,00" },
+    { text: "IA de Compromisso (agendamentos, lembretes, no-show, briefing)", value: "R$ 12.000,00" },
+    { text: "IA de Follow-up (9 tentativas, retomada contextual, reengajamento)", value: "R$ 19.000,00" },
+    { text: "IA Estrategista (análise de funil, gargalos, recomendações)", value: "R$ 15.000,00" },
+    { text: "Infraestrutura completa + Portal do Cliente (VPS, integrações, painel)", value: "R$ 20.000,00" },
+    { text: "6 Tutorais 1:1 com o Gabriel", value: "R$ 15.000,00" },
+    { text: "Trilha de Vídeos – Automações + IAs", value: "R$ 2.300,00" },
+    { text: "Borusa Client Federado (BCF) - Releases semanais", value: "R$ 7.000,00" },
+    { text: "Atualizações de Base de Conhecimento (Sentinela)", value: "R$ 5.000,00" },
+    { text: "Reunião Mensal de Acompanhamento", value: "R$ 2.500,00" },
+    { text: "QBR Trimestral (ROI acumulado + roadmap)", value: "R$ 2.500,00" },
+    { text: "Release Notes Semanais", value: "R$ 1.500,00" },
+    { text: "Data Moat (Proteção da memória da operação)", value: "R$ 8.000,00" },
+    { text: "Borusa Academy (Portal de vídeos e treinamentos)", value: "R$ 9.000,00" },
     { text: "Bônus 1: Acesso antecipado à Inteligência Coletiva BCF v2 (em validação)", value: "R$ 10.000,00" },
     { text: 'Bônus 2: Arsenal Open Source Proprietário ("Caixa de Pandora")', value: "R$ 15.000,00" },
   ];
@@ -167,7 +167,7 @@ export default function Slide65() {
                   TOTAL RECEBIDO (VALOR DE MERCADO):
                 </h2>
                 <p className="text-2xl md:text-3xl font-bold text-green-400 font-sans">
-                  R$ 190.500,00
+                  R$ 160.800,00
                 </p>
               </div>
             </motion.div>
@@ -198,7 +198,7 @@ export default function Slide65() {
                     transition={{ duration: 0.6 }}
                     className="text-5xl md:text-6xl font-bold text-yellow-400 font-sans"
                   >
-                    R$ 47.625,00?
+                    R$ 40.200,00?
                   </motion.p>
                 )}
               </div>
