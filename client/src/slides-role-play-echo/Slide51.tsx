@@ -13,7 +13,7 @@ export default function Slide51() {
           className="mb-12"
         >
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-8 font-sans leading-tight">
-            <span className="text-purple-400 font-semibold">4 TUTORIAS 1:1</span>
+            <span className="text-purple-400 font-semibold">2 TUTORIAS 1:1</span>
           </h1>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-white mb-12 font-sans leading-tight">
             PRA AJUSTAR O JOGO JUNTO COM VOCÊ
@@ -29,7 +29,7 @@ export default function Slide51() {
         >
           <p className="text-lg md:text-xl text-gray-300 leading-relaxed font-light font-sans">
             Além da implementação, você tem direito a{' '}
-            <span className="text-white font-semibold">4 tutorias individuais durante o ciclo</span>: pra falar de marketing, comercial, processo ou qualquer ponto crítico da operação.
+            <span className="text-white font-semibold">2 tutorias individuais durante o ciclo</span>: pra falar de marketing, comercial, processo ou qualquer ponto crítico da operação.
           </p>
 
           <p className="text-lg md:text-xl text-gray-300 leading-relaxed font-light font-sans">

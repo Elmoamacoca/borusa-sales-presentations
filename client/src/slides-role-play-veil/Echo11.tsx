@@ -16,8 +16,7 @@ export default function Echo11() {
     'Identificação de gargalos por etapa do funil',
     'Relatórios de performance com leitura em linguagem simples',
     'Análise estatística básica (taxas, tempos médios, comparações)',
-    'Recomendações estratégicas de ajuste (copy, cadência, segmentação)',
-    'Identificação de Oportunidades'
+    'Recomendações estratégicas de ajuste (copy, cadência, segmentação)'
   ];
 
   return (

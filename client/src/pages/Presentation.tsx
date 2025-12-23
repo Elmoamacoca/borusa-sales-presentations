@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { usePresentationStore, setSlidesConfig } from '@/store/presentationStore';
 import { getSlidesByConfigId } from '@/config/slides.config';
@@ -16,8 +16,9 @@ interface PresentationProps {
 }
 
 export default function Presentation({ slidesConfigId }: PresentationProps) {
-  const { currentSlideId } = usePresentationStore();
+  const { currentSlideId, setCurrentSlide } = usePresentationStore();
   const { active: laserActive } = useLaser();
+  const hasInitialized = useRef(false);
 
   // Carregar configuração de slides específica para esta apresentação
   const slidesConfig = getSlidesByConfigId(slidesConfigId);
@@ -25,7 +26,35 @@ export default function Presentation({ slidesConfigId }: PresentationProps) {
   // Inicializar configuração de slides
   useEffect(() => {
     setSlidesConfig(slidesConfig);
-  }, [slidesConfig]);
+    
+    // Só executar a lógica de inicialização uma vez por montagem do componente
+    if (!hasInitialized.current) {
+      hasInitialized.current = true;
+      
+      // Verificar se há um slide salvo para esta apresentação específica
+      const savedSlideKey = `presentation-slide-${slidesConfigId}`;
+      const savedSlideId = localStorage.getItem(savedSlideKey);
+      
+      // Verificar se o slide salvo existe nesta configuração
+      const slideExists = savedSlideId && slidesConfig.some(slide => slide.id === savedSlideId);
+      
+      if (slideExists) {
+        // Restaurar o slide salvo para esta apresentação
+        setCurrentSlide(savedSlideId, false);
+      } else {
+        // Se não há slide salvo ou não existe, começar do início
+        setCurrentSlide('welcome', false);
+      }
+    }
+  }, [slidesConfig, slidesConfigId, setCurrentSlide]);
+
+  // Salvar o slide atual no localStorage específico desta apresentação
+  useEffect(() => {
+    if (hasInitialized.current && currentSlideId) {
+      const savedSlideKey = `presentation-slide-${slidesConfigId}`;
+      localStorage.setItem(savedSlideKey, currentSlideId);
+    }
+  }, [currentSlideId, slidesConfigId]);
 
   // Ativar atalhos de teclado
   useKeyboardShortcuts();

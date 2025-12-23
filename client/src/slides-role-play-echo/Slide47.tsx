@@ -14,7 +14,6 @@ export default function Slide47() {
   const features = [
     'Recepção inicial automática dos leads nos canais integrados',
     'Triagem leve (pergunta o básico sem cansar o lead)',
-    'Qualificação básica (fit, urgência, orçamento aproximado)',
     'Gestão de pipeline inicial (move o lead pelas primeiras etapas)',
     'Reporting básico do topo de funil',
     'Atuação multicanal (WhatsApp, e-mail, Instagram)'

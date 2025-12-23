@@ -16,7 +16,6 @@ export default function Slide49() {
     'Detecção de silêncio pra reativar quem sumiu',
     'Retomada contextual (sempre usando histórico da conversa)',
     'Escalonamento pro humano quando a conversa pede vendedor',
-    'Persistência estratégica (não vira spam, mas também não desiste)',
     'Reengajamento multicanal (WhatsApp + e-mail)'
   ];
 

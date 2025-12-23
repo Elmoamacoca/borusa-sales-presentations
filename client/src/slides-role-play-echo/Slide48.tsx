@@ -15,10 +15,6 @@ export default function Slide48() {
     'Lembretes automáticos de reunião (D-1, D-0, pós-agendamento)',
     'Confirmação de presença e pedido de confirmação do lead',
     'Envio de convite de calendário pro lead e pro vendedor',
-    'Reagendamento inteligente quando o lead não pode comparecer',
-    'Validação de disponibilidade do lead antes de fechar horário',
-    'Personalização de mensagem de compromisso por oferta/nicho',
-    'Briefing pré-reunião pro closer (resumo do lead e histórico)',
     'Atuação multicanal (WhatsApp, e-mail, Instagram)'
   ];
 
